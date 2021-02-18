@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+@font-face {
+  font-family: 'DMono';
+  src: local('DMono'), url('assets/fonts/DTM-Mono.otf') format('TrueType');
+}
+
+@font-face {
+  font-family: 'P2P';
+  src: url('assets/fonts/press-start-2p-font/PressStart2P-vaV7.ttf') format('TrueType');
+}
+
+@font-face {
+  font-family: 'POperator';
+  src: url('assets/fonts/pixel_operator/PixelOperator.ttf') format('TrueType');
+}

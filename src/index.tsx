@@ -1,11 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import { ThemeProvider } from '@material-ui/core/styles';
+
+import { lightTheme } from './config/theme/light';
+import Routes from './routes';
 import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={lightTheme}>
+      <Routes />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root'),
 );
