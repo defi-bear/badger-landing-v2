@@ -13,7 +13,7 @@ export const MenuList = [
 	},
 	{
 		name: 'About us',
-		link: '#about',
+		link: '/about',
 	},
 	{
 		name: 'BUIDL with us',
