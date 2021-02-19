@@ -57,12 +57,7 @@ export default function Footer() {
 							{footerItems.items.map((item) => (
 								<Grid container key={item.title}>
 									<Link>
-										<Grid
-											container
-											direction="row"
-											alignItems="center"
-											className={styles.item}
-										>
+										<Grid container direction="row" alignItems="center" className={styles.item}>
 											<img
 												alt={item.title}
 												src={`assets/images/${item.icon}`}
