@@ -3,8 +3,8 @@ import { createMuiTheme } from '@material-ui/core';
 export const lightTheme = createMuiTheme({
 	palette: {
 		type: 'light',
-    primary: { main: '#FFDD29', contrastText: '#381608' },
-    secondary: { main: '#F2A52B', contrastText: '#FFF' },
+		primary: { main: '#FFDD29', contrastText: '#381608' },
+		secondary: { main: '#F2A52B', contrastText: '#FFF' },
 		// background: {
 		// 	default: "#181818",
 		// 	paper: "#2b2b2b"
@@ -37,7 +37,7 @@ export const lightTheme = createMuiTheme({
 		// h3: { fontFamily: "'Press Start 2P'", fontSize: "1.8rem" },
 		// h4: { fontFamily: "'Press Start 2P'", fontSize: "1rem" },
 		h5: { fontWeight: 500 },
-    body1: { fontWeight: 500 },
+		body1: { fontWeight: 500 },
 		// h6: { fontFamily: "'Press Start 2P'" },
 	},
 	shape: {
