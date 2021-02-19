@@ -3,8 +3,9 @@
     "start": "snowpack dev",
     "build": "snowpack build",
     "test": "web-test-runner \"src/**/*.test.tsx\"",
-    "lint": "yarn eslint */**/*.{js,json,ts,tsx}",
-    "lint-fix": "yarn eslint */**/*.{js,json,ts,tsx} --quiet --fix"
+    "lint": "yarn eslint src/**/*.{js,jsx,json,ts,tsx,css,scss,md} --no-error-on-unmatched-pattern",
+    "lint-fix": "yarn eslint src/**/*.{js,jsx,json,ts,tsx,css,scss,md} --quiet --fix --no-error-on-unmatched-pattern",
+    "lint-fix-warn": "yarn eslint src/**/*.{js,jsx,json,ts,tsx,css,scss,md} --fix --no-error-on-unmatched-pattern"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.3",
