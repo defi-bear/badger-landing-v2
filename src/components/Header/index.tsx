@@ -5,7 +5,11 @@ import { MenuList } from './HeaderItemList';
 
 const useStyles = makeStyles((theme) => ({
 	main: {
+		position: 'fixed',
+		top: 0,
+		background: '#FFF',
 		padding: '13px 50px',
+		zIndex: 999
 	},
 	right: {
 		display: 'flex',
@@ -43,6 +47,11 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Header() {
 	const styles = useStyles();
+
+	const onLaunchApp = () => {
+		window.open('https://app.badger.finance', '_self');
+	}
+
 	return (
 		<Grid container alignItems="center" justify="space-between" className={styles.main}>
 			<Grid xs={3} item>
@@ -60,7 +69,7 @@ export default function Header() {
 							</Link>
 						</Grid>
 					))}
-					<Button className={styles.launchApp}>
+					<Button className={styles.launchApp} onClick={onLaunchApp}>
 						Launch App
 						<img alt="Arrow Icon" src="assets/images/arrow.png" className={styles.arrowImg} />
 					</Button>
