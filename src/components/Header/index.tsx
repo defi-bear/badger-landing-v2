@@ -33,10 +33,13 @@ const useStyles = makeStyles((theme) => ({
 		background: 'linear-gradient(180deg, #FFC93F 0%, rgba(255, 255, 255, 0) 79.76%), #E3581F',
 		boxShadow: '0px 3px 3px rgba(0, 0, 0, 0.25)',
 		height: 42,
+		marginLeft: 14,
+		padding: '6px 17px',
 		'&>span': {
 			fontSize: 15,
 			textShadow: '1.5px 1.5px 0px rgba(72, 4, 4, 0.6)',
 			color: 'white',
+			textTransform: 'none'
 		},
 	},
 	arrowImg: {
@@ -54,13 +57,13 @@ export default function Header() {
 
 	return (
 		<Grid container alignItems="center" justify="space-between" className={styles.main}>
-			<Grid xs={3} item>
+			<Grid xs={2} item>
 				<Grid container alignItems="center">
 					<img alt="Badger Logo" src="assets/images/logo.png" className={styles.logo} />
 					<Typography className={styles.badgerText}>Badger</Typography>
 				</Grid>
 			</Grid>
-			<Grid item xs={9}>
+			<Grid item xs={10}>
 				<Grid container spacing={5} justify="flex-end" alignItems="center">
 					{MenuList.map((menuItem) => (
 						<Grid item key={menuItem.name}>

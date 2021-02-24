@@ -5,7 +5,8 @@ import Positional, { Coord } from 'positional-react-animations';
 
 const useStyles = makeStyles(() => ({
     main: {
-        position: 'relative'
+        position: 'relative',
+        maxWidth: 530
     },
 	mainBadger: {
 		width: '100%'
@@ -48,7 +49,7 @@ export default function MainBadgerImage() {
                     <Coord x={90} y={10}>
                         <img alt="Star" src="assets/images/star.png" className={styles.star3} />
                     </Coord>
-                    <Coord x={90} y={85}>
+                    <Coord x={90} y={85} velocity={200}>
                         <img alt="Star" src="assets/images/star.png" className={styles.star4} />
                     </Coord>
                 </Positional>
