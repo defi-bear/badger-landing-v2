@@ -5,6 +5,7 @@ import TopPart from './components/TopPart';
 import OrangeText from './components/OrangeText';
 import Info from './components/Info';
 import Products from './components/Products';
+import Governance from './components/Governance';
 
 export default function Home() {
 
@@ -14,6 +15,7 @@ export default function Home() {
 			<OrangeText />
 			<Info />
 			<Products />
+			<Governance />
 		</Grid>
 	)
 }
