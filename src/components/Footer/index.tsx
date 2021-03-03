@@ -36,6 +36,15 @@ const useStyles = makeStyles((theme) => ({
 		color: theme.palette.info.contrastText,
 		fontFamily: 'POperator',
 	},
+	bottomText: {
+		fontFamily: 'POperator',
+		fontSize: 20,
+		lineHeight: '23px',
+		color: '#FFF',
+		opacity: 0.6,
+		textAlign: 'center',
+		marginTop: 40,
+	}
 }));
 
 export default function Footer() {
@@ -72,6 +81,11 @@ export default function Footer() {
 					</Grid>
 				</Grid>
 			))}
+			<Grid item xs={12}>
+				<Typography className={styles.bottomText}>
+					*$BADGER is strictly utilized to govern the Badger DAO and has no monetary value
+				</Typography>
+			</Grid>
 		</Grid>
 	);
 }
