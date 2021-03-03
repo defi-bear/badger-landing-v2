@@ -1,4 +1,5 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade';
 import { Grid, makeStyles, Typography, Button } from '@material-ui/core';
 
 import { roadmapList, cloudList } from '../../../utils/roadmapList';
@@ -163,14 +164,22 @@ export default function Roadmap() {
                 <Grid container>
                     <Grid className={styles.left} container direction="column" alignItems="flex-end">
                         <Grid style={{ height: 200 }} />
-                        <RoadmapItem {...roadmapList[1]} width={318} height={480} left />
+                        <Fade duration={2000}>
+                            <RoadmapItem {...roadmapList[1]} width={318} height={480} left />
+                        </Fade>
                         <Grid style={{ height: 380 }} />
-                        <RoadmapItem {...roadmapList[3]} width={427} height={200} left />
+                        <Fade duration={2000}>
+                            <RoadmapItem {...roadmapList[3]} width={427} height={200} left />
+                        </Fade>
                     </Grid>
                     <Grid className={styles.right}>
-                        <RoadmapItem {...roadmapList[0]} width={560} height={200} />
+                        <Fade duration={2000}>
+                            <RoadmapItem {...roadmapList[0]} width={560} height={200} />
+                        </Fade>
                         <Grid style={{ height: 480 }} />
-                        <RoadmapItem {...roadmapList[2]} width={443} height={380} />
+                        <Fade duration={2000}>
+                            <RoadmapItem {...roadmapList[2]} width={443} height={380} />
+                        </Fade>
                         <Grid style={{ height: 200 }} />
                     </Grid>
                 </Grid>
