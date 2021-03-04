@@ -132,7 +132,7 @@ export default function Products() {
     const styles = useStyles();
 
     return (
-        <Grid container className={styles.main} justify="center">
+        <Grid container className={styles.main} justify="center" id="products">
             <Grid container className={styles.subMain} justify="center">
                 <Typography className={styles.products}>Products</Typography>
                 <Grid item>
