@@ -90,7 +90,7 @@ export default function Governance() {
     const styles = useStyles();
 
     return (
-        <Grid className={styles.main} container justify="center">
+        <Grid className={styles.main} container justify="center" id="governance">
             <Grid className={styles.subMain} alignItems="center" container direction="column">
                 <Typography className={styles.title}>Governance</Typography>
                 <Typography className={styles.description}>

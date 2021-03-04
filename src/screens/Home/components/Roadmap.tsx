@@ -156,7 +156,7 @@ export default function Roadmap() {
     const styles = useStyles();
 
     return (
-        <Grid container justify="center" className={styles.main}>
+        <Grid container justify="center" className={styles.main} id="roadmap">
             <Grid className={styles.subMain} container direction="column" alignItems="center">
                 <img src="assets/images/sunStar.png" className={styles.sunStar} />
                 <Typography className={styles.roadmapText}>Roadmap</Typography>
