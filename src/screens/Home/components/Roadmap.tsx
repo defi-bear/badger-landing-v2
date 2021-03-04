@@ -63,11 +63,25 @@ const useStyles = makeStyles((theme) => ({
         width: 342,
         marginBottom: 150,
     },
-    mainBottom: {
-        width: 1532,
+    leftBush: {
+        width: 234,
         position: 'absolute',
-        left: 'calc(50% - 766px)',
-        bottom: 205,
+        left: 0,
+        bottom: 266,
+        zIndex: 1,
+    },
+    mainBottom: {
+        width: 846,
+        position: 'absolute',
+        left: 'calc(50% - 423px)',
+        bottom: 265,
+        zIndex: 1,
+    },
+    rightBush: {
+        width: 398,
+        position: 'absolute',
+        right: 0,
+        bottom: 266,
         zIndex: 1,
     },
     stackingPart: {
@@ -184,7 +198,9 @@ export default function Roadmap() {
                     </Grid>
                 </Grid>
                 <img src="assets/images/bottomGas.png" className={styles.bottomGas} />
+                <img src="assets/images/leftBush.png" className={styles.leftBush} />
                 <img src="assets/images/mainBottom.png" className={styles.mainBottom} />
+                <img src="assets/images/rightBush.png" className={styles.rightBush} />
                 {
                     cloudList.map(({img: cloudImg, ...cloud}: CloudListType) => (
                         <img key={cloudImg} src={`assets/images/${cloudImg}`} className={styles.cloud} style={{...cloud}} />
