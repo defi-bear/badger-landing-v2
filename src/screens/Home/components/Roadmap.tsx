@@ -174,7 +174,9 @@ export default function Roadmap() {
             <Grid className={styles.subMain} container direction="column" alignItems="center">
                 <img src="assets/images/sunStar.png" className={styles.sunStar} />
                 <Typography className={styles.roadmapText}>Roadmap</Typography>
-                <img src="assets/images/rocket.png" className={styles.rocket} />
+                <Fade up duration={3000}>
+                    <img src="assets/images/rocket.png" className={styles.rocket} />
+                </Fade>
                 <Grid container>
                     <Grid className={styles.left} container direction="column" alignItems="flex-end">
                         <Grid style={{ height: 200 }} />
@@ -203,7 +205,9 @@ export default function Roadmap() {
                 <img src="assets/images/rightBush.png" className={styles.rightBush} />
                 {
                     cloudList.map(({img: cloudImg, ...cloud}: CloudListType) => (
-                        <img key={cloudImg} src={`assets/images/${cloudImg}`} className={styles.cloud} style={{...cloud}} />
+                        <Fade duration={2000} left={cloud.left ? true : false} right={cloud.right ? true : false}>
+                            <img key={cloudImg} src={`assets/images/${cloudImg}`} className={styles.cloud} style={{...cloud}} />
+                        </Fade>
                     ))
                 }
             </Grid>
