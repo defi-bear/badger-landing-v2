@@ -1,4 +1,5 @@
 import React from 'react';
+// @ts-ignore
 import Fade from 'react-reveal/Fade';
 import { Grid, makeStyles, Typography, Button } from '@material-ui/core';
 
