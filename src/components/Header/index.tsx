@@ -74,7 +74,7 @@ export default function Header() {
 					))}
 					<Button className={styles.launchApp} onClick={onLaunchApp}>
 						Launch App
-						<img alt="Arrow Icon" src={"assets/images/arrow.png"} className={styles.arrowImg} />
+						<img alt="Arrow Icon" src={"/assets/images/arrow.png"} className={styles.arrowImg} />
 					</Button>
 				</Grid>
 			</Grid>
