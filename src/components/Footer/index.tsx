@@ -120,7 +120,7 @@ export default function Footer() {
 											<Grid container direction="row" alignItems="center" className={styles.item}>
 												<img
 													alt={item.title}
-													src={`assets/images/${item.icon}`}
+													src={`/assets/images/${item.icon}`}
 													className={styles.itemIcon}
 												/>
 												<Typography className={styles.itemText}>{item.title}</Typography>

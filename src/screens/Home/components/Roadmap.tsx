@@ -164,7 +164,7 @@ export default function Roadmap() {
                 {
                     cloudList.map(({img: cloudImg, ...cloud}: CloudListType) => (
                         <Fade duration={2000} left={cloud.left ? true : false} right={cloud.right ? true : false}>
-                            <img key={cloudImg} src={`assets/images/${cloudImg}`} className={styles.cloud} style={{...cloud}} />
+                            <img key={cloudImg} src={`/assets/images/${cloudImg}`} className={styles.cloud} style={{...cloud}} />
                         </Fade>
                     ))
                 }
