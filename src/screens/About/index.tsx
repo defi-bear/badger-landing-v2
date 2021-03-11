@@ -3,6 +3,7 @@ import { Grid, Typography, makeStyles, Button } from '@material-ui/core';
 import ReactPlayer from 'react-player';
 
 import AboutAudit from './components/aboutAudit';
+import InsuranceAudit from './components/insuranceAudit';
 
 const useStyles = makeStyles((theme) => ({
     title: {
@@ -108,6 +109,7 @@ export default function About() {
                 <ReactPlayer url='https://www.youtube.com/watch?v=7GVz9La2L9w' width={835} height={430} />
             </Grid>
             <AboutAudit />
+            <InsuranceAudit />
         </Grid>
     )
 }

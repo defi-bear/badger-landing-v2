@@ -1,15 +1,15 @@
 export const MenuList = [
 	{
 		name: 'Products',
-		link: '#products',
+		link: '/#products',
 	},
 	{
 		name: 'Governance',
-		link: '#governance',
+		link: '/#governance',
 	},
 	{
 		name: 'Roadmap',
-		link: '#roadmap',
+		link: '/#roadmap',
 	},
 	{
 		name: 'About us',

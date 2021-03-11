@@ -68,65 +68,22 @@ const useStyles = makeStyles((theme) => ({
         width: 234,
         position: 'absolute',
         left: 0,
-        bottom: 266,
+        bottom: 0,
         zIndex: 1,
     },
     mainBottom: {
         width: 846,
         position: 'absolute',
         left: 'calc(50% - 423px)',
-        bottom: 265,
+        bottom: -1,
         zIndex: 1,
     },
     rightBush: {
         width: 398,
         position: 'absolute',
         right: 0,
-        bottom: 266,
+        bottom: 0,
         zIndex: 1,
-    },
-    stackingPart: {
-        marginTop: 90,
-        paddingTop: 54,
-        paddingBottom: 72,
-        width: '100%',
-        backgroundColor: theme.palette.secondary.main,
-        zIndex: 10,
-    },
-    stackingText: {
-        fontFamily: 'POperator',
-        fontSize: 30,
-        fontWeight: 'bold',
-        lineHeight: '23px',
-        textAlign: 'center',
-        color: '#FFF'
-    },
-    coinStarImg: {
-        width: 42,
-        paddingLeft: 5,
-    },
-    stackingDescription: {
-        marginTop: 9,
-        fontFamily: 'POperator',
-        fontWeight: 'bold',
-        fontSize: 25,
-        lineHeight: '23px',
-        color: '#FFF',
-        opacity: 0.8,
-        textAlign: 'center'
-    },
-    launchApp: {
-        marginTop: 25,
-        padding: '21px 71px 20px 68px',
-        borderRadius: 10,
-		background: theme.palette.primary.main,
-		height: 42,
-		'&>span': {
-			fontSize: 20,
-			color: '#651A1A',
-			fontFamily: 'DMono',
-			textTransform: 'none',
-		},
     },
     cloud: {
         position: 'absolute',
@@ -211,14 +168,6 @@ export default function Roadmap() {
                         </Fade>
                     ))
                 }
-            </Grid>
-            <Grid className={styles.stackingPart} container direction="column" alignItems="center">
-                <Grid container justify="center" alignItems="flex-end">
-                    <Typography className={styles.stackingText}>Start Stacking</Typography>
-                    <img src="assets/images/coinStar.png" className={styles.coinStarImg} />
-                </Grid>
-                <Typography className={styles.stackingDescription}>Open the Badger App and Digg into our Sett Vaults</Typography>
-                <Button className={styles.launchApp} onClick={() => window.open('https://app.badger.finance/', '_self')}>LAUNCH OUR APP</Button>
             </Grid>
         </Grid>
     )
