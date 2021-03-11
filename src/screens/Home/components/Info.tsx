@@ -70,7 +70,7 @@ const SubText = ({children}: SubTextProps) => {
     const styles = useStyles();
     return (
         <Grid className={styles.textWrapper}>
-            <img alt="Indent Icon" src="assets/images/marioCoin.png" className={styles.indentIcon} />
+            <img alt="Indent Icon" src="/assets/images/marioCoin.png" className={styles.indentIcon} />
             <Typography className={styles.subText}>
                 {children}
             </Typography>
@@ -99,14 +99,14 @@ export default function Info() {
                     </Grid>
                     <Grid item xs={4}>
                         <Grid container justify="flex-end">
-                            <img alt="Bitcoin Icons" src="assets/images/bitcoinGroup.png" className={styles.bitcoin} />
+                            <img alt="Bitcoin Icons" src="/assets/images/bitcoinGroup.png" className={styles.bitcoin} />
                         </Grid>
                     </Grid>
                 </Grid>
                 <Grid container className={styles.kongContainer}>
                     <Grid item xs={4}>
                         <Grid container justify="flex-start">
-                            <img alt="Kong Icon" src="assets/images/kongImg.png" className={styles.kongIcon} />
+                            <img alt="Kong Icon" src="/assets/images/kongImg.png" className={styles.kongIcon} />
                         </Grid>
                     </Grid>
                     <Grid item xs={8}>
@@ -134,7 +134,7 @@ export default function Info() {
                     </Grid>
                     <Grid item xs={4} className={styles.treasuryContainer}>
                         <Grid container justify="flex-end">
-                            <img alt="Treasury Icon" src="assets/images/treasury.png" className={styles.treasuryIcon} />
+                            <img alt="Treasury Icon" src="/assets/images/treasury.png" className={styles.treasuryIcon} />
                         </Grid>
                     </Grid>
                 </Grid>

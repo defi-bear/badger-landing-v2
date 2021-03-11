@@ -73,7 +73,7 @@ export default function TopPart() {
                         <Typography className={styles.description}><span className={styles.boldDescription}>BadgerDAO</span> is a decentralized collective of developers, strategists, and content creators who seek to build and support new Bitcoin-focused products for the DeFi ecosystem</Typography>
                         <Button className={styles.viewAudit} onClick={onAudit}>
                             View our Audits
-                            <img alt="Arrow Icon" src="assets/images/arrow1.png" className={styles.arrowImg} />
+                            <img alt="Arrow Icon" src="/assets/images/arrow1.png" className={styles.arrowImg} />
                         </Button>
                     </Grid>
                 </Grid>

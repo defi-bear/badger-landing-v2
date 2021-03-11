@@ -37,20 +37,20 @@ export default function MainBadgerImage() {
     const styles = useStyles();
     return (
         <Grid className={styles.main}>
-            <img alt="Main Badger Image" src="assets/images/mBadger.png" className={styles.mainBadger} />
+            <img alt="Main Badger Image" src="/assets/images/mBadger.png" className={styles.mainBadger} />
             <Grid className={styles.starContainer}>
                 <Positional height="100%" cursorEvent>
                     <Coord x={30} y={15}>
-                        <img alt="Star" src="assets/images/star.png" className={styles.star1} />
+                        <img alt="Star" src="/assets/images/star.png" className={styles.star1} />
                     </Coord>
                     <Coord x={20} y={25}>
-                        <img alt="Star" src="assets/images/star.png" className={styles.star2} />
+                        <img alt="Star" src="/assets/images/star.png" className={styles.star2} />
                     </Coord>
                     <Coord x={90} y={10}>
-                        <img alt="Star" src="assets/images/star.png" className={styles.star3} />
+                        <img alt="Star" src="/assets/images/star.png" className={styles.star3} />
                     </Coord>
                     <Coord x={90} y={85} velocity={200}>
-                        <img alt="Star" src="assets/images/star.png" className={styles.star4} />
+                        <img alt="Star" src="/assets/images/star.png" className={styles.star4} />
                     </Coord>
                 </Positional>
             </Grid>

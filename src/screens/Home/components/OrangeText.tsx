@@ -68,9 +68,9 @@ export default function OrangeText() {
             <Typography className={styles.text}>
                 <Grid className={styles.orangeWrapper}>
                     <span className={styles.orange}>Orange</span> is the new blue-chip.
-                    <img alt="Star" src="assets/images/star.png" className={styles.star1} />
-                    <img alt="Star" src="assets/images/star.png" className={styles.star2} />
-                    <img alt="Star" src="assets/images/star.png" className={styles.star3} />
+                    <img alt="Star" src="/assets/images/star.png" className={styles.star1} />
+                    <img alt="Star" src="/assets/images/star.png" className={styles.star2} />
+                    <img alt="Star" src="/assets/images/star.png" className={styles.star3} />
                 </Grid>
             </Typography>
         </Grid>

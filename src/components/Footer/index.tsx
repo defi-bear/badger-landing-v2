@@ -97,7 +97,7 @@ export default function Footer() {
 			<Grid className={styles.stackingPart} container direction="column" alignItems="center">
                 <Grid container justify="center" alignItems="flex-end">
                     <Typography className={styles.stackingText}>Start Stacking</Typography>
-                    <img src="assets/images/coinStar.png" className={styles.coinStarImg} />
+                    <img src="/assets/images/coinStar.png" className={styles.coinStarImg} />
                 </Grid>
                 <Typography className={styles.stackingDescription}>Open the Badger App and Digg into our Sett Vaults</Typography>
                 <Button className={styles.launchApp} onClick={() => window.open('https://app.badger.finance/', '_self')}>LAUNCH OUR APP</Button>
@@ -105,7 +105,7 @@ export default function Footer() {
 			<Grid container className={styles.main}>
 				<Grid item xs={3}>
 					<Grid container alignItems="center" className={styles.logoWrapper}>
-						<img alt="Badger Logo" src="assets/images/logo.png" className={styles.logo} />
+						<img alt="Badger Logo" src="/assets/images/logo.png" className={styles.logo} />
 						<Typography className={styles.badgerText}>Badger</Typography>
 					</Grid>
 				</Grid>

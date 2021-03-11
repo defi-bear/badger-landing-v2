@@ -76,7 +76,7 @@ const TickItem = ({ children, href }: TickItemProps) => {
     return (
         <Grid container justify="center" alignItems="center" className={styles.tickItem}>
             <Grid className={styles.arrowContainer}>
-                <img src="assets/images/arrow2.png" className={styles.arrow} />
+                <img src="/assets/images/arrow2.png" className={styles.arrow} />
             </Grid>
             <div className={styles.circle} />
             <Link href={href} className={styles.tickText}>
