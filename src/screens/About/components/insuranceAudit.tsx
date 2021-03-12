@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
     insurancePeople: {
         position: 'absolute',
         width: 424,
-        top: -56,
+        top: -6,
         right: -10,
         zIndex: 5
     },
@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: '#FFDD29',
         position: 'absolute',
         left: 0,
-        top: 384
+        top: 434
     }
 }))
 

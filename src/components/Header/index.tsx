@@ -58,10 +58,12 @@ export default function Header() {
 	return (
 		<Grid container alignItems="center" justify="space-between" className={styles.main}>
 			<Grid xs={2} item>
-				<Grid container alignItems="center">
-					<img draggable={false} alt="Badger Logo" src="/assets/images/logo.png" className={styles.logo} />
-					<Typography className={styles.badgerText}>Badger</Typography>
-				</Grid>
+				<Button onClick={() => window.open('/', '_self')}>
+					<Grid container alignItems="center">
+						<img draggable={false} alt="Badger Logo" src="/assets/images/logo.png" className={styles.logo} />
+						<Typography className={styles.badgerText}>Badger</Typography>
+					</Grid>
+				</Button>
 			</Grid>
 			<Grid item xs={10}>
 				<Grid container spacing={5} justify="flex-end" alignItems="center">
