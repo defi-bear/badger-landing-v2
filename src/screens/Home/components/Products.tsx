@@ -104,7 +104,7 @@ const Item = ({ img, title, textList, learnMore }: ItemProps) => {
     return (
         <Grid container direction="column" className={styles.item} justify="center" alignItems="center">
             <Grid item>
-                <img src={img} className={styles.itemImg} />
+                <img draggable={false} src={img} className={styles.itemImg} />
             </Grid>
             <Grid item>
                 <Typography className={styles.itemTitle}>{title}</Typography>
@@ -112,7 +112,10 @@ const Item = ({ img, title, textList, learnMore }: ItemProps) => {
             <Grid item className={styles.itemBody}>
                 {
                     textList.map(text => (
-                        <Typography key={text} className={styles.itemText}><img src="/assets/images/star.png" className={styles.star} />{text}</Typography>
+                        <Typography key={text} className={styles.itemText}>
+                            <img draggable={false} src="/assets/images/star.png" className={styles.star} />
+                            {text}
+                        </Typography>
                     ))
                 }
             </Grid>
@@ -120,7 +123,7 @@ const Item = ({ img, title, textList, learnMore }: ItemProps) => {
                 learnMore && (
                     <Button className={styles.learnMore} onClick={() => window.open(learnMore)}>
                         Learn more
-                        <img alt="Arrow Icon" src="/assets/images/arrow1.png" className={styles.arrowImg} />
+                        <img draggable={false} alt="Arrow Icon" src="/assets/images/arrow1.png" className={styles.arrowImg} />
                     </Button>
                 )
             }
@@ -146,7 +149,7 @@ export default function Products() {
                 </Grid>
                 {
                     positionList.map(position => (
-                        <img key={position.index} alt="Rectangle" src="/assets/images/rect.png" className={styles.rect} style={{...position}} />
+                        <img draggable={false} key={position.index} alt="Rectangle" src="/assets/images/rect.png" className={styles.rect} style={{...position}} />
                     ))
                 }
             </Grid>

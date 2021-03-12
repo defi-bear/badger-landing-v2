@@ -94,7 +94,7 @@ export default function About() {
             <Typography className={styles.title}>About The Badgers</Typography>
             <Grid className={styles.topMain} container justify="center">
                 <Grid className={styles.topMainWrapper} container direction="row">
-                    <img alt="Badger Logo" src="/assets/images/bigBadger.png" className={styles.bigBadger} />
+                    <img draggable={false} alt="Badger Logo" src="/assets/images/bigBadger.png" className={styles.bigBadger} />
                     <Typography className={styles.description}>The <span className={styles.boldText}>Badger</span> Builders are a distributed team of developers, founders, content creators, and strategists, who all believe in the power of Bitcoin as a digital store of value, and DeFi as a means of permissionlessly earning yield on Bitcoin. The team is being led by Chris Spadafora, a long term crypto enthusiast, investor, founder of Angelrock, host of Crypto After Dark poker and philanthropy through Pioneerclub.io. Many more Badgers have joined him since the inception of Badger DAO, and now compose a community where the DAO decides on the direction & production of Badger DAO’s products.</Typography>
                 </Grid>
             </Grid>
@@ -103,7 +103,7 @@ export default function About() {
                 <Typography className={styles.hideText}>BADGERS NEVER HIDE</Typography>
                 <Button className={styles.reviewCode} onClick={onReview}>
                     Review the Code
-                    <img alt="Arrow Icon" src="/assets/images/arrow1.png" className={styles.arrowImg} />
+                    <img draggable={false} alt="Arrow Icon" src="/assets/images/arrow1.png" className={styles.arrowImg} />
                 </Button>
                 <Grid className={styles.bigBorder} />
                 <ReactPlayer url='https://www.youtube.com/watch?v=7GVz9La2L9w' width={835} height={430} />

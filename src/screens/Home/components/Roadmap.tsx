@@ -130,10 +130,10 @@ export default function Roadmap() {
     return (
         <Grid container justify="center" className={styles.main} id="roadmap">
             <Grid className={styles.subMain} container direction="column" alignItems="center">
-                <img src="/assets/images/sunStar.png" className={styles.sunStar} />
+                <img draggable={false} src="/assets/images/sunStar.png" className={styles.sunStar} />
                 <Typography className={styles.roadmapText}>Roadmap</Typography>
                 <Fade up duration={3000}>
-                    <img src="/assets/images/rocket.png" className={styles.rocket} />
+                    <img draggable={false} src="/assets/images/rocket.png" className={styles.rocket} />
                 </Fade>
                 <Grid container>
                     <Grid className={styles.left} container direction="column" alignItems="flex-end">
@@ -157,14 +157,14 @@ export default function Roadmap() {
                         <Grid style={{ height: 200 }} />
                     </Grid>
                 </Grid>
-                <img src="/assets/images/bottomGas.png" className={styles.bottomGas} />
-                <img src="/assets/images/leftBush.png" className={styles.leftBush} />
-                <img src="/assets/images/mainBottom.png" className={styles.mainBottom} />
-                <img src="/assets/images/rightBush.png" className={styles.rightBush} />
+                <img draggable={false} src="/assets/images/bottomGas.png" className={styles.bottomGas} />
+                <img draggable={false} src="/assets/images/leftBush.png" className={styles.leftBush} />
+                <img draggable={false} src="/assets/images/mainBottom.png" className={styles.mainBottom} />
+                <img draggable={false} src="/assets/images/rightBush.png" className={styles.rightBush} />
                 {
                     cloudList.map(({img: cloudImg, ...cloud}: CloudListType) => (
                         <Fade duration={2000} left={cloud.left ? true : false} right={cloud.right ? true : false}>
-                            <img key={cloudImg} src={`/assets/images/${cloudImg}`} className={styles.cloud} style={{...cloud}} />
+                            <img draggable={false} key={cloudImg} src={`/assets/images/${cloudImg}`} className={styles.cloud} style={{...cloud}} />
                         </Fade>
                     ))
                 }

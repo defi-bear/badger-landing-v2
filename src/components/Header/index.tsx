@@ -59,7 +59,7 @@ export default function Header() {
 		<Grid container alignItems="center" justify="space-between" className={styles.main}>
 			<Grid xs={2} item>
 				<Grid container alignItems="center">
-					<img alt="Badger Logo" src="/assets/images/logo.png" className={styles.logo} />
+					<img draggable={false} alt="Badger Logo" src="/assets/images/logo.png" className={styles.logo} />
 					<Typography className={styles.badgerText}>Badger</Typography>
 				</Grid>
 			</Grid>
@@ -74,7 +74,7 @@ export default function Header() {
 					))}
 					<Button className={styles.launchApp} onClick={onLaunchApp}>
 						Launch App
-						<img alt="Arrow Icon" src="/assets/images/arrow.png" className={styles.arrowImg} />
+						<img draggable={false} alt="Arrow Icon" src="/assets/images/arrow.png" className={styles.arrowImg} />
 					</Button>
 				</Grid>
 			</Grid>

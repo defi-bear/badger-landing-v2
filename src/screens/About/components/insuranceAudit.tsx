@@ -90,7 +90,7 @@ export default function InsuranceAudit() {
     return (
         <Grid container className={styles.main}>
             <Grid className={styles.leftPanel} item xs={4}>
-                <img alt="Insurance Person" src="/assets/images/insurancePeople.png" className={styles.insurancePeople} />
+                <img draggable={false} alt="Insurance Person" src="/assets/images/insurancePeople.png" className={styles.insurancePeople} />
                 <Grid className={styles.yellowBorder} />
             </Grid>
             <Grid className={styles.rightPanel} item xs={8}>
@@ -101,11 +101,11 @@ export default function InsuranceAudit() {
                         <Typography className={styles.nexusDescription}>Nexus Mutual is a decentralized insurance protocol built on Ethereum that began in May 2019. Through Nexus, users can purchase covers on their smart contracts using NXM.</Typography>
                         <Button className={styles.learnMore} onClick={onLearnMore}>
                             learn more
-                            <img alt="Arrow Icon" src="/assets/images/arrow1.png" className={styles.arrowImg} />
+                            <img draggable={false} alt="Arrow Icon" src="/assets/images/arrow1.png" className={styles.arrowImg} />
                         </Button>
                     </Grid>
                     <Grid item xs={6} container justify="center">
-                        <img alt="Nexus Mutual Icon" src="/assets/images/bigNexusLogo.png" className={styles.nexusIcon} />
+                        <img draggable={false} alt="Nexus Mutual Icon" src="/assets/images/bigNexusLogo.png" className={styles.nexusIcon} />
                     </Grid>
                 </Grid>
             </Grid>

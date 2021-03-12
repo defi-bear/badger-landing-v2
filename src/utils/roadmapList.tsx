@@ -30,7 +30,7 @@ const roadmapList = [
 		],
 	},
 	{
-		title: 'Q3 2021',
+		title: 'Q3 2020',
 		texts: ['- Ideation for elastic supply rebasing token targeting the price of Bitcoin'],
 	},
 ];

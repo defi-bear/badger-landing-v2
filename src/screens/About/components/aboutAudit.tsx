@@ -97,7 +97,7 @@ export default function AboutAudit() {
                 <Typography className={styles.auditText}>Audits</Typography>
                 <Grid className={styles.auditWrapper} container alignItems="flex-end">
                     <Grid item>
-                        <img alt="Audit Logo" src="/assets/images/bigAudit.png" className={styles.auditImg} />
+                        <img draggable={false} alt="Audit Logo" src="/assets/images/bigAudit.png" className={styles.auditImg} />
                     </Grid>
                     <Grid item xs={7}>
                         <Grid container alignItems="center">
@@ -107,13 +107,13 @@ export default function AboutAudit() {
                         <Typography className={styles.auditDescription}>Zokyo audits smart contracts, protocols, crowd sale token contracts, and custom smart contracts across every major protocol and programming language.</Typography>
                         <Button className={styles.readAudit} onClick={onZokyoAudit}>
                             read the audit
-                            <img alt="Arrow Icon" src="/assets/images/arrow1.png" className={styles.arrowImg} />
+                            <img draggable={false} alt="Arrow Icon" src="/assets/images/arrow1.png" className={styles.arrowImg} />
                         </Button>
                     </Grid>
                 </Grid>
                 <Grid className={styles.auditWrapper} container alignItems="flex-end">
                     <Grid item>
-                        <img alt="Audit Logo" src="/assets/images/bigAudit.png" className={styles.auditImg} />
+                        <img draggable={false} alt="Audit Logo" src="/assets/images/bigAudit.png" className={styles.auditImg} />
                     </Grid>
                     <Grid item xs={7}>
                         <Grid container alignItems="center">
@@ -123,13 +123,13 @@ export default function AboutAudit() {
                         <Typography className={styles.auditDescription}>Haechi is a leading smart contract security audit and development firm. They are incubated by the Samsung Electronics and awarded Ethereum Foundation Grant.</Typography>
                         <Button className={styles.readAudit} onClick={onHaechiAudit}>
                             read the audit
-                            <img alt="Arrow Icon" src="/assets/images/arrow1.png" className={styles.arrowImg} />
+                            <img draggable={false} alt="Arrow Icon" src="/assets/images/arrow1.png" className={styles.arrowImg} />
                         </Button>
                     </Grid>
                 </Grid>
             </Grid>
             <Grid className={styles.rightPanel} item xs={4}>
-                <img alt="Security Person" src="/assets/images/securityPeople.png" className={styles.securityPerson} />
+                <img draggable={false} alt="Security Person" src="/assets/images/securityPeople.png" className={styles.securityPerson} />
                 <Grid className={styles.yellowBorder} />
             </Grid>
         </Grid>
