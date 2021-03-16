@@ -1,5 +1,7 @@
 import React from 'react';
 import { Grid, makeStyles, Typography, Button } from '@material-ui/core';
+// @ts-ignore
+import Fade from 'react-reveal/Fade';
 
 import InfoText from './InfoText';
 import MainBadgerImage from './MainBadgerImage';
@@ -69,12 +71,18 @@ export default function TopPart() {
             <Grid container className={styles.subMain}>
                 <Grid item xs={6}>
                     <Grid container>
-                        <Typography className={styles.buildText}>Building Defi for Bitcoin</Typography>
-                        <Typography className={styles.description}><span className={styles.boldDescription}>BadgerDAO</span> is a decentralized collective of developers, strategists, and content creators who seek to build and support new Bitcoin-focused products for the DeFi ecosystem</Typography>
-                        <Button className={styles.viewAudit} onClick={onAudit}>
-                            View our Audits
-                            <img draggable={false} alt="Arrow Icon" src="/assets/images/arrow1.png" className={styles.arrowImg} />
-                        </Button>
+						<Fade bottom>
+                        	<Typography className={styles.buildText}>Building Defi for Bitcoin</Typography>
+						</Fade>
+						<Fade bottom delay={500}>
+                        	<Typography className={styles.description}><span className={styles.boldDescription}>BadgerDAO</span> is a decentralized collective of developers, strategists, and content creators who seek to build and support new Bitcoin-focused products for the DeFi ecosystem</Typography>
+						</Fade>
+						<Fade bottom delay={1000}>
+							<Button className={styles.viewAudit} onClick={onAudit}>
+								View our Audits
+								<img draggable={false} alt="Arrow Icon" src="/assets/images/arrow1.png" className={styles.arrowImg} />
+							</Button>
+						</Fade>
                     </Grid>
                 </Grid>
                 <Grid item xs={6}>
@@ -83,20 +91,20 @@ export default function TopPart() {
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid container direction="row" className={styles.infoContainer}>
-                <Grid item xs={2}>
-                    <InfoText topText='$57.54' bottomText='Badger price' />
-                </Grid>
-                <Grid item xs={2}>
-                    <InfoText topText='7,000+' bottomText='Badger HODLers' />
-                </Grid>
-                <Grid item xs={2}>
-                    <InfoText topText='$42,000' bottomText='DIGG price' />
-                </Grid>
-                <Grid item xs={2}>
-                    <InfoText topText='1000+' bottomText='DIGG HODLers' />
-                </Grid>
-            </Grid>
+			<Grid container direction="row" className={styles.infoContainer}>
+				<Grid item xs={2}>
+					<InfoText topText='$57.54' bottomText='Badger price' />
+				</Grid>
+				<Grid item xs={2}>
+					<InfoText topText='7,000+' bottomText='Badger HODLers' />
+				</Grid>
+				<Grid item xs={2}>
+					<InfoText topText='$42,000' bottomText='DIGG price' />
+				</Grid>
+				<Grid item xs={2}>
+					<InfoText topText='1000+' bottomText='DIGG HODLers' />
+				</Grid>
+			</Grid>
         </Grid>
     )
 }

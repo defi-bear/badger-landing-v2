@@ -1,6 +1,8 @@
 import React from 'react';
-
 import { Grid, makeStyles, Typography, Button } from '@material-ui/core';
+// @ts-ignore
+import Fade from 'react-reveal/Fade';
+
 import { list, positionList } from '../../../utils/productList';
 
 const useStyles = makeStyles((theme) => ({
@@ -142,7 +144,9 @@ export default function Products() {
                     <Grid container className={styles.items} justify="space-between">
                         {
                             list.map(item => (
-                                <Item key={item.title} {...item} />
+                                <Fade key={item.title} bottom>
+                                    <Item {...item} />
+                                </Fade>
                             ))
                         }
                     </Grid>

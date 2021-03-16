@@ -1,5 +1,9 @@
 import React from 'react';
 import { Grid, makeStyles, Typography, Button } from '@material-ui/core';
+// @ts-ignore
+import Fade from 'react-reveal/Fade';
+// @ts-ignore
+import Bounce from 'react-reveal/Bounce';
 
 const useStyles = makeStyles((theme) => ({
     main: {
@@ -64,11 +68,28 @@ const useStyles = makeStyles((theme) => ({
         position: 'relative',
     },
     securityPerson: {
-        width: 535,
-        height: 479,
+        width: 328,
+        height: 352,
         position: 'absolute',
-        top: 110,
+        top: 240,
         left: -114,
+    },
+    bubbleWrapper: {
+        position: 'absolute',
+        left: 150,
+        top: 120,
+        width: 267,
+    },
+    securityBubble: {
+        width: '100%'
+    },
+    securityText: {
+        fontFamily: 'P2P',
+        fontSize: 25,
+        lineHeight: '35px',
+        position: 'absolute',
+        top: 85,
+        left: 35,
     },
     yellowBorder: {
         width: 'calc( 100% + 114px )',
@@ -130,6 +151,14 @@ export default function AboutAudit() {
             </Grid>
             <Grid className={styles.rightPanel} item xs={4}>
                 <img draggable={false} alt="Security Person" src="/assets/images/securityPeople.png" className={styles.securityPerson} />
+                <Fade duration={2000} top>
+                    <Grid className={styles.bubbleWrapper}>
+                        <img draggable={false} alt="Security Bubble" src="/assets/images/securityBubble.png" className={styles.securityBubble} />
+                        <Bounce right cascade duration={2000}>
+                            <Typography className={styles.securityText}>Security matters</Typography>
+                        </Bounce>
+                    </Grid>
+                </Fade>
                 <Grid className={styles.yellowBorder} />
             </Grid>
         </Grid>

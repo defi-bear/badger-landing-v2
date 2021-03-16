@@ -62,15 +62,19 @@ const useStyles = makeStyles((theme) => ({
         width: 20,
         marginRight: 16,
         display: 'none'
+    },
+    tickItemImage: {
+        width: 40
     }
 }))
 
 type TickItemProps = {
     children: string,
-    href: string
+    href: string,
+    type: string,
 }
 
-const TickItem = ({ children, href }: TickItemProps) => {
+const TickItem = ({ children, href, type }: TickItemProps) => {
     const styles = useStyles();
 
     return (
@@ -78,7 +82,7 @@ const TickItem = ({ children, href }: TickItemProps) => {
             <Grid className={styles.arrowContainer}>
                 <img draggable={false} src="/assets/images/arrow2.png" className={styles.arrow} />
             </Grid>
-            <div className={styles.circle} />
+            <img draggable={false} src={`/assets/images/${type}.png`} className={styles.tickItemImage} />
             <Link href={href} className={styles.tickText}>
                 {children}
             </Link>
@@ -98,12 +102,12 @@ export default function Governance() {
                 </Typography>
                 <Grid container alignItems="flex-start" direction="column" className={styles.tickItems}>
                     <Grid item>
-                        <TickItem href="https://discord.com/invite/xSPFHHS">
+                        <TickItem type="discord" href="https://discord.com/invite/xSPFHHS">
                             Go to Discord
                         </TickItem>
                     </Grid>
                     <Grid item>
-                        <TickItem href="https://forum.badger.finance">
+                        <TickItem type="community" href="https://forum.badger.finance">
                             Go to Community forum
                         </TickItem>
                     </Grid>

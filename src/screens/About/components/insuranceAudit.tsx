@@ -1,5 +1,9 @@
 import React from 'react';
 import { Grid, makeStyles, Typography, Button } from '@material-ui/core';
+// @ts-ignore
+import Fade from 'react-reveal/Fade';
+// @ts-ignore
+import Bounce from 'react-reveal/Bounce';
 
 const useStyles = makeStyles((theme) => ({
     main: {
@@ -63,13 +67,6 @@ const useStyles = makeStyles((theme) => ({
 		width: 14,
 		marginLeft: 10,
     },
-    insurancePeople: {
-        position: 'absolute',
-        width: 424,
-        top: -6,
-        right: -10,
-        zIndex: 5
-    },
     yellowBorder: {
         width: 'calc( 100% + 114px )',
         height: 42,
@@ -77,6 +74,30 @@ const useStyles = makeStyles((theme) => ({
         position: 'absolute',
         left: 0,
         top: 434
+    },
+    bubbleWrapper: {
+        position: 'absolute',
+        left: 220,
+        top: 0
+    },
+    insurancePeople: {
+        position: 'absolute',
+        top: 145,
+        right: -10,
+        zIndex: 5,
+        width: 270,
+        height: 290
+    },
+    insuranceBubble: {
+        width: 233,
+    },
+    bubbleText: {
+        fontFamily: 'P2P',
+        fontSize: 25,
+        lineHeight: '34px',
+        position: 'absolute',
+        top: 60,
+        left: 40
     }
 }))
 
@@ -91,6 +112,14 @@ export default function InsuranceAudit() {
         <Grid container className={styles.main}>
             <Grid className={styles.leftPanel} item xs={4}>
                 <img draggable={false} alt="Insurance Person" src="/assets/images/insurancePeople.png" className={styles.insurancePeople} />
+                <Fade duration={2000} top>
+                    <Grid className={styles.bubbleWrapper}>
+                        <img draggable={false} alt="Insurance Bubble" src="/assets/images/insuranceBubble.png" className={styles.insuranceBubble} />
+                        <Bounce left cascade duration={1500}>
+                            <Typography className={styles.bubbleText}>Insure your Funds</Typography>
+                        </Bounce>
+                    </Grid>
+                </Fade>
                 <Grid className={styles.yellowBorder} />
             </Grid>
             <Grid className={styles.rightPanel} item xs={8}>

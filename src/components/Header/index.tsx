@@ -41,6 +41,9 @@ const useStyles = makeStyles((theme) => ({
 			color: 'white',
 			textTransform: 'none'
 		},
+		'&:hover': {
+			background: 'linear-gradient(180deg, #FFC93F 0%, rgba(255, 255, 255, 0) 79.76%), #FF9C54'
+		}
 	},
 	arrowImg: {
 		width: 14,
