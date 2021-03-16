@@ -81,15 +81,15 @@ export default function Buidl() {
         <Grid container className={styles.main} alignItems="center" justify="center">
             <Grid className={styles.mainWrapper} container>
                 <Grid container direction="row" justify="center" alignItems="flex-end" className={styles.top}>
-                    <img draggable={false} alt="Hammer Icon" src="assets/images/hammer.png" className={styles.hammerIcon} />
+                    <img draggable={false} alt="Hammer Icon" src="/assets/images/hammer.png" className={styles.hammerIcon} />
                     <Typography className={styles.buildText}>Build with the Badgers</Typography>
-                    <img draggable={false} alt="Screw Icon" src="assets/images/screw.png" className={styles.hammerIcon} />
+                    <img draggable={false} alt="Screw Icon" src="/assets/images/screw.png" className={styles.hammerIcon} />
                 </Grid>
                 <Typography className={styles.description}>Come join the party! The Badgers are growing in numbers, and there’s plenty of room left for anyone who wants to come and start building products and liquidity strategies with the community. </Typography>
                 <Typography className={styles.waysText}>Ways you can contribute:</Typography>
                 <Grid container className={styles.item} alignItems="flex-start" direction="row">
                     <Grid item>
-                        <img draggable={false} alt="Star Logo" src="assets/images/star.png" className={styles.star} />
+                        <img draggable={false} alt="Star Logo" src="/assets/images/star.png" className={styles.star} />
                     </Grid>
                     <Grid item className={styles.itemRight}>
                         <Grid container>
@@ -101,7 +101,7 @@ export default function Buidl() {
                 </Grid>
                 <Grid container className={styles.item} alignItems="flex-start" direction="row">
                     <Grid item>
-                        <img draggable={false} alt="Star Logo" src="assets/images/star.png" className={styles.star} />
+                        <img draggable={false} alt="Star Logo" src="/assets/images/star.png" className={styles.star} />
                     </Grid>
                     <Grid item className={styles.itemRight}>
                         <Grid container>
@@ -113,7 +113,7 @@ export default function Buidl() {
                 </Grid>
                 <Grid container className={styles.item} alignItems="flex-start" direction="row">
                     <Grid item>
-                        <img draggable={false} alt="Star Logo" src="assets/images/star.png" className={styles.star} />
+                        <img draggable={false} alt="Star Logo" src="/assets/images/star.png" className={styles.star} />
                     </Grid>
                     <Grid item className={styles.itemRight}>
                         <Grid container>
@@ -126,7 +126,7 @@ export default function Buidl() {
                     </Grid>
                 </Grid>
                 <Grid container justify="center">
-                    <img draggable={false} alt="Badger Builder" src="assets/images/badgerBuilder.png" className={styles.badgerBuilder} />
+                    <img draggable={false} alt="Badger Builder" src="/assets/images/badgerBuilder.png" className={styles.badgerBuilder} />
                 </Grid>
             </Grid>
         </Grid>
