@@ -111,57 +111,53 @@ export default function Info() {
                         </Fade>
                     </Grid>
                 </Grid>
-                <Fade right delay={500}>
-                    <Grid container className={styles.kongContainer}>
-                        <Grid item xs={4}>
-                            <Fade left delay={1000}>
-                                <Grid container justify="flex-start">
-                                    <img draggable={false} alt="Kong Icon" src="/assets/images/kongImg.png" className={styles.kongIcon} />
-                                </Grid>
-                            </Fade>
-                        </Grid>
-                        <Grid item xs={8}>
-                            <Fade bottom delay={1500}>
-                                <>
-                                    <Typography className={styles.title} align="right">The Potential of DeFi</Typography>
-                                    <SubText>
-                                        The fastest-growing sub-industry in blockchain, with over $25B Total Value Locked in DeFi applications.
-                                    </SubText>
-                                    <SubText>
-                                        For the first time, retail traders are able to utilize advanced financial instruments permissionlessly and without KYC.
-                                    </SubText>
-                                    <SubText>
-                                        It’s a way to build alternatives to closed and centralized systems of Wall Street and the world’s most powerful banks.
-                                    </SubText>
-                                </>
-                            </Fade>
-                        </Grid>
+                <Grid container className={styles.kongContainer}>
+                    <Grid item xs={4}>
+                        <Fade left>
+                            <Grid container justify="flex-start">
+                                <img draggable={false} alt="Kong Icon" src="/assets/images/kongImg.png" className={styles.kongIcon} />
+                            </Grid>
+                        </Fade>
                     </Grid>
-                </Fade>
-                <Fade left delay={500}>
-                    <Grid container className={styles.ecosystemContainer}>
-                        <Grid item xs={8}>
-                            <Fade bottom delay={2500}>
-                                <>
-                                    <Typography className={styles.title}>Ecosystem-Forward</Typography>
-                                    <SubText>
-                                        The Badger DAO believes in the initiatives of other Web3 projects and aims to support them with exposure and funds.
-                                    </SubText>
-                                    <SubText>
-                                        Gitcoin is a grants program for Web3 projects that are building cool stuff for the blockchain ecosystem. 2% of the DAO’s treasury is devoted to philanthropic efforts to these small communities.
-                                    </SubText>
-                                </>
-                            </Fade>
-                        </Grid>
-                        <Grid item xs={4} className={styles.treasuryContainer}>
-                            <Fade right delay={2000}>
-                                <Grid container justify="flex-end">
-                                    <img draggable={false} alt="Treasury Icon" src="/assets/images/treasury.png" className={styles.treasuryIcon} />
-                                </Grid>
-                            </Fade>
-                        </Grid>
+                    <Grid item xs={8}>
+                        <Fade bottom delay={500}>
+                            <>
+                                <Typography className={styles.title} align="right">The Potential of DeFi</Typography>
+                                <SubText>
+                                    The fastest-growing sub-industry in blockchain, with over $25B Total Value Locked in DeFi applications.
+                                </SubText>
+                                <SubText>
+                                    For the first time, retail traders are able to utilize advanced financial instruments permissionlessly and without KYC.
+                                </SubText>
+                                <SubText>
+                                    It’s a way to build alternatives to closed and centralized systems of Wall Street and the world’s most powerful banks.
+                                </SubText>
+                            </>
+                        </Fade>
                     </Grid>
-                </Fade>
+                </Grid>
+                <Grid container className={styles.ecosystemContainer}>
+                    <Grid item xs={8}>
+                        <Fade bottom delay={500}>
+                            <>
+                                <Typography className={styles.title}>Ecosystem-Forward</Typography>
+                                <SubText>
+                                    The Badger DAO believes in the initiatives of other Web3 projects and aims to support them with exposure and funds.
+                                </SubText>
+                                <SubText>
+                                    Gitcoin is a grants program for Web3 projects that are building cool stuff for the blockchain ecosystem. 2% of the DAO’s treasury is devoted to philanthropic efforts to these small communities.
+                                </SubText>
+                            </>
+                        </Fade>
+                    </Grid>
+                    <Grid item xs={4} className={styles.treasuryContainer}>
+                        <Fade right>
+                            <Grid container justify="flex-end">
+                                <img draggable={false} alt="Treasury Icon" src="/assets/images/treasury.png" className={styles.treasuryIcon} />
+                            </Grid>
+                        </Fade>
+                    </Grid>
+                </Grid>
             </Grid>
         </Grid>
     )
