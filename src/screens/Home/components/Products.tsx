@@ -90,6 +90,9 @@ const useStyles = makeStyles((theme) => ({
         width: 30,
         height: 30,
         position: 'absolute',
+    },
+    fullWidth: {
+        width: '100%'
     }
 }))
 
@@ -138,25 +141,31 @@ export default function Products() {
 
     return (
         <Grid container className={styles.main} justify="center" id="products">
-            <Grid container className={styles.subMain} justify="center">
-                <Typography className={styles.products}>Products</Typography>
-                <Grid item>
-                    <Grid container className={styles.items} justify="space-between">
-                        {
-                            list.map(item => (
-                                <Fade key={item.title} bottom>
-                                    <Item {...item} />
-                                </Fade>
-                            ))
-                        }
+            <Fade bottom>
+                <Grid container className={styles.subMain} justify="center">
+                    <Grid className={styles.fullWidth}>
+                        <Fade bottom delay={1000}>
+                            <Typography className={styles.products}>Products</Typography>
+                        </Fade>
                     </Grid>
+                    <Grid item>
+                        <Grid container className={styles.items} justify="space-between">
+                            {
+                                list.map(item => (
+                                    <Fade key={item.title} bottom delay={1000}>
+                                        <Item {...item} />
+                                    </Fade>
+                                ))
+                            }
+                        </Grid>
+                    </Grid>
+                    {
+                        positionList.map(position => (
+                            <img draggable={false} key={position.index} alt="Rectangle" src="/assets/images/rect.png" className={styles.rect} style={{...position}} />
+                        ))
+                    }
                 </Grid>
-                {
-                    positionList.map(position => (
-                        <img draggable={false} key={position.index} alt="Rectangle" src="/assets/images/rect.png" className={styles.rect} style={{...position}} />
-                    ))
-                }
-            </Grid>
+            </Fade>
         </Grid>
     )
 }

@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
     },
     bottomGas: {
         width: 342,
-        marginBottom: 150,
+        marginBottom: 250,
     },
     leftBush: {
         width: 234,
@@ -74,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
     mainBottom: {
         width: 846,
         position: 'absolute',
-        left: 'calc(50% - 423px)',
+        left: 'calc(50% - 465px)',
         bottom: -1,
         zIndex: 1,
     },
