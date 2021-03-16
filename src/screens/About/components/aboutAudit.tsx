@@ -115,7 +115,9 @@ export default function AboutAudit() {
     return (
         <Grid container className={styles.main}>
             <Grid className={styles.leftPanel} item xs={8}>
-                <Typography className={styles.auditText}>Audits</Typography>
+                <Fade right>
+                    <Typography className={styles.auditText}>Audits</Typography>
+                </Fade>
                 <Grid className={styles.auditWrapper} container alignItems="flex-end">
                     <Grid item>
                         <img draggable={false} alt="Audit Logo" src="/assets/images/bigAudit.png" className={styles.auditImg} />
@@ -151,14 +153,12 @@ export default function AboutAudit() {
             </Grid>
             <Grid className={styles.rightPanel} item xs={4}>
                 <img draggable={false} alt="Security Person" src="/assets/images/securityPeople.png" className={styles.securityPerson} />
-                <Fade duration={2000} top>
+                <Bounce right cascade duration={2000}>
                     <Grid className={styles.bubbleWrapper}>
                         <img draggable={false} alt="Security Bubble" src="/assets/images/securityBubble.png" className={styles.securityBubble} />
-                        <Bounce right cascade duration={2000}>
-                            <Typography className={styles.securityText}>Security matters</Typography>
-                        </Bounce>
+                        <Typography className={styles.securityText}>Security matters</Typography>
                     </Grid>
-                </Fade>
+                </Bounce>
                 <Grid className={styles.yellowBorder} />
             </Grid>
         </Grid>

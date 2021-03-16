@@ -112,18 +112,18 @@ export default function InsuranceAudit() {
         <Grid container className={styles.main}>
             <Grid className={styles.leftPanel} item xs={4}>
                 <img draggable={false} alt="Insurance Person" src="/assets/images/insurancePeople.png" className={styles.insurancePeople} />
-                <Fade duration={2000} top>
+                <Bounce left cascade duration={1500}>
                     <Grid className={styles.bubbleWrapper}>
                         <img draggable={false} alt="Insurance Bubble" src="/assets/images/insuranceBubble.png" className={styles.insuranceBubble} />
-                        <Bounce left cascade duration={1500}>
-                            <Typography className={styles.bubbleText}>Insure your Funds</Typography>
-                        </Bounce>
+                        <Typography className={styles.bubbleText}>Insure your Funds</Typography>
                     </Grid>
-                </Fade>
+                </Bounce>
                 <Grid className={styles.yellowBorder} />
             </Grid>
             <Grid className={styles.rightPanel} item xs={8}>
-                <Typography className={styles.insuranceText}>Insurance</Typography>
+                <Fade left>
+                    <Typography className={styles.insuranceText}>Insurance</Typography>
+                </Fade>
                 <Grid container className={styles.nexusWrapper}>
                     <Grid item xs={6} container justify="flex-end">
                         <Typography className={styles.nexusText}>Nexus Mutual</Typography>
