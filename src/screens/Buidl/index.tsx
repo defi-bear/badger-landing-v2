@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Typography, makeStyles } from '@material-ui/core';
+import { Grid, Typography, makeStyles, Link } from '@material-ui/core';
 
 const useStyles = makeStyles(() => ({
     main: {
@@ -94,7 +94,9 @@ export default function Buidl() {
                     <Grid item className={styles.itemRight}>
                         <Grid container>
                             <Typography className={styles.itemTitle}>Governance:</Typography>
-                            <Typography className={styles.itemLink}>Read through our governance forum</Typography>
+                            <Link href="https://forum.badger.finance/">
+                                <Typography className={styles.itemLink}>Read through our governance forum</Typography>
+                            </Link>
                             <Typography className={styles.itemText}>vote on current proposals or compose your own!</Typography>
                         </Grid>
                     </Grid>
@@ -107,7 +109,9 @@ export default function Buidl() {
                         <Grid container>
                             <Typography className={styles.itemTitle}>Development:</Typography>
                             <Typography className={styles.itemText}>Build new products, liquidity strategies and integrations with other Defi DAOs.</Typography>
-                            <Typography className={styles.itemLink} style={{marginLeft: 0}}>Fill out our Badger Interest Form</Typography>
+                            <Link href="https://forms.gle/bJMAC5M3T2NfSvy3A">
+                                <Typography className={styles.itemLink} style={{marginLeft: 0}}>Fill out our Badger Interest Form</Typography>
+                            </Link>
                         </Grid>
                     </Grid>
                 </Grid>
@@ -119,7 +123,9 @@ export default function Buidl() {
                         <Grid container>
                             <Typography>
                                 <span className={styles.itemTitle}>Join the Discussion:</span>
-                                <span className={styles.itemLink}>Hop in to our Discord</span>
+                                <Link href="https://discord.gg/PaPaeDq">
+                                    <span className={styles.itemLink}>Hop in to our Discord</span>
+                                </Link>
                                 <span className={styles.itemText}>to get involved in the conversations and find out about our awesome community events!</span>
                             </Typography>
                         </Grid>
