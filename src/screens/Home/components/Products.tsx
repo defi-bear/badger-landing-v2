@@ -70,7 +70,10 @@ const useStyles = makeStyles((theme) => ({
     },
     items: {
         padding: '0px 60px',
-        flexWrap: 'wrap'
+        flexWrap: 'wrap',
+        '&>div:last-child': {
+            margin: 'auto'
+        }
     },
     learnMore: {
         borderRadius: 10,

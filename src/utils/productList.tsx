@@ -141,6 +141,22 @@ const list = [
 		],
 	},
 	{
+		img: 'assets/images/badgerSett.png',
+		title: 'Badger Setts on BSC',
+		textList: [
+			[
+				{
+					text: 'A Series of vault strategies implemented',
+					letterspacing: '-0.04em'
+				},
+				{
+					text: 'on the Binance Smart Chain.',
+					letterspacing: '0.01em'
+				}
+			]
+		]
+	},
+	{
 		img: 'assets/images/comingSoon.png',
 		title: 'bBTC (Coming Soon)',
 		textList: [
