@@ -28,6 +28,7 @@ const useStyles = makeStyles(() => ({
         width: 15,
         height: 15,
         marginTop: 4,
+        marginRight: 6
     },
     subText: {
         fontFamily: 'POperator',
@@ -38,6 +39,7 @@ const useStyles = makeStyles(() => ({
         letterSpacing: '-0.001em',
         opacity: 0.7,
         marginLeft: 4,
+        textAlign: 'justify',
     },
     bitcoin: {
         width: 311,
@@ -66,14 +68,16 @@ const useStyles = makeStyles(() => ({
 
 type SubTextProps = {
     children: string
+    width?: number,
+    letterspacing?: string,
 }
 
-const SubText = ({children}: SubTextProps) => {
+const SubText = ({ children, width, letterspacing }: SubTextProps) => {
     const styles = useStyles();
     return (
-        <Grid className={styles.textWrapper}>
-            <img draggable={false} alt="Indent Icon" src="/assets/images/marioCoin.png" className={styles.indentIcon} />
-            <Typography className={styles.subText}>
+        <Grid className={styles.textWrapper} style={{ width: width || 'initial' }}>
+            <Typography className={styles.subText} style={{ letterSpacing: letterspacing || 'initial' }}>
+                <img draggable={false} alt="Indent Icon" src="/assets/images/marioCoin.png" className={styles.indentIcon} />
                 {children}
             </Typography>
         </Grid>
@@ -91,7 +95,7 @@ export default function Info() {
                         <Fade bottom delay={500}>
                             <>
                                 <Typography className={styles.title}>The Power of Bitcoin</Typography>
-                                <SubText>
+                                <SubText width={580}>
                                     The #1 digital store of value on the planet, with the most distributed and permissionless network.
                                 </SubText>
                                 <SubText>
@@ -123,13 +127,13 @@ export default function Info() {
                         <Fade bottom delay={500}>
                             <>
                                 <Typography className={styles.title} align="right">The Potential of DeFi</Typography>
-                                <SubText>
+                                <SubText letterspacing='-0.032em'>
                                     The fastest-growing sub-industry in blockchain, with over $25B Total Value Locked in DeFi applications.
                                 </SubText>
                                 <SubText>
                                     For the first time, retail traders are able to utilize advanced financial instruments permissionlessly and without KYC.
                                 </SubText>
-                                <SubText>
+                                <SubText letterspacing='0.005em'>
                                     It’s a way to build alternatives to closed and centralized systems of Wall Street and the world’s most powerful banks.
                                 </SubText>
                             </>
@@ -144,7 +148,7 @@ export default function Info() {
                                 <SubText>
                                     The Badger DAO believes in the initiatives of other Web3 projects and aims to support them with exposure and funds.
                                 </SubText>
-                                <SubText>
+                                <SubText letterspacing='0.003em'>
                                     Gitcoin is a grants program for Web3 projects that are building cool stuff for the blockchain ecosystem. 2% of the DAO’s treasury is devoted to philanthropic efforts to these small communities.
                                 </SubText>
                             </>
