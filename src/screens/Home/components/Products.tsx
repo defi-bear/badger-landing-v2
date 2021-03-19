@@ -162,15 +162,15 @@ export default function Products() {
             <Fade bottom>
                 <Grid container className={styles.subMain} justify="center">
                     <Grid className={styles.fullWidth}>
-                        <Fade bottom delay={1000}>
+                        <Fade bottom delay={1500}>
                             <Typography className={styles.products}>Products</Typography>
                         </Fade>
                     </Grid>
                     <Grid item>
                         <Grid container className={styles.items} justify="space-between">
                             {
-                                list.map(item => (
-                                    <Fade key={item.title} bottom delay={1000}>
+                                list.map((item, index) => (
+                                    <Fade key={item.title} bottom delay={index === 0 || index === 1 ? 1500 : 500}>
                                         <Item {...item} />
                                     </Fade>
                                 ))
