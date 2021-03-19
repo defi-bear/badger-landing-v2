@@ -70,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
     yellowBorder: {
         width: 'calc( 100% + 114px )',
         height: 42,
-        backgroundColor: '#FFDD29',
+        backgroundColor: theme.palette.primary.main,
         position: 'absolute',
         left: 0,
         top: 434
