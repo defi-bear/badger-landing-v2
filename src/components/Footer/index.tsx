@@ -58,7 +58,8 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 'bold',
         lineHeight: '23px',
         textAlign: 'center',
-        color: '#FFF'
+		color: '#FFF',
+		marginLeft: 35
     },
     coinStarImg: {
         width: 42,

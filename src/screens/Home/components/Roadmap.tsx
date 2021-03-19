@@ -74,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
     mainBottom: {
         width: 846,
         position: 'absolute',
-        left: 'calc(50% - 465px)',
+        left: 'calc(50% - 450px)',
         bottom: -1,
         zIndex: 1,
     },
