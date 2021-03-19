@@ -27,6 +27,11 @@ const useStyles = makeStyles((theme) => ({
 	item: {
 		marginBottom: 10,
 	},
+	newsIcon: {
+		width: 26,
+		marginRight: 11,
+		marginLeft: -3,
+	},
 	itemIcon: {
 		width: 26,
 		marginRight: 8,
@@ -127,7 +132,7 @@ export default function Footer() {
 												 	draggable={false}
 													alt={item.title}
 													src={`/assets/images/${item.icon}`}
-													className={styles.itemIcon}
+													className={item.title === 'Read our Newsletter' ? styles.newsIcon : styles.itemIcon}
 												/>
 												<Typography className={styles.itemText}>{item.title}</Typography>
 											</Grid>

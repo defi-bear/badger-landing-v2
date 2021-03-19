@@ -8,7 +8,7 @@ export const FooterItemList = [
 				link: 'https://badgerdao.medium.com',
 			},
 			{
-				title: 'Read our Newslatter',
+				title: 'Read our Newsletter',
 				icon: 'newsletter.png',
 				link: 'https://badger.substack.com',
 			},
