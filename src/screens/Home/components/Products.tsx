@@ -29,7 +29,8 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: 3,
     },
     item: {
-        marginTop: 79,
+        paddingTop: 79,
+        height: '100%',
         width: 420,
         position: 'relative',
     },
@@ -58,9 +59,12 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'POperator',
         fontSize: 25,
         lineHeight: '23px',
-        letterSpacing: '-0.038em',
+        letterSpacing: '-0.05em',
+        textAlign: 'justify',
         color: '#FFFFFF',
         opacity: 0.9,
+    },
+    itemTextWrapper: {
         marginBottom: 15,
     },
     items: {
@@ -96,16 +100,20 @@ const useStyles = makeStyles((theme) => ({
     }
 }))
 
+type TextItem = {
+    text: string,
+    letterspacing: string,
+}
+
 type ItemProps = {
     img: string,
     title: string,
-    textList: Array<string>,
+    textList: Array<Array<TextItem>>,
     learnMore?: string
 }
 
 const Item = ({ img, title, textList, learnMore }: ItemProps) => {
     const styles = useStyles();
-
     return (
         <Grid container direction="column" className={styles.item} justify="center" alignItems="center">
             <Grid item>
@@ -116,11 +124,21 @@ const Item = ({ img, title, textList, learnMore }: ItemProps) => {
             </Grid>
             <Grid item className={styles.itemBody}>
                 {
-                    textList.map(text => (
-                        <Typography key={text} className={styles.itemText}>
-                            <img draggable={false} src="/assets/images/star.png" className={styles.star} />
-                            {text}
-                        </Typography>
+                    textList.map(texts => (
+                        <Grid className={styles.itemTextWrapper}>
+                            {
+                                texts.map((text, index) => (
+                                    <Typography key={text.text} className={styles.itemText} style={{letterSpacing: text.letterspacing}}>
+                                        {
+                                            index === 0 && (
+                                                <img draggable={false} src="/assets/images/star.png" className={styles.star} />
+                                            )
+                                        }
+                                        {text.text}
+                                    </Typography>
+                                ))
+                            }
+                        </Grid>
                     ))
                 }
             </Grid>

@@ -3,18 +3,100 @@ const list = [
 		img: 'assets/images/vault.png',
 		title: 'Sett Vaults',
 		textList: [
-			'The Sett Vaults are a product for earning rewards on your staked assets, with a primary focus on Bitcoin-on-Ethereum strategies',
-			'You can earn rewards for staking $Badger and $DIGG token',
-			'The Badger Setts are the main hub for Bitcoiners transitioning their funds across chains to stack sats with the power of DeFi',
+			[
+				{
+					text: 'The Sett Vaults are a product for earning',
+					letterspacing: '-0.044em'
+				},
+				{
+					text: 'rewards on your staked assets, with a',
+					letterspacing: '0.008em'
+				},
+				{
+					text: 'primary focus on Bitcoin-on-Ethereum',
+					letterspacing: '0.012em'
+				},
+				{
+					text: 'strategies',
+					letterspacing: '0em'
+				},
+			],
+			[
+				{
+					text: 'You can earn rewards for staking $Badger',
+					letterspacing: '-0.05em'
+				},
+				{
+					text: 'and $DIGG token',
+					letterspacing: '0em'
+				},
+			],
+			[
+				{
+					text: 'The Badger Setts are the main hub for',
+					letterspacing: '-0.01em'
+				},
+				{
+					text: 'Bitcoiners transitioning their funds',
+					letterspacing: '0.029em'
+				},
+				{
+					text: 'across chains to stack sats with the',
+					letterspacing: '0.028em'
+				},
+				{
+					text: 'power of DeFi',
+					letterspacing: '0em'
+				},
+			]
 		],
 	},
 	{
 		img: 'assets/images/digg.png',
 		title: '$DIGG',
 		textList: [
-			'DIGG is an elastic supply token targeting the price of Bitcoin, with 24 hour rebasing periods',
-			'It is the first algorithmic token to peg to an asset that is not USD',
-			'When staking DIGG in the DIGG vault, you receive bDIGG, which represents your % in the rebasing liquidity pool, allowing for composability with other DeFi applications',
+			[
+				{
+					text: 'DIGG is an elastic supply token',
+					letterspacing: '0.077em'
+				},
+				{
+					text: 'targeting the price of Bitcoin, with',
+					letterspacing: '0.038em'
+				},
+				{
+					text: '24 hour rebasing periods',
+					letterspacing: '0em'
+				},
+			],
+			[
+				{
+					text: 'It is the first algorithmic token to peg',
+					letterspacing: '-0.025em'
+				},
+				{
+					text: 'to an asset that is not USD',
+					letterspacing: '0em'
+				},
+			],
+			[
+				{
+					text: 'When staking DIGG in the DIGG vault, you',
+					letterspacing: '-0.03em'
+				},
+				{
+					text: 'receive bDIGG, which represents your %',
+					letterspacing: '-0.005em'
+				},
+				{
+					text: 'in the rebasing liquidity pool, allowing',
+					letterspacing: '0em'
+				},
+				{
+					text: 'for composability with other DeFi applications',
+					letterspacing: '-0.064em'
+				},
+			]	 
 		],
 		learnMore: 'https://digg.page',
 	},
@@ -22,25 +104,85 @@ const list = [
 		img: 'assets/images/badgerHead.png',
 		title: '$BADGER',
 		textList: [
-			'BADGER is the token of governing power over the BadgerDAO treasury',
-			'It is issued as a reward for staking in the Badger Setts',
-			'bBadger from the BADGER Sett is often utilized for collaborations with other DeFi communities, such as MEME',
+			[
+				{
+					text: 'BADGER is the token of governing power',
+					letterspacing: '-0.025em'
+				},
+				{
+					text: 'over the BadgerDAO treasury',
+					letterspacing: '0em'
+				},
+			],
+			[
+				{
+					text: 'It is issued as a reward for staking',
+					letterspacing: '0.01em'
+				},
+				{
+					text: 'in the Badger Setts',
+					letterspacing: '0em'
+				},
+			],
+			[
+				{
+					text: 'bBadger from the BADGER Sett is often',
+					letterspacing: '-0.011em'
+				},
+				{
+					text: 'utilized for collaborations with other',
+					letterspacing: '0.01em'
+				},
+				{
+					text: 'DeFi communities, such as MEME',
+					letterspacing: '0em'
+				},
+			], 
 		],
 	},
 	{
 		img: 'assets/images/comingSoon.png',
 		title: 'bBTC (Coming Soon)',
-		textList: ['Interest-bearing tokenized Bitcoin for DeFi'],
+		textList: [
+			[
+				{
+					text: 'Interest-bearing tokenized Bitcoin',
+					letterspacing: '0.02em'
+				},
+				{
+					text: 'for DeFi',
+					letterspacing: '0em'
+				},
+			]
+		],
 	},
 	{
 		img: 'assets/images/comingSoon.png',
 		title: '$CLAWS (Coming Soon)',
-		textList: ['USD-pegged stablecoin backed by the staked assets in the Sett vaults'],
+		textList: [
+			[
+				{
+					text: 'USD-pegged stablecoin backed by the',
+					letterspacing: '0.004em'
+				},
+				{
+					text: 'staked assets in the Sett vaults',
+					letterspacing: '0em'
+				},
+			]
+		],
 	},
 	{
 		img: 'assets/images/comingSoon.png',
 		title: 'BadgerDEX (Coming Soon)',
-		textList: ['Layer 2 tokenized Bitcoin swap exchange'],
+		textList: [
+			[
+				{
+					text: 'Layer 2 tokenized Bitcoin swap exchange',
+					letterspacing: '-0.038em'
+				}
+			]
+		],
 	},
 ];
 
