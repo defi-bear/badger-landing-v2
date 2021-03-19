@@ -109,35 +109,37 @@ export default function InsuranceAudit() {
     }
 
     return (
-        <Grid container className={styles.main}>
-            <Grid className={styles.leftPanel} item xs={4}>
-                <img draggable={false} alt="Insurance Person" src="/assets/images/insurancePeople.png" className={styles.insurancePeople} />
-                <Bounce left cascade duration={1500}>
-                    <Grid className={styles.bubbleWrapper}>
-                        <img draggable={false} alt="Insurance Bubble" src="/assets/images/insuranceBubble.png" className={styles.insuranceBubble} />
-                        <Typography className={styles.bubbleText}>Insure your Funds</Typography>
-                    </Grid>
-                </Bounce>
-                <Grid className={styles.yellowBorder} />
-            </Grid>
-            <Grid className={styles.rightPanel} item xs={8}>
-                <Fade left>
-                    <Typography className={styles.insuranceText}>Insurance</Typography>
-                </Fade>
-                <Grid container className={styles.nexusWrapper}>
-                    <Grid item xs={6} container justify="flex-end">
-                        <Typography className={styles.nexusText}>Nexus Mutual</Typography>
-                        <Typography className={styles.nexusDescription}>Nexus Mutual is a decentralized insurance protocol built on Ethereum that began in May 2019. Through Nexus, users can purchase covers on their smart contracts using NXM.</Typography>
-                        <Button className={styles.learnMore} onClick={onLearnMore}>
-                            learn more
-                            <img draggable={false} alt="Arrow Icon" src="/assets/images/arrow1.png" className={styles.arrowImg} />
-                        </Button>
-                    </Grid>
-                    <Grid item xs={6} container justify="center">
-                        <img draggable={false} alt="Nexus Mutual Icon" src="/assets/images/bigNexusLogo.png" className={styles.nexusIcon} />
+        <Fade bottom>
+            <Grid container className={styles.main}>
+                <Grid className={styles.leftPanel} item xs={4}>
+                    <img draggable={false} alt="Insurance Person" src="/assets/images/insurancePeople.png" className={styles.insurancePeople} />
+                    <Bounce left cascade delay={2000}>
+                        <Grid className={styles.bubbleWrapper}>
+                            <img draggable={false} alt="Insurance Bubble" src="/assets/images/insuranceBubble.png" className={styles.insuranceBubble} />
+                            <Typography className={styles.bubbleText}>Insure your Funds</Typography>
+                        </Grid>
+                    </Bounce>
+                    <Grid className={styles.yellowBorder} />
+                </Grid>
+                <Grid className={styles.rightPanel} item xs={8}>
+                    <Fade left delay={1000}>
+                        <Typography className={styles.insuranceText}>Insurance</Typography>
+                    </Fade>
+                    <Grid container className={styles.nexusWrapper}>
+                        <Grid item xs={6} container justify="flex-end">
+                            <Typography className={styles.nexusText}>Nexus Mutual</Typography>
+                            <Typography className={styles.nexusDescription}>Nexus Mutual is a decentralized insurance protocol built on Ethereum that began in May 2019. Through Nexus, users can purchase covers on their smart contracts using NXM.</Typography>
+                            <Button className={styles.learnMore} onClick={onLearnMore}>
+                                learn more
+                                <img draggable={false} alt="Arrow Icon" src="/assets/images/arrow1.png" className={styles.arrowImg} />
+                            </Button>
+                        </Grid>
+                        <Grid item xs={6} container justify="center">
+                            <img draggable={false} alt="Nexus Mutual Icon" src="/assets/images/bigNexusLogo.png" className={styles.nexusIcon} />
+                        </Grid>
                     </Grid>
                 </Grid>
             </Grid>
-        </Grid>
+        </Fade>
     )
 }

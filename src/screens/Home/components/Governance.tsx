@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     },
     description: {
         fontFamily: 'POperator',
-        fontWeight: 'bold',
+        fontWeight: 700,
         fontSize: 25,
         lineHeight: '23px',
         textAlign: 'center',
@@ -28,7 +28,15 @@ const useStyles = makeStyles((theme) => ({
         opacity: 0.7,
         marginTop: 39,
         paddingBottom: 16,
-        maxWidth: 775,
+        maxWidth: 820,
+        letterSpacing: 1,
+    },
+    sdescription: {
+        fontFamily: 'POperator',
+        fontSize: 25,
+        lineHeight: '23px',
+        opacity: 0.7,
+        marginTop: 39
     },
     tickItem: {
         marginTop: 15,
@@ -98,7 +106,7 @@ export default function Governance() {
             <Grid className={styles.subMain} alignItems="center" container direction="column">
                 <Typography className={styles.title}>Governance</Typography>
                 <Typography className={styles.description}>
-                    Badger DAO is governed through a combination of communication platforms, from Discord, to our community forum
+                Badger DAO is governed through a combination of communication platforms, from Discord, to our community forum
                 </Typography>
                 <Grid container alignItems="flex-start" direction="column" className={styles.tickItems}>
                     <Grid item>
@@ -112,6 +120,9 @@ export default function Governance() {
                         </TickItem>
                     </Grid>
                 </Grid>
+                <Typography className={styles.sdescription}>
+                    Anyone can come and propose a new product, idea, or amendment to governance
+                </Typography>
             </Grid>
         </Grid>
     )

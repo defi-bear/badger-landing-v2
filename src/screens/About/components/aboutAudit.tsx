@@ -113,54 +113,56 @@ export default function AboutAudit() {
     }
 
     return (
-        <Grid container className={styles.main}>
-            <Grid className={styles.leftPanel} item xs={8}>
-                <Fade right>
-                    <Typography className={styles.auditText}>Audits</Typography>
-                </Fade>
-                <Grid className={styles.auditWrapper} container alignItems="flex-end">
-                    <Grid item>
-                        <img draggable={false} alt="Audit Logo" src="/assets/images/bigAudit.png" className={styles.auditImg} />
-                    </Grid>
-                    <Grid item xs={7}>
-                        <Grid container alignItems="center">
-                            <Typography className={styles.auditSubText}>Zokyo audit</Typography>
-                            <Grid className={styles.whiteLine} />
+        <Fade bottom>
+            <Grid container className={styles.main}>
+                <Grid className={styles.leftPanel} item xs={8}>
+                    <Fade right delay={1000}>
+                        <Typography className={styles.auditText}>Audits</Typography>
+                    </Fade>
+                    <Grid className={styles.auditWrapper} container alignItems="flex-end">
+                        <Grid item>
+                            <img draggable={false} alt="Audit Logo" src="/assets/images/bigAudit.png" className={styles.auditImg} />
                         </Grid>
-                        <Typography className={styles.auditDescription}>Zokyo audits smart contracts, protocols, crowd sale token contracts, and custom smart contracts across every major protocol and programming language.</Typography>
-                        <Button className={styles.readAudit} onClick={onZokyoAudit}>
-                            read the audit
-                            <img draggable={false} alt="Arrow Icon" src="/assets/images/arrow1.png" className={styles.arrowImg} />
-                        </Button>
+                        <Grid item xs={7}>
+                            <Grid container alignItems="center">
+                                <Typography className={styles.auditSubText}>Zokyo audit</Typography>
+                                <Grid className={styles.whiteLine} />
+                            </Grid>
+                            <Typography className={styles.auditDescription}>Zokyo audits smart contracts, protocols, crowd sale token contracts, and custom smart contracts across every major protocol and programming language.</Typography>
+                            <Button className={styles.readAudit} onClick={onZokyoAudit}>
+                                read the audit
+                                <img draggable={false} alt="Arrow Icon" src="/assets/images/arrow1.png" className={styles.arrowImg} />
+                            </Button>
+                        </Grid>
+                    </Grid>
+                    <Grid className={styles.auditWrapper} container alignItems="flex-end">
+                        <Grid item>
+                            <img draggable={false} alt="Audit Logo" src="/assets/images/bigAudit.png" className={styles.auditImg} />
+                        </Grid>
+                        <Grid item xs={7}>
+                            <Grid container alignItems="center">
+                                <Typography className={styles.auditSubText}>Haechi audit</Typography>
+                                <Grid className={styles.whiteLine} />
+                            </Grid>
+                            <Typography className={styles.auditDescription}>Haechi is a leading smart contract security audit and development firm. They are incubated by the Samsung Electronics and awarded Ethereum Foundation Grant.</Typography>
+                            <Button className={styles.readAudit} onClick={onHaechiAudit}>
+                                read the audit
+                                <img draggable={false} alt="Arrow Icon" src="/assets/images/arrow1.png" className={styles.arrowImg} />
+                            </Button>
+                        </Grid>
                     </Grid>
                 </Grid>
-                <Grid className={styles.auditWrapper} container alignItems="flex-end">
-                    <Grid item>
-                        <img draggable={false} alt="Audit Logo" src="/assets/images/bigAudit.png" className={styles.auditImg} />
-                    </Grid>
-                    <Grid item xs={7}>
-                        <Grid container alignItems="center">
-                            <Typography className={styles.auditSubText}>Haechi audit</Typography>
-                            <Grid className={styles.whiteLine} />
+                <Grid className={styles.rightPanel} item xs={4}>
+                    <img draggable={false} alt="Security Person" src="/assets/images/securityPeople.png" className={styles.securityPerson} />
+                    <Bounce right cascade delay={2000}>
+                        <Grid className={styles.bubbleWrapper}>
+                            <img draggable={false} alt="Security Bubble" src="/assets/images/securityBubble.png" className={styles.securityBubble} />
+                            <Typography className={styles.securityText}>Security matters</Typography>
                         </Grid>
-                        <Typography className={styles.auditDescription}>Haechi is a leading smart contract security audit and development firm. They are incubated by the Samsung Electronics and awarded Ethereum Foundation Grant.</Typography>
-                        <Button className={styles.readAudit} onClick={onHaechiAudit}>
-                            read the audit
-                            <img draggable={false} alt="Arrow Icon" src="/assets/images/arrow1.png" className={styles.arrowImg} />
-                        </Button>
-                    </Grid>
+                    </Bounce>
+                    <Grid className={styles.yellowBorder} />
                 </Grid>
             </Grid>
-            <Grid className={styles.rightPanel} item xs={4}>
-                <img draggable={false} alt="Security Person" src="/assets/images/securityPeople.png" className={styles.securityPerson} />
-                <Bounce right cascade duration={2000}>
-                    <Grid className={styles.bubbleWrapper}>
-                        <img draggable={false} alt="Security Bubble" src="/assets/images/securityBubble.png" className={styles.securityBubble} />
-                        <Typography className={styles.securityText}>Security matters</Typography>
-                    </Grid>
-                </Bounce>
-                <Grid className={styles.yellowBorder} />
-            </Grid>
-        </Grid>
+        </Fade>
     )
 }

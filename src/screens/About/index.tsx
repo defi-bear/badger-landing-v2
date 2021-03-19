@@ -34,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: 49,
         flex: 1,
         textIndent: 35,
+        textAlign: 'justify'
     },
     boldText: {
         fontWeight: 700
