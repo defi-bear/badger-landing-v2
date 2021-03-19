@@ -30,7 +30,9 @@ const useStyles = makeStyles((theme) => ({
 		opacity: 0.8,
 		lineHeight: '26.12px',
 		letterSpacing: '-0.022em',
-		marginTop: 6
+		marginTop: 6,
+		textAlign: 'justify',
+		width: 520
 	},
 	boldDescription: {
 		fontWeight: 700,

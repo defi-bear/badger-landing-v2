@@ -143,7 +143,7 @@ export default function Roadmap() {
                         </Fade>
                         <Grid style={{ height: 380 }} />
                         <Fade duration={2000}>
-                            <RoadmapItem {...roadmapList[3]} width={427} height={200} left />
+                            <RoadmapItem {...roadmapList[3]} width={400} height={200} left />
                         </Fade>
                     </Grid>
                     <Grid className={styles.right}>
