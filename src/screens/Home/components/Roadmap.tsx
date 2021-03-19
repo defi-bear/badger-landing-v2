@@ -8,7 +8,7 @@ import { roadmapList, cloudList } from '../../../utils/roadmapList';
 const useStyles = makeStyles((theme) => ({
     main: {
         width: '100%',
-        marginTop: 167,
+        paddingTop: 234,
         position: 'relative',
 	},
 	subMain: {

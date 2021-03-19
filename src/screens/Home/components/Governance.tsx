@@ -4,7 +4,7 @@ import { Grid, makeStyles, Link, Typography } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
     main: {
         width: '100%',
-        marginTop: 58,
+        paddingTop: 125,
         paddingBottom: 67,
         borderBottom: '3px solid rgba(0, 0, 0, 0.05)'
 	},

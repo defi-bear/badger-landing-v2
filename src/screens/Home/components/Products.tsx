@@ -8,7 +8,7 @@ import { list, positionList } from '../../../utils/productList';
 const useStyles = makeStyles((theme) => ({
     main: {
         width: '100%',
-        marginTop: 120,
+        paddingTop: 234,
         paddingBottom: 67,
         borderBottom: '3px solid rgba(0, 0, 0, 0.05)'
 	},

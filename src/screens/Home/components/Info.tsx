@@ -6,7 +6,7 @@ import Fade from 'react-reveal/Fade';
 const useStyles = makeStyles(() => ({
     main: {
 		width: '100%',
-		padding: '107px 140px 114px 155px',
+		padding: '107px 140px 0px 155px',
     },
     subMain: {
         maxWidth: 1120

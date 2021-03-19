@@ -22,6 +22,12 @@ const useStyles = makeStyles((theme) => ({
 	badgerText: {
 		fontFamily: 'P2P',
 		fontSize: 18,
+		color: 'black',
+	},
+	logoLink: {
+		'&:hover': {
+			textDecoration: 'none'
+		}
 	},
 	linkItem: {
 		fontFamily: 'DMono',
@@ -61,12 +67,12 @@ export default function Header() {
 	return (
 		<Grid container alignItems="center" justify="space-between" className={styles.main}>
 			<Grid xs={2} item>
-				<Button onClick={() => window.open('/', '_self')}>
+				<Link href="/" className={styles.logoLink}>
 					<Grid container alignItems="center">
 						<img draggable={false} alt="Badger Logo" src="/assets/images/logo.png" className={styles.logo} />
 						<Typography className={styles.badgerText}>Badger</Typography>
 					</Grid>
-				</Button>
+				</Link>
 			</Grid>
 			<Grid item xs={10}>
 				<Grid container spacing={5} justify="flex-end" alignItems="center">
