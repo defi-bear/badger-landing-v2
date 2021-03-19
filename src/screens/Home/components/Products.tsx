@@ -33,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
         height: '100%',
         width: 420,
         position: 'relative',
+        paddingBottom: 20
     },
     itemImg: {
         height: 157
@@ -78,7 +79,11 @@ const useStyles = makeStyles((theme) => ({
 		marginTop: 15,
         padding: '6px 12px',
         position: 'absolute',
-        bottom: -20,
+        bottom: 0,
+		'&:hover': {
+			background: theme.palette.primary.dark,
+			opacity: 1
+		},
 		'&>span': {
 			fontSize: 20,
 			color: '#651A1A',

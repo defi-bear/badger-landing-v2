@@ -81,6 +81,10 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: 10,
 		background: theme.palette.primary.main,
 		height: 42,
+		'&:hover': {
+			background: theme.palette.primary.dark,
+			opacity: 1
+		},
 		'&>span': {
 			fontSize: 20,
 			color: '#651A1A',

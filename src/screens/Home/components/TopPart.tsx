@@ -44,6 +44,10 @@ const useStyles = makeStyles((theme) => ({
 		height: 42,
 		marginTop: 15,
 		padding: '6px 12px',
+		'&:hover': {
+			background: theme.palette.primary.dark,
+			opacity: 1
+		},
 		'&>span': {
 			fontSize: 20,
 			color: '#651A1A',

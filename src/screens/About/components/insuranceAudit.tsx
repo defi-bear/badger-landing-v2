@@ -56,6 +56,10 @@ const useStyles = makeStyles((theme) => ({
 		marginTop: 21,
         padding: '6px 12px',
         marginRight: 50,
+		'&:hover': {
+			background: theme.palette.primary.dark,
+			opacity: 1
+		},
 		'&>span': {
 			fontSize: 20,
 			color: '#651A1A',
