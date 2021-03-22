@@ -35,16 +35,17 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: '23px',
         color: 'white',
         textAlign: 'right',
-        marginRight: 50
     },
     nexusDescription: {
         fontFamily: 'POperator',
         fontSize: 25,
         lineHeight: '23px',
-        letterSpacing: '0.025em',
+        letterSpacing: '0em',
         color: '#FFF',
         opacity: 0.9,
         marginTop: 12,
+        width: 435,
+        textAlign: 'justify'
     },
     nexusIcon: {
         width: 214
@@ -55,7 +56,6 @@ const useStyles = makeStyles((theme) => ({
 		height: 42,
 		marginTop: 21,
         padding: '6px 12px',
-        marginRight: 50,
 		'&:hover': {
 			background: theme.palette.primary.dark,
 			opacity: 1

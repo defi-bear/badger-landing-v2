@@ -46,6 +46,8 @@ const useStyles = makeStyles((theme) => ({
         color: '#FFF',
         opacity: 0.9,
         marginTop: 12,
+        width: 402,
+        textAlign: 'justify'
     },
     readAudit: {
 		borderRadius: 10,
@@ -148,7 +150,7 @@ export default function AboutAudit() {
                                 <Typography className={styles.auditSubText}>Haechi audit</Typography>
                                 <Grid className={styles.whiteLine} />
                             </Grid>
-                            <Typography className={styles.auditDescription}>Haechi is a leading smart contract security audit and development firm. They are incubated by the Samsung Electronics and awarded Ethereum Foundation Grant.</Typography>
+                            <Typography className={styles.auditDescription} style={{ letterSpacing: '-0.04em' }}>Haechi is a leading smart contract security audit and development firm. They are incubated by the Samsung Electronics and awarded Ethereum Foundation Grant.</Typography>
                             <Button className={styles.readAudit} onClick={onHaechiAudit}>
                                 read the audit
                                 <img draggable={false} alt="Arrow Icon" src="/assets/images/arrow1.png" className={styles.arrowImg} />
