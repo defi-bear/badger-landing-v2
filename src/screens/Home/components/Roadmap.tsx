@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
         width: 1350,
         position: 'absolute',
         left: 'calc(50% - 675px)',
-        top: -130
+        top: 50
     },
     roadmapText: {
         fontSize: 30,

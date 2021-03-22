@@ -36,13 +36,13 @@ const roadmapList = [
 ];
 
 const cloudList = [
-	{ img: 'cloud1.png', left: 'calc(50% - 800px)', top: 150, width: 120 },
-	{ img: 'cloud2.png', left: 'calc(50% - 650px)', top: 250, width: 75 },
-	{ img: 'cloud3.png', right: 'calc(50% - 625px)', top: 80, width: 153 },
-	{ img: 'cloud4.png', right: 'calc(50% - 825px)', top: 530, width: 355 },
-	{ img: 'cloud5.png', left: 'calc(50% - 755px)', top: 1020, width: 200 },
-	{ img: 'cloud6.png', left: 'calc(50% - 500px)', top: 1150, width: 74 },
-	{ img: 'cloud7.png', right: 'calc(50% - 585px)', bottom: 280, width: 300 },
+	{ img: 'cloud1.png', left: 'calc(50% - 800px)', top: 330, width: 120 },
+	{ img: 'cloud2.png', left: 'calc(50% - 650px)', top: 430, width: 75 },
+	{ img: 'cloud3.png', right: 'calc(50% - 625px)', top: 260, width: 153 },
+	{ img: 'cloud4.png', right: 'calc(50% - 825px)', top: 710, width: 355 },
+	{ img: 'cloud5.png', left: 'calc(50% - 755px)', top: 1200, width: 200 },
+	{ img: 'cloud6.png', left: 'calc(50% - 500px)', top: 1330, width: 74 },
+	{ img: 'cloud7.png', right: 'calc(50% - 585px)', bottom: 460, width: 300 },
 ];
 
 export { roadmapList, cloudList };
