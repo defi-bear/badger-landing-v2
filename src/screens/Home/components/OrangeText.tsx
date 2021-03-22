@@ -1,9 +1,10 @@
 import React from 'react';
 import { Grid, Typography, makeStyles } from '@material-ui/core';
+import { isMobile } from 'react-device-detect';
 
 const useStyles = makeStyles((theme) => ({
     main: {
-        padding: 85,
+        padding: `${isMobile ? '0px 35px 38px 35px' : '85px' }`,
         '&:hover': {
             '& img': {
                 animation: `$fadeIn 3s infinite`
@@ -26,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'P2P',
         fontStyle: 'normal',
         fontWeight: 'normal',
-        fontSize: 20,
+        fontSize: `${isMobile ? 10 : 20}px`,
         lineHeight: '23px',
     },
     orange: {

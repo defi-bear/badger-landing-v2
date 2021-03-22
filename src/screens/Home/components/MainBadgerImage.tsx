@@ -2,6 +2,7 @@ import React from 'react';
 import { Grid, makeStyles } from '@material-ui/core';
 // @ts-ignore
 import Positional, { Coord } from 'positional-react-animations';
+import { isMobile } from 'react-device-detect';
 
 const useStyles = makeStyles(() => ({
     main: {
@@ -9,7 +10,8 @@ const useStyles = makeStyles(() => ({
         maxWidth: 530
     },
 	mainBadger: {
-		width: '100%'
+        height: `${isMobile ? '262px' : 'initial' }`,
+		width: `${isMobile ? 'initial' : '100%'}`,
     },
     starContainer: {
         position: 'absolute',

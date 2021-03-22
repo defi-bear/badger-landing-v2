@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid, makeStyles } from '@material-ui/core';
+import { isMobile } from 'react-device-detect';
 
 type WrapperProps = {
     children: object
@@ -7,7 +8,7 @@ type WrapperProps = {
 
 const useStyles = makeStyles(() => ({
     main: {
-        marginTop: 96.5
+        marginTop: `${isMobile ? 66.2 : 96.5}px`
     }
 }))
 

@@ -2,6 +2,7 @@ import React from 'react';
 // @ts-ignore
 import Fade from 'react-reveal/Fade';
 import { Grid, makeStyles, Typography, Button } from '@material-ui/core';
+import { isMobile } from 'react-device-detect';
 
 import { roadmapList, cloudList } from '../../../utils/roadmapList';
 
@@ -130,7 +131,9 @@ export default function Roadmap() {
     return (
         <Grid container justify="center" className={styles.main} id="roadmap">
             <Grid className={styles.subMain} container direction="column" alignItems="center">
-                <img draggable={false} src="/assets/images/sunStar.png" className={styles.sunStar} />
+                {
+                    !isMobile && <img draggable={false} src="/assets/images/sunStar.png" className={styles.sunStar} />
+                }
                 <Typography className={styles.roadmapText}>Roadmap</Typography>
                 <Fade up duration={3000}>
                     <img draggable={false} src="/assets/images/rocket.png" className={styles.rocket} />
@@ -162,7 +165,7 @@ export default function Roadmap() {
                 <img draggable={false} src="/assets/images/mainBottom.png" className={styles.mainBottom} />
                 <img draggable={false} src="/assets/images/rightBush.png" className={styles.rightBush} />
                 {
-                    cloudList.map(({img: cloudImg, ...cloud}: CloudListType) => (
+                    !isMobile && cloudList.map(({img: cloudImg, ...cloud}: CloudListType) => (
                         <Fade duration={2000} left={cloud.left ? true : false} right={cloud.right ? true : false}>
                             <img draggable={false} key={cloudImg} src={`/assets/images/${cloudImg}`} className={styles.cloud} style={{...cloud}} />
                         </Fade>
