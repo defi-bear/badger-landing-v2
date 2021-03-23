@@ -84,7 +84,7 @@ export default function Header() {
 
 	return (
 		<Grid container alignItems="center" justify="space-between" className={styles.main}>
-			<Grid xs={isMobile ? 4 : 2} item>
+			<Grid xs={isMobile ? 6 : 2} item>
 				<Link href="/" className={styles.logoLink}>
 					<Grid container alignItems="center">
 						<img draggable={false} alt="Badger Logo" src="/assets/images/logo.png" className={styles.logo} />
@@ -92,7 +92,7 @@ export default function Header() {
 					</Grid>
 				</Link>
 			</Grid>
-			<Grid item xs={isMobile ? 8 : 10}>
+			<Grid item xs={isMobile ? 6 : 10}>
 				{
 					isMobile ? (
 						<Grid container justify="flex-end">

@@ -1,6 +1,7 @@
 export const FooterItemList = [
 	{
 		title: 'NEWS',
+		left: 65,
 		items: [
 			{
 				title: 'Check out our blog',
@@ -16,6 +17,7 @@ export const FooterItemList = [
 	},
 	{
 		title: 'DIGG THE CODE',
+		left: 50,
 		items: [
 			{
 				title: 'Digg into our Github',
@@ -38,6 +40,7 @@ export const FooterItemList = [
 	},
 	{
 		title: 'SOCIAL MEDIA',
+		left: 55,
 		items: [
 			{
 				title: 'Follow us on Twiiter',

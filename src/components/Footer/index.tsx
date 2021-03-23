@@ -1,12 +1,13 @@
 import React from 'react';
 import { makeStyles, Grid, Typography, Link, Button } from '@material-ui/core';
+import { isMobile } from 'react-device-detect';
 
 import { FooterItemList } from './FooterItemList';
 
 const useStyles = makeStyles((theme) => ({
 	main: {
 		background: theme.palette.info.main,
-		padding: 50,
+		padding: isMobile ? '22px 42px 46px 41px' : 50,
 	},
 	logoWrapper: {
 		paddingTop: 8,
@@ -20,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
 		color: 'white',
 	},
 	title: {
-		fontSize: 18,
+		fontSize: isMobile ? 12.65 : 18,
 		color: theme.palette.info.contrastText,
 		marginBottom: 20,
 	},
@@ -37,52 +38,52 @@ const useStyles = makeStyles((theme) => ({
 		marginRight: 8,
 	},
 	itemText: {
-		fontSize: 25,
+		fontSize: isMobile ? 17.6 : 25,
 		color: theme.palette.info.contrastText,
 		fontFamily: 'POperator',
 	},
 	bottomText: {
 		fontFamily: 'POperator',
-		fontSize: 20,
-		lineHeight: '23px',
+		fontSize: isMobile ? 14 : 20,
+		lineHeight: isMobile ? '16px' : '23px',
 		color: '#FFF',
 		opacity: 0.6,
 		textAlign: 'center',
-		marginTop: 40,
+		marginTop: isMobile ? 35 : 40,
 	},
     stackingPart: {
-        paddingTop: 54,
-        paddingBottom: 72,
+        paddingTop: isMobile ? 20 : 54,
+        paddingBottom: isMobile ? 38 : 72,
         width: '100%',
         backgroundColor: theme.palette.secondary.main,
         zIndex: 10,
     },
     stackingText: {
         fontFamily: 'POperator',
-        fontSize: 30,
+        fontSize: isMobile ? 16 : 30,
         fontWeight: 'bold',
-        lineHeight: '23px',
+        lineHeight: isMobile ? '12px' : '23px',
         textAlign: 'center',
 		color: '#FFF',
 		marginLeft: 35
     },
     coinStarImg: {
-        width: 42,
+        width: isMobile ? 22 : 42,
         paddingLeft: 5,
     },
     stackingDescription: {
         marginTop: 9,
         fontFamily: 'POperator',
         fontWeight: 'bold',
-        fontSize: 25,
-        lineHeight: '23px',
+        fontSize: isMobile ? 13.5 : 25,
+        lineHeight: isMobile ? '12px' : '23px',
         color: '#FFF',
         opacity: 0.8,
         textAlign: 'center'
     },
     launchApp: {
-        marginTop: 25,
-        padding: '21px 71px 20px 68px',
+        marginTop: isMobile ? 13 : 25,
+        padding: isMobile ? '11px 38px 11px 36px' : '21px 71px 20px 68px',
         borderRadius: 10,
 		background: theme.palette.primary.main,
 		height: 42,
@@ -91,12 +92,16 @@ const useStyles = makeStyles((theme) => ({
 			opacity: 1
 		},
 		'&>span': {
-			fontSize: 20,
+			fontSize: isMobile ? 8 : 15,
+			lineHeight: isMobile ? 12 : 23,
 			color: '#651A1A',
-			fontFamily: 'DMono',
+			fontFamily: 'P2P',
 			textTransform: 'none',
 		},
-    },
+	},
+	footerItem: {
+		marginTop: isMobile ? 35 : 0,
+	}
 }));
 
 export default function Footer() {
@@ -113,18 +118,18 @@ export default function Footer() {
                 <Button className={styles.launchApp} onClick={() => window.open('https://app.badger.finance/', '_self')}>LAUNCH OUR APP</Button>
             </Grid>
 			<Grid container className={styles.main}>
-				<Grid item xs={3}>
-					<Grid container alignItems="center" className={styles.logoWrapper}>
+				<Grid item xs={isMobile ? 12 : 3}>
+					<Grid container alignItems="center" justify={isMobile ? "center" : "flex-start"} className={styles.logoWrapper}>
 						<img draggable={false} alt="Badger Logo" src="/assets/images/logo.png" className={styles.logo} />
 						<Typography className={styles.badgerText}>Badger</Typography>
 					</Grid>
 				</Grid>
-				{FooterItemList.map((footerItems) => (
-					<Grid key={footerItems.title} item xs={3}>
-						<Grid container>
-							<Typography className={styles.title}>{footerItems.title}</Typography>
-							<Grid container>
-								{footerItems.items.map((item) => (
+				{FooterItemList.map((footeritems) => (
+					<Grid key={footeritems.title} item xs={isMobile ? 12 : 3} className={styles.footerItem}>
+						<Grid container justify={isMobile ? 'center' : 'flex-start'}>
+							<Typography className={styles.title}>{footeritems.title}</Typography>
+							<Grid container style={{ paddingLeft: footeritems.left }}>
+								{footeritems.items.map((item) => (
 									<Grid container key={item.title}>
 										<Link href={item.link}>
 											<Grid container direction="row" alignItems="center" className={styles.item}>

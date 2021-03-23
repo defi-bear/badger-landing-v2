@@ -1,3 +1,5 @@
+import { isMobile } from 'react-device-detect';
+
 const list = [
 	{
 		img: 'assets/images/vault.png',
@@ -10,11 +12,11 @@ const list = [
 				},
 				{
 					text: 'rewards on your staked assets, with a',
-					letterspacing: '0.008em'
+					letterspacing: isMobile ? '0.02em' : '0.008em'
 				},
 				{
 					text: 'primary focus on Bitcoin-on-Ethereum',
-					letterspacing: '0.012em'
+					letterspacing: isMobile ? '0.025em' : '0.012em'
 				},
 				{
 					text: 'strategies',
@@ -38,11 +40,11 @@ const list = [
 				},
 				{
 					text: 'Bitcoiners transitioning their funds',
-					letterspacing: '0.029em'
+					letterspacing: isMobile ? '0.04em' : '0.029em'
 				},
 				{
 					text: 'across chains to stack sats with the',
-					letterspacing: '0.028em'
+					letterspacing: isMobile ? '0.04em' : '0.028em'
 				},
 				{
 					text: 'power of DeFi',
@@ -62,7 +64,7 @@ const list = [
 				},
 				{
 					text: 'targeting the price of Bitcoin, with',
-					letterspacing: '0.038em'
+					letterspacing: isMobile ? '0.05em' : '0.038em'
 				},
 				{
 					text: '24 hour rebasing periods',
@@ -86,15 +88,15 @@ const list = [
 				},
 				{
 					text: 'receive bDIGG, which represents your %',
-					letterspacing: '-0.005em'
+					letterspacing: isMobile ? '0.005em' : '-0.005em'
 				},
 				{
 					text: 'in the rebasing liquidity pool, allowing',
-					letterspacing: '0em'
+					letterspacing: isMobile ? '0.01em' : '0em'
 				},
 				{
 					text: 'for composability with other DeFi applications',
-					letterspacing: '-0.064em'
+					letterspacing: isMobile ? '-0.056em' : '-0.064em'
 				},
 			]	 
 		],
@@ -131,7 +133,7 @@ const list = [
 				},
 				{
 					text: 'utilized for collaborations with other',
-					letterspacing: '0.01em'
+					letterspacing: isMobile ? '0.025em' : '0.01em'
 				},
 				{
 					text: 'DeFi communities, such as MEME',
@@ -203,14 +205,14 @@ const list = [
 ];
 
 const positionList = [
-	{ index: 0, left: -51, top: -74 },
-	{ index: 1, left: -93, top: 12 },
-	{ index: 2, right: 93, top: -74 },
-	{ index: 3, right: -25, top: -120 },
-	{ index: 4, right: -120, top: 211 },
-	{ index: 5, left: -95, bottom: 70 },
-	{ index: 6, left: -45, bottom: -40 },
-	{ index: 7, right: -85, bottom: 20 },
+	{ index: 0, left: isMobile ? -10 : -51, top: isMobile ? -25 : -74 },
+	{ index: 1, left: isMobile ? -26 : -93, top: isMobile ? -2 : 12 },
+	{ index: 2, right: isMobile ? 40 : 93, top: isMobile ? -25 : -74 },
+	{ index: 3, right: isMobile ? 5 : -25, top: isMobile ? -45 : -120 },
+	{ index: 4, right: isMobile ? -20 : -120, top: isMobile ? 61 : 211 },
+	{ index: 5, left: isMobile ? -25 : -95, bottom: isMobile ? 10 : 70 },
+	{ index: 6, left: isMobile ? -15 : -45, bottom: isMobile ? -20 : -40 },
+	{ index: 7, right: isMobile ? -20 : -85, bottom: isMobile ? 5 : 20 },
 ];
 
 export { list, positionList };

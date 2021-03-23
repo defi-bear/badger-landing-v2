@@ -14,6 +14,7 @@ const roadmapList = [
 			'- $MEME NFT campaign featuring bBadger',
 			'- Second audit by Haechi',
 			'- Launch of $DIGG token',
+			'- $DIGG stability vault',
 			'- Badger Zaps',
 			'- RenVM integration bridging BTC directly to Badger Setts',
 			'- $CLAWS: USD-pegged stablecoin backed by Badger Setts',

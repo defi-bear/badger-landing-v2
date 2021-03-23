@@ -1,11 +1,12 @@
 import React from 'react';
 import { Grid, makeStyles, Link, Typography } from '@material-ui/core';
+import { isMobile } from 'react-device-detect';
 
 const useStyles = makeStyles((theme) => ({
     main: {
         width: '100%',
-        paddingTop: 125,
-        paddingBottom: 67,
+        paddingTop: isMobile ? 17 : 84,
+        paddingBottom: isMobile ? 32 : 67,
         borderBottom: '3px solid rgba(0, 0, 0, 0.05)'
 	},
 	subMain: {
@@ -13,33 +14,35 @@ const useStyles = makeStyles((theme) => ({
         position: 'relative'
     },
     title: {
-        fontSize: 30,
-        lineHeight: '55px',
+        fontSize: isMobile ? 17 : 30,
+        lineHeight: isMobile ? '31px' : '55px',
         color: theme.palette.secondary.main,
         textAlign: 'center',
     },
     description: {
         fontFamily: 'POperator',
         fontWeight: 700,
-        fontSize: 25,
+        fontSize: isMobile ? 14.2 : 25,
         lineHeight: '23px',
         textAlign: 'center',
         color: '#000000',
         opacity: 0.7,
-        marginTop: 39,
+        marginTop: isMobile ? 9 : 39,
         paddingBottom: 16,
-        maxWidth: 820,
-        letterSpacing: 1,
+        maxWidth: isMobile ? 315 : 820,
+        letterSpacing: isMobile ? 0.5 : 1,
     },
     sdescription: {
         fontFamily: 'POperator',
-        fontSize: 25,
-        lineHeight: '23px',
+        fontSize: isMobile ? 15 : 25,
+        lineHeight: isMobile ? '13px' : '23px',
+        textAlign: 'center',
         opacity: 0.7,
-        marginTop: 39
+        marginTop: isMobile ? 17.8 : 39,
+        maxWidth: isMobile ? 290 : 'initial',
     },
     tickItem: {
-        marginTop: 15,
+        marginTop: isMobile ? 8.5 : 15,
         '&:hover': {
             '& img': {
                 display: 'inherit'
@@ -55,13 +58,13 @@ const useStyles = makeStyles((theme) => ({
     },
     tickText: {
         fontFamily: 'DMono',
-        fontSize: 20,
-        lineHeight: '24px',
+        fontSize: isMobile ? 11.4 : 20,
+        lineHeight: isMobile ? '14px' : '24px',
         color: theme.palette.secondary.main,
         marginLeft: 22,
     },
     tickItems: {
-        width: 360
+        width: isMobile ? 250 : 360
     },
     arrowContainer: {
         width: 36,
@@ -72,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'none'
     },
     tickItemImage: {
-        width: 40
+        width: isMobile ? 22.7 : 40
     }
 }))
 
@@ -106,7 +109,7 @@ export default function Governance() {
             <Grid className={styles.subMain} alignItems="center" container direction="column">
                 <Typography className={styles.title}>Governance</Typography>
                 <Typography className={styles.description}>
-                Badger DAO is governed through a combination of communication platforms, from Discord, to our community forum
+                    Badger DAO is governed through a combination of communication platforms, from Discord, to our community forum
                 </Typography>
                 <Grid container alignItems="flex-start" direction="column" className={styles.tickItems}>
                     <Grid item>

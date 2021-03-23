@@ -2,44 +2,45 @@ import React from 'react';
 import { Grid, makeStyles, Typography, Button } from '@material-ui/core';
 // @ts-ignore
 import Fade from 'react-reveal/Fade';
+import { isMobile } from 'react-device-detect';
 
 import { list, positionList } from '../../../utils/productList';
 
 const useStyles = makeStyles((theme) => ({
     main: {
         width: '100%',
-        paddingTop: 234,
-        paddingBottom: 67,
-        borderBottom: '3px solid rgba(0, 0, 0, 0.05)'
+        paddingTop: isMobile ? 55 : 234,
+        borderBottom: '3px solid rgba(0, 0, 0, 0.05)',
+        padding: isMobile ? '0px 35px 35px 35px' : 67,
 	},
 	subMain: {
         maxWidth: 1120,
         backgroundColor: theme.palette.secondary.main,
-        padding: '32px 42px 131px 42px',
+        padding: isMobile ? '0px 8px' : '32px 42px 131px 42px',
         position: 'relative'
     },
     products: {
-        fontSize: '30px',
+        fontSize: isMobile ? '17px' : '30px',
         lineHeight: '55px',
         color: '#FFFFFF',
         textAlign: 'center',
         borderBottom: '6px solid #FFF',
-        paddingBottom: '15px',
+        paddingBottom: isMobile ? '0px' : '15px',
         width: '100%',
         marginBottom: 3,
     },
     item: {
-        paddingTop: 79,
+        paddingTop: isMobile ? 21 : 79,
         height: '100%',
-        width: 420,
+        width: isMobile ? 'initial' : 420,
         position: 'relative',
         paddingBottom: 20
     },
     itemImg: {
-        height: 157
+        height: isMobile ? 106 : 157
     },
     itemTitle: {
-        fontSize: '18px',   
+        fontSize: isMobile ? '12.5px' : '18px',   
         lineHeight: '23px',
         color: '#FFFFFF',
         marginTop: 22
@@ -53,13 +54,13 @@ const useStyles = makeStyles((theme) => ({
         flex: 1,
     },
     star: {
-        width: 20,
+        width: isMobile ? 13.5 : 20,
         marginRight: 3,
     },
     itemText: {
         fontFamily: 'POperator',
-        fontSize: 25,
-        lineHeight: '23px',
+        fontSize: isMobile ? 17 : 25,
+        lineHeight: isMobile ? '16px' : '23px',
         letterSpacing: '-0.05em',
         textAlign: 'justify',
         color: '#FFFFFF',
@@ -69,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: 15,
     },
     items: {
-        padding: '0px 60px',
+        padding: isMobile ? '0px' : '0px 60px',
         flexWrap: 'wrap',
         '&>div:last-child': {
             margin: 'auto'
@@ -78,17 +79,17 @@ const useStyles = makeStyles((theme) => ({
     learnMore: {
         borderRadius: 10,
 		background: theme.palette.primary.main,
-		height: 42,
+		height: isMobile ? 24 : 42,
 		marginTop: 15,
         padding: '6px 12px',
         position: 'absolute',
-        bottom: 0,
+        bottom: 7,
 		'&:hover': {
 			background: theme.palette.primary.dark,
 			opacity: 1
 		},
 		'&>span': {
-			fontSize: 20,
+			fontSize: isMobile ? 13.6 : 20,
 			color: '#651A1A',
 			fontFamily: 'DMono',
 			textTransform: 'none',
@@ -99,8 +100,8 @@ const useStyles = makeStyles((theme) => ({
 		marginLeft: 10,
     },
     rect: {
-        width: 30,
-        height: 30,
+        width: isMobile ? 10 : 30,
+        height: isMobile ? 10 : 30,
         position: 'absolute',
     },
     fullWidth: {
@@ -175,7 +176,7 @@ export default function Products() {
                         </Fade>
                     </Grid>
                     <Grid item>
-                        <Grid container className={styles.items} justify="space-between">
+                        <Grid container className={styles.items} justify={isMobile ? "center" : "space-between"}>
                             {
                                 list.map((item, index) => (
                                     <Fade key={item.title} bottom delay={index === 0 || index === 1 ? 1500 : 500}>
