@@ -1,76 +1,76 @@
 import React from 'react';
 import { Grid, Typography, makeStyles, Link } from '@material-ui/core';
+import { isMobile } from 'react-device-detect';
 
 const useStyles = makeStyles(() => ({
     main: {
 
     },
     mainWrapper: {
-        maxWidth: 1130,
+        maxWidth: isMobile ? 'calc( 100% - 70px )' : 1130,
     },
     hammerIcon: {
-        width: 79.5
+        width: isMobile ? 27.8 : 79.5
     },
     buildText: {
-        fontSize: 30,
-        lineHeight: '55px',
+        fontSize: isMobile ? 10.5 : 30,
+        lineHeight: isMobile ? '19px' : '55px',
         color: 'black',
     },
     top: {
-        marginTop: 76
+        marginTop: isMobile ? 20 : 76
     },
     description: {
-        marginTop: 58,
+        marginTop: isMobile ? 20 : 58,
         fontFamily: 'POperator',
-        fontSize: 28,
-        lineHeight: '35px',
+        fontSize: isMobile ? 17 : 28,
+        lineHeight: isMobile ? '20px' : '35px',
         opacity: 0.7,
         textIndent: 30
     },
     waysText: {
         fontFamily: 'POperator',
         fontWeight: 'bold',
-        fontSize: 28,
+        fontSize: isMobile ? 17 : 28,
         lineHeight: '35px',
         opacity: 0.7,
-        marginTop: 57
+        marginTop: isMobile ? 15 : 57
     },
     item: {
-        marginTop: 50
+        marginTop: isMobile ? 25 : 50
     },
     star: {
-        width: 25,
-        height: 20,
-        marginLeft: 29,
-        marginTop: 11
+        width: isMobile ? 13.7 : 25,
+        height: isMobile ? 11.1 : 20,
+        marginLeft: isMobile ? 4.3 : 29,
+        marginTop: isMobile ? 4 : 11
     },
     itemRight: {
-        width: 1056,
-        marginLeft: 20,
+        width: isMobile ? 300 : 1056,
+        marginLeft: isMobile ? 4.3 : 20,
     },
     itemTitle: {
         fontFamily: 'POperator',
-        fontSize: 28,
-        opacity: 0.7,
+        fontSize: isMobile ? 17 : 28,
+        lineHeight: isMobile ? '20px' : 'initial',
         fontWeight: 'bold'
     },
     itemLink: {
-        marginLeft: 10,
         fontFamily: 'POperator',
-        fontSize: 28,
-        opacity: 0.7,
+        fontSize: isMobile ? 17 : 28,
+        lineHeight: isMobile ? '20px' : 'initial',
         color: '#d8a24d'
     },
     itemText: {
-        marginLeft: 8,
         fontFamily: 'POperator',
-        fontSize: 28,
-        opacity: 0.7,
+        fontSize: isMobile ? 17 : 28,
+        lineHeight: isMobile ? '20px' : 'initial',
+        opacity: 0.7
     },
     badgerBuilder: {
-        width: 411,
-        marginTop: 122,
-        marginBottom: 78
+        width: isMobile ? 180 : 411,
+        marginTop: isMobile ? 30 : 122,
+        marginBottom: isMobile ? 17.6 : 78
     }
 }))
 
@@ -93,11 +93,13 @@ export default function Buidl() {
                     </Grid>
                     <Grid item className={styles.itemRight}>
                         <Grid container>
-                            <Typography className={styles.itemTitle}>Governance:</Typography>
-                            <Link href="https://forum.badger.finance/">
-                                <Typography className={styles.itemLink}>Read through our governance forum</Typography>
-                            </Link>
-                            <Typography className={styles.itemText}>vote on current proposals or compose your own!</Typography>
+                            <Typography className={styles.itemText}>
+                                <span className={styles.itemTitle}>Governance:</span>
+                                <Link href="https://forum.badger.finance/">
+                                    <span className={styles.itemLink}> Read through our governance forum</span>
+                                </Link>
+                                <span> vote on current proposals or compose your own!</span>
+                            </Typography>
                         </Grid>
                     </Grid>
                 </Grid>
@@ -107,11 +109,15 @@ export default function Buidl() {
                     </Grid>
                     <Grid item className={styles.itemRight}>
                         <Grid container>
-                            <Typography className={styles.itemTitle}>Development:</Typography>
-                            <Typography className={styles.itemText}>Build new products, liquidity strategies and integrations with other Defi DAOs.</Typography>
-                            <Link href="https://forms.gle/bJMAC5M3T2NfSvy3A">
-                                <Typography className={styles.itemLink} style={{marginLeft: 0}}>Fill out our Badger Interest Form</Typography>
-                            </Link>
+                            <Typography className={styles.itemText}>
+                                <span className={styles.itemTitle}>Development:</span>
+                                <span> Build new products, liquidity strategies and integrations with other Defi DAOs.</span>
+                            </Typography>
+                            <Typography className={styles.itemText}>
+                                <Link href="https://forms.gle/bJMAC5M3T2NfSvy3A">
+                                    <span className={styles.itemLink} style={{marginLeft: 0}}> Fill out our Badger Interest Form</span>
+                                </Link>
+                            </Typography>
                         </Grid>
                     </Grid>
                 </Grid>
@@ -121,12 +127,12 @@ export default function Buidl() {
                     </Grid>
                     <Grid item className={styles.itemRight}>
                         <Grid container>
-                            <Typography>
+                            <Typography className={styles.itemText}>
                                 <span className={styles.itemTitle}>Join the Discussion:</span>
                                 <Link href="https://discord.gg/PaPaeDq">
-                                    <span className={styles.itemLink}>Hop in to our Discord</span>
+                                    <span className={styles.itemLink}> Hop in to our Discord</span>
                                 </Link>
-                                <span className={styles.itemText}>to get involved in the conversations and find out about our awesome community events!</span>
+                                <span className={styles.itemText}> to get involved in the conversations and find out about our awesome community events!</span>
                             </Typography>
                         </Grid>
                     </Grid>

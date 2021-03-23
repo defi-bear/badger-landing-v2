@@ -4,33 +4,36 @@ import { Grid, makeStyles, Typography, Button } from '@material-ui/core';
 import Fade from 'react-reveal/Fade';
 // @ts-ignore
 import Bounce from 'react-reveal/Bounce';
+import { isMobile } from 'react-device-detect';
 
 const useStyles = makeStyles((theme) => ({
     main: {
-        marginTop: 110
+        marginTop: isMobile ? 30 : 110
     },
     leftPanel: {
         backgroundColor: theme.palette.secondary.main,
-        padding: '72px 0px 28px 123px',
+        padding: isMobile ? '3px 0px 0px 24px' : '72px 0px 28px 123px',
     },
     auditText: {
         color: 'white',
-        fontSize: 30,
-        lineHeight: '40px',
+        fontSize: isMobile ? 13 : 30,
+        lineHeight: isMobile ? '20px' : '40px',
         borderBottom: '6px solid white',
-        marginLeft: 'calc( 50% - 90px )',
-        marginBottom: 87,
+        marginLeft: isMobile ? '170px' : 'calc( 50% - 90px )',
+        marginBottom: isMobile ? 10 : 87,
+        marginTop: isMobile ? 20 : 0,
     },
     auditImg: {
-        width: 120,
-        marginRight: 52,
+        width: isMobile ? 43 : 120,
+        marginRight: isMobile ? 21 : 52,
+        marginTop: isMobile ? 23 : 0
     },
     auditWrapper: {
-        marginBottom: 116,
+        marginBottom: isMobile ? 36.5 : 116,
     },
     auditSubText: {
-        fontSize: 18,
-        lineHeight: '23px',
+        fontSize: isMobile ? 10 : 18,
+        lineHeight: isMobile ? '11px' : '23px',
         color: '#FFF'
     },
     whiteLine: {
@@ -41,69 +44,69 @@ const useStyles = makeStyles((theme) => ({
     },
     auditDescription: {
         fontFamily: 'POperator',
-        fontSize: 25,
-        lineHeight: '23px',
+        fontSize: isMobile ? 17 : 25,
+        lineHeight: isMobile ? '15px' : '23px',
         color: '#FFF',
         opacity: 0.9,
-        marginTop: 12,
-        width: 402,
+        marginTop: isMobile ? 8 : 12,
+        width: isMobile ? 200 : 402,
         textAlign: 'justify'
     },
     readAudit: {
-		borderRadius: 10,
+		borderRadius: isMobile ? 5 : 10,
 		background: theme.palette.primary.main,
-		height: 42,
+		height: isMobile ? 17.5 : 42,
 		marginTop: 21,
-		padding: '6px 12px',
+		padding: isMobile ? '3px 6px' : '6px 12px',
 		'&:hover': {
 			background: theme.palette.primary.dark,
 			opacity: 1
 		},
 		'&>span': {
-			fontSize: 20,
+			fontSize: isMobile ? 9.5 : 20,
 			color: '#651A1A',
 			fontFamily: 'DMono',
 			textTransform: 'none',
 		},
 	},
 	arrowImg: {
-		width: 14,
-		marginLeft: 10,
+		width: isMobile ? 6.5 : 14,
+		marginLeft: isMobile ? 3 : 10,
     },
     rightPanel: {
         position: 'relative',
     },
     securityPerson: {
-        width: 328,
-        height: 352,
+        width: isMobile ? 117 : 328,
+        height: isMobile ? 125 : 352,
         position: 'absolute',
-        top: 240,
-        left: -114,
+        top: isMobile ? 420 : 240,
+        left: isMobile ? -150 : -114,
     },
     bubbleWrapper: {
         position: 'absolute',
-        left: 150,
-        top: 120,
-        width: 267,
+        left: isMobile ? -65 : 150,
+        top: isMobile ? 370 : 120,
+        width: isMobile ? 95 : 267,
     },
     securityBubble: {
         width: '100%'
     },
     securityText: {
         fontFamily: 'P2P',
-        fontSize: 25,
-        lineHeight: '35px',
+        fontSize: isMobile ? 8.5 : 25,
+        lineHeight: isMobile ? '8px' : '35px',
         position: 'absolute',
-        top: 85,
-        left: 35,
+        top: isMobile ? 33 : 85,
+        left: isMobile ? 14 : 35,
     },
     yellowBorder: {
-        width: 'calc( 100% + 114px )',
-        height: 57,
+        width: isMobile ? 220 : 'calc( 100% + 114px )',
+        height: isMobile ? 20 : 57,
         background: theme.palette.primary.main,
         position: 'absolute',
-        top: 579,
-        left: -114,
+        top: isMobile ? 541 : 579,
+        left: isMobile ? -149 : -114,
     },
 }))
 
@@ -121,18 +124,18 @@ export default function AboutAudit() {
     return (
         <Fade bottom>
             <Grid container className={styles.main}>
-                <Grid className={styles.leftPanel} item xs={8}>
+                <Grid className={styles.leftPanel} item xs={isMobile ? 10 : 8}>
                     <Fade right delay={1000}>
                         <Typography className={styles.auditText}>Audits</Typography>
                     </Fade>
-                    <Grid className={styles.auditWrapper} container alignItems="flex-end">
+                    <Grid className={styles.auditWrapper} container alignItems={isMobile ? "flex-start" : "flex-end"}>
                         <Grid item>
                             <img draggable={false} alt="Audit Logo" src="/assets/images/bigAudit.png" className={styles.auditImg} />
                         </Grid>
-                        <Grid item xs={7}>
+                        <Grid item xs={isMobile ? 8 : 7}>
                             <Grid container alignItems="center">
                                 <Typography className={styles.auditSubText}>Zokyo audit</Typography>
-                                <Grid className={styles.whiteLine} />
+                                { !isMobile && <Grid className={styles.whiteLine} /> }
                             </Grid>
                             <Typography className={styles.auditDescription}>Zokyo audits smart contracts, protocols, crowd sale token contracts, and custom smart contracts across every major protocol and programming language.</Typography>
                             <Button className={styles.readAudit} onClick={onZokyoAudit}>
@@ -141,14 +144,14 @@ export default function AboutAudit() {
                             </Button>
                         </Grid>
                     </Grid>
-                    <Grid className={styles.auditWrapper} container alignItems="flex-end">
+                    <Grid className={styles.auditWrapper} container alignItems={isMobile ? "flex-start" : "flex-end"}>
                         <Grid item>
                             <img draggable={false} alt="Audit Logo" src="/assets/images/bigAudit.png" className={styles.auditImg} />
                         </Grid>
                         <Grid item xs={7}>
                             <Grid container alignItems="center">
                                 <Typography className={styles.auditSubText}>Haechi audit</Typography>
-                                <Grid className={styles.whiteLine} />
+                                { !isMobile && <Grid className={styles.whiteLine} /> }
                             </Grid>
                             <Typography className={styles.auditDescription} style={{ letterSpacing: '-0.04em' }}>Haechi is a leading smart contract security audit and development firm. They are incubated by the Samsung Electronics and awarded Ethereum Foundation Grant.</Typography>
                             <Button className={styles.readAudit} onClick={onHaechiAudit}>
@@ -158,7 +161,7 @@ export default function AboutAudit() {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid className={styles.rightPanel} item xs={4}>
+                <Grid className={styles.rightPanel} item xs={isMobile ? 2 : 4}>
                     <img draggable={false} alt="Security Person" src="/assets/images/securityPeople.png" className={styles.securityPerson} />
                     <Bounce right cascade delay={2000}>
                         <Grid className={styles.bubbleWrapper}>

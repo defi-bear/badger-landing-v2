@@ -4,6 +4,7 @@ import { Grid, makeStyles, Typography, Button } from '@material-ui/core';
 import Fade from 'react-reveal/Fade';
 // @ts-ignore
 import Bounce from 'react-reveal/Bounce';
+import { isMobile } from 'react-device-detect';
 
 const useStyles = makeStyles((theme) => ({
     main: {
@@ -16,92 +17,95 @@ const useStyles = makeStyles((theme) => ({
     rightPanel: {
         marginTop: 56,
         backgroundColor: theme.palette.secondary.main,
-        padding: '39px 111px 89px 0px',
+        padding: isMobile ? '3px 17px 31px 0px' : '39px 111px 89px 0px',
     },
     insuranceText: {
-        fontSize: 30,
-        lineHeight: '55px',
+        fontSize: isMobile ? 13 : 30,
+        lineHeight: isMobile ? '20px' : '55px',
         color: 'white',
         borderBottom: '6px solid white',
-        marginRight: 'calc( 50% - 135px )',
-        marginBottom: 73,
+        marginRight: 135,
+        marginBottom: isMobile ? 31 : 73,
+        marginTop: isMobile ? 30 : 0,
         textAlign: 'right',
     },
     nexusWrapper: {
-        marginLeft: 120
+        marginLeft: isMobile ? 14 : 120
     },
     nexusText: {
-        fontSize: 18,
-        lineHeight: '23px',
+        fontSize: isMobile ? 10 : 18,
+        lineHeight: isMobile ? '11px' : '23px',
         color: 'white',
         textAlign: 'right',
     },
     nexusDescription: {
         fontFamily: 'POperator',
-        fontSize: 25,
-        lineHeight: '23px',
+        fontSize: isMobile ? 17 : 25,
+        lineHeight: isMobile ? '15px' : '23px',
         letterSpacing: '0em',
         color: '#FFF',
         opacity: 0.9,
         marginTop: 12,
-        width: 435,
+        width: isMobile ? '100%' : 435,
         textAlign: 'justify'
     },
     nexusIcon: {
-        width: 214
+        width: isMobile ? 67 : 214,
+        height: isMobile ? 67 : 214,
+        marginTop: isMobile ? 20 : 0,
     },
     learnMore: {
-		borderRadius: 10,
+		borderRadius: isMobile ? 5 : 10,
 		background: theme.palette.primary.main,
-		height: 42,
+		height: isMobile ? 17.5 : 42,
 		marginTop: 21,
-        padding: '6px 12px',
+        padding: isMobile ? '3px 6px' : '6px 12px',
 		'&:hover': {
 			background: theme.palette.primary.dark,
 			opacity: 1
 		},
 		'&>span': {
-			fontSize: 20,
+			fontSize: isMobile ? 9.5 : 20,
 			color: '#651A1A',
 			fontFamily: 'DMono',
 			textTransform: 'none',
 		},
 	},
 	arrowImg: {
-		width: 14,
-		marginLeft: 10,
+		width: isMobile ? 6.5 : 14,
+		marginLeft: isMobile ? 3 : 10,
     },
     yellowBorder: {
-        width: 'calc( 100% + 114px )',
-        height: 42,
+        width: isMobile ? 250 : 'calc( 100% + 114px )',
+        height: isMobile ? 15 : 42,
         backgroundColor: theme.palette.primary.main,
         position: 'absolute',
         left: 0,
-        top: 434
+        top: isMobile ? 460 : 434
     },
     bubbleWrapper: {
         position: 'absolute',
-        left: 220,
-        top: 0
+        left: isMobile ? 45 : 220,
+        top: isMobile ? 305 : 0
     },
     insurancePeople: {
         position: 'absolute',
-        top: 145,
-        right: -10,
+        top: isMobile ? 360 : 145,
+        right: isMobile ? -120 : -10,
         zIndex: 5,
-        width: 270,
-        height: 290
+        width: isMobile ? 95 : 270,
+        height: isMobile ? 100 : 290
     },
     insuranceBubble: {
-        width: 233,
+        width: isMobile ? 83 : 233,
     },
     bubbleText: {
         fontFamily: 'P2P',
-        fontSize: 25,
-        lineHeight: '34px',
+        fontSize: isMobile ? 8.5 : 25,
+        lineHeight: isMobile ? '12px' : '34px',
         position: 'absolute',
-        top: 60,
-        left: 40
+        top: isMobile ? 23 : 60,
+        left: isMobile ? 15 : 40
     }
 }))
 
@@ -115,7 +119,7 @@ export default function InsuranceAudit() {
     return (
         <Fade bottom>
             <Grid container className={styles.main}>
-                <Grid className={styles.leftPanel} item xs={4}>
+                <Grid className={styles.leftPanel} item xs={isMobile ? 2 : 4}>
                     <img draggable={false} alt="Insurance Person" src="/assets/images/insurancePeople.png" className={styles.insurancePeople} />
                     <Bounce left cascade delay={2000}>
                         <Grid className={styles.bubbleWrapper}>
@@ -125,12 +129,12 @@ export default function InsuranceAudit() {
                     </Bounce>
                     <Grid className={styles.yellowBorder} />
                 </Grid>
-                <Grid className={styles.rightPanel} item xs={8}>
+                <Grid className={styles.rightPanel} item xs={isMobile ? 10 : 8}>
                     <Fade left delay={1000}>
                         <Typography className={styles.insuranceText}>Insurance</Typography>
                     </Fade>
                     <Grid container className={styles.nexusWrapper}>
-                        <Grid item xs={6} container justify="flex-end">
+                        <Grid item xs={isMobile ? 8 : 6} container justify="flex-end">
                             <Typography className={styles.nexusText}>Nexus Mutual</Typography>
                             <Typography className={styles.nexusDescription}>Nexus Mutual is a decentralized insurance protocol built on Ethereum that began in May 2019. Through Nexus, users can purchase covers on their smart contracts using NXM.</Typography>
                             <Button className={styles.learnMore} onClick={onLearnMore}>
@@ -138,7 +142,7 @@ export default function InsuranceAudit() {
                                 <img draggable={false} alt="Arrow Icon" src="/assets/images/arrow1.png" className={styles.arrowImg} />
                             </Button>
                         </Grid>
-                        <Grid item xs={6} container justify="center">
+                        <Grid item xs={isMobile ? 4 : 6} container justify="center">
                             <img draggable={false} alt="Nexus Mutual Icon" src="/assets/images/bigNexusLogo.png" className={styles.nexusIcon} />
                         </Grid>
                     </Grid>
