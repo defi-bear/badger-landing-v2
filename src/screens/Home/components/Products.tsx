@@ -179,7 +179,7 @@ export default function Products() {
                         <Grid container className={styles.items} justify={isMobile ? "center" : "space-between"}>
                             {
                                 list.map((item, index) => (
-                                    <Fade key={item.title} bottom delay={index === 0 || index === 1 ? 1500 : 500}>
+                                    <Fade key={item.title} bottom delay={isMobile ? 1500 : (index === 0 || index === 1 ? 1500 : 500)}>
                                         <Item {...item} />
                                     </Fade>
                                 ))

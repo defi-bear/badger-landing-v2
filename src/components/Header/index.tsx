@@ -82,6 +82,12 @@ export default function Header() {
 		window.open('https://app.badger.finance', '_self');
 	}
 
+	const onLinkClicked = (name : string) => {
+		if(name === 'Products' || name === 'Governance' || name === 'Roadmap') {
+			setOpen(false)
+		}
+	}
+
 	return (
 		<Grid container alignItems="center" justify="space-between" className={styles.main}>
 			<Grid xs={isMobile ? 6 : 2} item>
@@ -128,7 +134,7 @@ export default function Header() {
 						</Grid>
 						{MenuList.map((menuItem) => (
 							<Grid item key={menuItem.name} className={styles.mobileItem} container justify="center">
-								<Link href={menuItem.link} className={styles.linkItem}>
+								<Link href={menuItem.link} className={styles.linkItem} onClick={() => onLinkClicked(menuItem.name)}>
 									{menuItem.name}
 								</Link>
 							</Grid>
