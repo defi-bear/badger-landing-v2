@@ -7,7 +7,7 @@ import { isMobile } from 'react-device-detect';
 const useStyles = makeStyles(() => ({
     main: {
 		width: '100%',
-		padding: '107px 35px 0px 36px',
+		padding: isMobile ? '50px 35px 0px 36px' : '107px 35px 0px 36px',
     },
     subMain: {
         maxWidth: 1120,
@@ -44,15 +44,15 @@ const useStyles = makeStyles(() => ({
         textAlign: 'justify',
     },
     bitcoin: {
-        width: 311,
-        height: 216
+        width: isMobile ? 187.5 : 311,
+        height: isMobile ? 130.03 : 216
     },
     kongContainer: {
         marginTop: isMobile ? 50 : 120
     },
     kongIcon: {
-        width: 328,
-        height: 245,
+        width: isMobile ? 197.6 : 328,
+        height: isMobile ? 147.5 : 245,
     },
     ecosystemContainer: {
         marginTop: isMobile ? 50 : 112
@@ -61,8 +61,8 @@ const useStyles = makeStyles(() => ({
         position: 'relative'
     },
     treasuryIcon: {
-        width: isMobile ? 350 : 400,
-        height: isMobile ? 186 : 213,
+        width: isMobile ? 240 : 400,
+        height: isMobile ? 128 : 213,
         position: isMobile ? 'initial' : 'absolute',
         right: -52,
         marginTop: isMobile ? 0 : -30,
@@ -122,7 +122,7 @@ export default function Info() {
                 <Grid container className={styles.kongContainer} direction={isMobile ? 'column' : 'row'}>
                     <Grid item xs={isMobile ? 12 : 4}>
                         <Fade left>
-                            <Grid container justify="flex-start">
+                            <Grid container justify={isMobile ? "center" : "flex-start"}>
                                 <img draggable={false} alt="Kong Icon" src="/assets/images/kongImg.png" className={styles.kongIcon} />
                             </Grid>
                         </Fade>
@@ -160,7 +160,7 @@ export default function Info() {
                     </Grid>
                     <Grid item xs={isMobile ? 12 : 4} className={styles.treasuryContainer}>
                         <Fade right>
-                            <Grid container justify="flex-end">
+                            <Grid container justify={isMobile ? "center" : "flex-end"}>
                                 <img draggable={false} alt="Treasury Icon" src="/assets/images/treasury.png" className={styles.treasuryIcon} />
                             </Grid>
                         </Fade>

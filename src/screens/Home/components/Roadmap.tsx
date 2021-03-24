@@ -4,7 +4,7 @@ import Fade from 'react-reveal/Fade';
 import { Grid, makeStyles, Typography, Button } from '@material-ui/core';
 import { isMobile as ismobile } from 'react-device-detect';
 
-import { roadmapList, cloudList } from '../../../utils/roadmapList';
+import { roadmapList, mobileRoadmapList, cloudList } from '../../../utils/roadmapList';
 
 const useStyles = makeStyles((theme) => ({
     main: {
@@ -34,13 +34,13 @@ const useStyles = makeStyles((theme) => ({
     },
     left: {
         width: '50%',
-        paddingRight: ismobile ? 13 : 42,
+        paddingRight: ismobile ? 15 : 42,
         flex: 1,
         borderRight: `${ismobile ? 4 : 8}px solid ${theme.palette.secondary.main}`,
     },
     right: {
         width: '50%',
-        paddingLeft: ismobile ? 16 : 42,
+        paddingLeft: ismobile ? 15 : 42,
         borderLeft: `${ismobile ? 4 : 8}px solid ${theme.palette.secondary.main}`,
         flex: 1,
     },
@@ -58,9 +58,11 @@ const useStyles = makeStyles((theme) => ({
         fontSize: ismobile ? 16 : 25,
         lineHeight: ismobile ? '16px' : '30px',
         opacity: 0.7,
-        marginTop: ismobile ? 10 : 15,
+        marginTop: ismobile ? 0 : 15,
         letterSpacing: ismobile ? '-0.05em' : '-0.028em',
-        textAlign: 'justify',
+    },
+    mobileTexts: {
+        marginTop: 10
     },
     bottomGas: {
         width: ismobile ? 180 : 342,
@@ -92,9 +94,14 @@ const useStyles = makeStyles((theme) => ({
     }
 }))
 
+type RoadmapItemTextType = {
+    text: string,
+    letterspacing: string,
+}
+
 type RoadmapItemProps = {
     title: string,
-    texts: Array<string>,
+    texts: Array<string | Array<RoadmapItemTextType>>,
     height: number,
     width?: number,
     left? : boolean,
@@ -118,9 +125,23 @@ const RoadmapItem = ({ title, texts, width, height, left, top }: RoadmapItemProp
             <Typography className={styles.roadmapItemTitle} style={{ textAlign: left ? 'right' : 'left' }}>{title}</Typography>
             <Grid>
                 {
-                    texts.map(text => (
-                        <Typography key={text} className={styles.roadmapItemText}>{text}</Typography>
-                    ))
+                    texts.map((text: any) => {
+                        if (!ismobile) {
+                            return (
+                                <Typography key={text} className={styles.roadmapItemText}>{text}</Typography>
+                            )
+                        } else {
+                            return (
+                                <Grid className={styles.mobileTexts}>
+                                    {
+                                        text.map((item: RoadmapItemTextType) => (
+                                            <Typography key={item.text} className={styles.roadmapItemText} style={{letterSpacing: item.letterspacing}}>{item.text}</Typography>
+                                        ))
+                                    }
+                                </Grid>
+                            )
+                        }
+                    })
                 }
             </Grid>
         </Grid>
@@ -129,6 +150,7 @@ const RoadmapItem = ({ title, texts, width, height, left, top }: RoadmapItemProp
 
 export default function Roadmap() {
     const styles = useStyles();
+    const items = ismobile ? mobileRoadmapList : roadmapList;
 
     return (
         <Grid container justify="center" className={styles.main} id="roadmap">
@@ -142,20 +164,20 @@ export default function Roadmap() {
                     <Grid className={styles.left} container direction="column" alignItems="flex-end">
                         <Grid style={{ height: 200 }} />
                         <Fade duration={2000}>
-                            <RoadmapItem {...roadmapList[1]} width={ismobile ? 148 : 318} height={480} left />
+                            <RoadmapItem {...items[1]} width={ismobile ? 148 : 318} height={480} left />
                         </Fade>
                         <Grid style={{ height: ismobile ? 150 : 380 }} />
                         <Fade duration={2000}>
-                            <RoadmapItem {...roadmapList[3]} width={ismobile ? 145 : 400} height={ismobile ? 150 : 200} left />
+                            <RoadmapItem {...items[3]} width={ismobile ? 145 : 400} height={ismobile ? 150 : 200} left />
                         </Fade>
                     </Grid>
                     <Grid className={styles.right}>
                         <Fade duration={2000}>
-                            <RoadmapItem {...roadmapList[0]} width={ismobile ? 144 : 560} height={200} top={36} />
+                            <RoadmapItem {...items[0]} width={ismobile ? 144 : 560} height={200} top={36} />
                         </Fade>
                         <Grid style={{ height: ismobile ? 300 : 480 }} />
                         <Fade duration={2000}>
-                            <RoadmapItem {...roadmapList[2]} width={ismobile ? 144 : 443} height={380} />
+                            <RoadmapItem {...items[2]} width={ismobile ? 144 : 443} height={380} />
                         </Fade>
                         <Grid style={{ height: ismobile ? 0 : 200 }} />
                     </Grid>

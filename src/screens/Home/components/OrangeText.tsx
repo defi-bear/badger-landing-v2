@@ -27,8 +27,8 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'P2P',
         fontStyle: 'normal',
         fontWeight: 'normal',
-        fontSize: `${isMobile ? 10 : 20}px`,
-        lineHeight: '23px',
+        fontSize: `${isMobile ? 10.0103 : 20}px`,
+        lineHeight: isMobile ? '12px' : '23px',
     },
     orange: {
         color: theme.palette.secondary.main,
@@ -37,26 +37,27 @@ const useStyles = makeStyles((theme) => ({
     },
     orangeWrapper: {
         position: 'relative',
+        marginTop: isMobile ? 20 : 0
     },
     star1: {
-        width: 25,
+        width: isMobile ? 12.5 : 25,
         position: 'absolute',
-        top: -30,
-        left: -20,
+        top: isMobile ? -10 : -30,
+        left: isMobile ? -10 : -20,
         opacity: 0,
     },
     star2: {
-        width: 25,
+        width: isMobile ? 12.5 : 25,
         position: 'absolute',
-        top: -50,
-        left: 100,
+        top: isMobile ? -20 : -50,
+        left: isMobile ? 55 : 100,
         opacity: 0,
     },
     star3: {
-        width: 25,
+        width: isMobile ? 12.5 : 25,
         position: 'absolute',
-        top: 45,
-        left: 70,
+        top: isMobile ? 35 : 45,
+        left: isMobile ? 30 : 70,
         opacity: 0,
     }
 }))

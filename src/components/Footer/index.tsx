@@ -128,22 +128,24 @@ export default function Footer() {
 					<Grid key={footeritems.title} item xs={isMobile ? 12 : 3} className={styles.footerItem}>
 						<Grid container justify={isMobile ? 'center' : 'flex-start'}>
 							<Typography className={styles.title}>{footeritems.title}</Typography>
-							<Grid container style={{ paddingLeft: footeritems.left }}>
-								{footeritems.items.map((item) => (
-									<Grid container key={item.title}>
-										<Link href={item.link}>
-											<Grid container direction="row" alignItems="center" className={styles.item}>
-												<img
-												 	draggable={false}
-													alt={item.title}
-													src={`/assets/images/${item.icon}`}
-													className={item.title === 'Read our Newsletter' ? styles.newsIcon : styles.itemIcon}
-												/>
-												<Typography className={styles.itemText}>{item.title}</Typography>
-											</Grid>
-										</Link>
-									</Grid>
-								))}
+							<Grid container justify={isMobile ? "center" : "flex-start"}>
+								<Grid>
+									{footeritems.items.map((item) => (
+										<Grid key={item.title}>
+											<Link href={item.link}>
+												<Grid container direction="row" alignItems="center" className={styles.item}>
+													<img
+														draggable={false}
+														alt={item.title}
+														src={`/assets/images/${item.icon}`}
+														className={item.title === 'Read our Newsletter' ? styles.newsIcon : styles.itemIcon}
+													/>
+													<Typography className={styles.itemText}>{item.title}</Typography>
+												</Grid>
+											</Link>
+										</Grid>
+									))}
+								</Grid>
 							</Grid>
 						</Grid>
 					</Grid>

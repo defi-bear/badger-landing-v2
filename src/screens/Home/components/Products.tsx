@@ -48,10 +48,11 @@ const useStyles = makeStyles((theme) => ({
     itemBody: {
         background: 'rgba(255, 255, 255, 0.1)',
         borderRadius: 10,
-        padding: '14px 20px 8px 20px',
+        padding: isMobile ? '4.5px 7.5px 11px 6.5px' : '14px 20px 8px 20px',
         marginTop: 15,
         width: '100%',
         flex: 1,
+        maxWidth: isMobile ? 274 : 'initial',
     },
     star: {
         width: isMobile ? 13.5 : 20,

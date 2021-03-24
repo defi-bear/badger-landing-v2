@@ -26,7 +26,9 @@ const useStyles = makeStyles(() => ({
         fontSize: isMobile ? 17 : 28,
         lineHeight: isMobile ? '20px' : '35px',
         opacity: 0.7,
-        textIndent: 30
+        textIndent: 30,
+        textAlign: 'justify',
+        letterSpacing: '-0.04em'
     },
     waysText: {
         fontFamily: 'POperator',
@@ -46,7 +48,7 @@ const useStyles = makeStyles(() => ({
         marginTop: isMobile ? 4 : 11
     },
     itemRight: {
-        width: isMobile ? 300 : 1056,
+        width: isMobile ? 275 : 1056,
         marginLeft: isMobile ? 4.3 : 20,
     },
     itemTitle: {
@@ -65,7 +67,9 @@ const useStyles = makeStyles(() => ({
         fontFamily: 'POperator',
         fontSize: isMobile ? 17 : 28,
         lineHeight: isMobile ? '20px' : 'initial',
-        opacity: 0.7
+        opacity: 0.7,
+        letterSpacing: '-0.03em',
+        textAlign: 'justify'
     },
     badgerBuilder: {
         width: isMobile ? 180 : 411,

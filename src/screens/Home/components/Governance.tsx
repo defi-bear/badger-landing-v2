@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'POperator',
         fontWeight: 700,
         fontSize: isMobile ? 14.2 : 25,
-        lineHeight: '23px',
+        lineHeight: isMobile ? '13px' : '23px',
         textAlign: 'center',
         color: '#000000',
         opacity: 0.7,

@@ -12,11 +12,11 @@ const list = [
 				},
 				{
 					text: 'rewards on your staked assets, with a',
-					letterspacing: isMobile ? '0.02em' : '0.008em'
+					letterspacing: isMobile ? '0.01em' : '0.008em'
 				},
 				{
 					text: 'primary focus on Bitcoin-on-Ethereum',
-					letterspacing: isMobile ? '0.025em' : '0.012em'
+					letterspacing: isMobile ? '0.015em' : '0.012em'
 				},
 				{
 					text: 'strategies',
@@ -36,15 +36,15 @@ const list = [
 			[
 				{
 					text: 'The Badger Setts are the main hub for',
-					letterspacing: '-0.01em'
+					letterspacing: '-0.009em'
 				},
 				{
 					text: 'Bitcoiners transitioning their funds',
-					letterspacing: isMobile ? '0.04em' : '0.029em'
+					letterspacing: isMobile ? '0.032em' : '0.029em'
 				},
 				{
 					text: 'across chains to stack sats with the',
-					letterspacing: isMobile ? '0.04em' : '0.028em'
+					letterspacing: isMobile ? '0.03em' : '0.028em'
 				},
 				{
 					text: 'power of DeFi',
@@ -60,11 +60,11 @@ const list = [
 			[
 				{
 					text: 'DIGG is an elastic supply token',
-					letterspacing: '0.077em'
+					letterspacing: '0.079em'
 				},
 				{
 					text: 'targeting the price of Bitcoin, with',
-					letterspacing: isMobile ? '0.05em' : '0.038em'
+					letterspacing: isMobile ? '0.04em' : '0.038em'
 				},
 				{
 					text: '24 hour rebasing periods',
@@ -88,15 +88,15 @@ const list = [
 				},
 				{
 					text: 'receive bDIGG, which represents your %',
-					letterspacing: isMobile ? '0.005em' : '-0.005em'
+					letterspacing: isMobile ? '-0.003em' : '-0.005em'
 				},
 				{
 					text: 'in the rebasing liquidity pool, allowing',
-					letterspacing: isMobile ? '0.01em' : '0em'
+					letterspacing: isMobile ? '0em' : '0em'
 				},
 				{
 					text: 'for composability with other DeFi applications',
-					letterspacing: isMobile ? '-0.056em' : '-0.064em'
+					letterspacing: isMobile ? '-0.062em' : '-0.064em'
 				},
 			]	 
 		],
@@ -109,7 +109,7 @@ const list = [
 			[
 				{
 					text: 'BADGER is the token of governing power',
-					letterspacing: '-0.025em'
+					letterspacing: '-0.023em'
 				},
 				{
 					text: 'over the BadgerDAO treasury',
@@ -133,7 +133,7 @@ const list = [
 				},
 				{
 					text: 'utilized for collaborations with other',
-					letterspacing: isMobile ? '0.025em' : '0.01em'
+					letterspacing: isMobile ? '0.012em' : '0.01em'
 				},
 				{
 					text: 'DeFi communities, such as MEME',
@@ -160,7 +160,7 @@ const list = [
 	},
 	{
 		img: 'assets/images/comingSoon.png',
-		title: 'bBTC (Coming Soon)',
+		title: 'ibBTC (Coming Soon)',
 		textList: [
 			[
 				{
