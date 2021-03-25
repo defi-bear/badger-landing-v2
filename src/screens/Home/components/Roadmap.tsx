@@ -72,14 +72,14 @@ const useStyles = makeStyles((theme) => ({
     leftBush: {
         width: ismobile ? 69 : 234,
         position: 'absolute',
-        left: 0,
+        left: ismobile ? -20 : 0,
         bottom: 0,
         zIndex: 1,
     },
     mainBottom: {
         width: ismobile ? 250 : 846,
         position: 'absolute',
-        left: ismobile ? 'calc(50% - 125px)' : 'calc(50% - 450px)',
+        left: ismobile ? 'calc(50% - 138px)' : 'calc(50% - 450px)',
         bottom: ismobile ? 0 : -1,
         zIndex: 1,
     },
