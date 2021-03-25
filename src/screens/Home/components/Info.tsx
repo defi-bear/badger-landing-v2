@@ -131,10 +131,10 @@ export default function Info() {
                         <Fade bottom delay={500}>
                             <>
                                 <Typography className={styles.title} align="right">The Potential of DeFi</Typography>
-                                <SubText letterspacing={isMobile ? '0.04em' : '-0.032em'}>
+                                <SubText letterspacing={isMobile ? '-0.05em' : '-0.032em'}>
                                     The fastest-growing sub-industry in blockchain, with over $25B Total Value Locked in DeFi applications.
                                 </SubText>
-                                <SubText letterspacing={isMobile ? '-0.04em' : 'initial'}>
+                                <SubText letterspacing={isMobile ? '-0.05em' : 'initial'}>
                                     For the first time, retail traders are able to utilize advanced financial instruments permissionlessly and without KYC.
                                 </SubText>
                                 <SubText letterspacing={isMobile ? '-0.01em' : '0.005em'}>
@@ -152,7 +152,7 @@ export default function Info() {
                                 <SubText>
                                     The Badger DAO believes in the initiatives of other Web3 projects and aims to support them with exposure and funds.
                                 </SubText>
-                                <SubText letterspacing={isMobile ? '0em' : '0.003em'}>
+                                <SubText letterspacing={isMobile ? '-0.01em' : '0.003em'}>
                                     Gitcoin is a grants program for Web3 projects that are building cool stuff for the blockchain ecosystem. 2% of the DAO’s treasury is devoted to philanthropic efforts to these small communities.
                                 </SubText>
                             </>
