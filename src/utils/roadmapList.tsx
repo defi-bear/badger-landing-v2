@@ -1,3 +1,5 @@
+import { isMobile } from 'react-device-detect';
+
 const roadmapList = [
 	{
 		title: 'Q2 2021',
@@ -203,13 +205,13 @@ const mobileRoadmapList = [
 ];
 
 const cloudList = [
-	{ img: 'cloud1.png', left: 'calc(50% - 800px)', top: 330, width: 120 },
-	{ img: 'cloud2.png', left: 'calc(50% - 650px)', top: 430, width: 75 },
-	{ img: 'cloud3.png', right: 'calc(50% - 625px)', top: 260, width: 153 },
-	{ img: 'cloud4.png', right: 'calc(50% - 825px)', top: 710, width: 355 },
-	{ img: 'cloud5.png', left: 'calc(50% - 755px)', top: 1200, width: 200 },
-	{ img: 'cloud6.png', left: 'calc(50% - 500px)', top: 1330, width: 74 },
-	{ img: 'cloud7.png', right: 'calc(50% - 585px)', bottom: 460, width: 300 },
+	{ img: 'cloud1.png', left: isMobile ? '-20px' : 'calc(50% - 800px)', top: isMobile ? 250 : 370, width: isMobile ? 60 : 120 },
+	{ img: 'cloud2.png', left: isMobile ? '45px' : 'calc(50% - 650px)', top: isMobile ? 300 : 470, width: isMobile ? 38 : 75 },
+	{ img: 'cloud3.png', right: isMobile ? '-20px' : 'calc(50% - 625px)', top: isMobile ? 160 : 300, width: isMobile ? 80 : 153 },
+	{ img: 'cloud4.png', right: isMobile ? '-70px' : 'calc(50% - 825px)', top: isMobile ? 550 : 850, width: isMobile ? 144 : 355 },
+	{ img: 'cloud5.png', left: isMobile ? '-20px' : 'calc(50% - 755px)', top: isMobile ? 900 : 1300, width: isMobile ? 104 : 200 },
+	{ img: 'cloud6.png', left: isMobile ? '120px' : 'calc(50% - 500px)', top: isMobile ? 980 : 1430, width: isMobile ? 38 : 74 },
+	{ img: 'cloud7.png', right: isMobile ? '-20px' : 'calc(50% - 585px)', bottom: isMobile ? 200 : 400, width: isMobile ? 105 : 300 },
 ];
 
 export { roadmapList, mobileRoadmapList, cloudList };

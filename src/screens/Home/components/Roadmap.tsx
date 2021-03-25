@@ -187,7 +187,7 @@ export default function Roadmap() {
                 <img draggable={false} src="/assets/images/mainBottom.png" className={styles.mainBottom} />
                 <img draggable={false} src={`/assets/images/rightBush${ismobile ? 1 : ''}.png`} className={styles.rightBush} />
                 {
-                    !ismobile && cloudList.map(({img: cloudImg, ...cloud}: CloudListType) => (
+                    cloudList.map(({img: cloudImg, ...cloud}: CloudListType) => (
                         <Fade duration={2000} left={cloud.left ? true : false} right={cloud.right ? true : false}>
                             <img draggable={false} key={cloudImg} src={`/assets/images/${cloudImg}`} className={styles.cloud} style={{...cloud}} />
                         </Fade>
