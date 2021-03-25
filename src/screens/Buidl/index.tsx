@@ -73,6 +73,7 @@ const useStyles = makeStyles(() => ({
     },
     badgerBuilder: {
         width: isMobile ? 180 : 411,
+        height: isMobile ? 104 : 'initial',
         marginTop: isMobile ? 30 : 122,
         marginBottom: isMobile ? 17.6 : 78
     }
