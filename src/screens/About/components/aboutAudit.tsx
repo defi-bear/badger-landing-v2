@@ -8,7 +8,8 @@ import { isMobile } from 'react-device-detect';
 
 const useStyles = makeStyles((theme) => ({
     main: {
-        marginTop: isMobile ? 30 : 110
+        marginTop: isMobile ? 30 : 110,
+        overflowX: 'hidden'
     },
     leftPanel: {
         backgroundColor: theme.palette.secondary.main,
