@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
 		background: 'linear-gradient(180deg, #FFC93F 0%, rgba(255, 255, 255, 0) 79.76%), #E3581F',
 		boxShadow: '0px 3px 3px rgba(0, 0, 0, 0.25)',
 		height: 42,
-		marginLeft: 14,
+		marginLeft: isMobile ? 0 : 14,
 		padding: '6px 17px',
 		'&>span': {
 			fontSize: 15,
@@ -70,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
 		padding: '13px 19px',
 	},
 	mobileItem: {
-		marginTop: 30
+		marginTop: 30,
 	},
 }));
 

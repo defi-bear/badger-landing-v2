@@ -34,7 +34,8 @@ const useStyles = makeStyles((theme) => ({
     auditSubText: {
         fontSize: isMobile ? 10 : 18,
         lineHeight: isMobile ? '11px' : '23px',
-        color: '#FFF'
+        color: '#FFF',
+        marginBottom: isMobile ? 8 : 0
     },
     whiteLine: {
         width: 138,
@@ -48,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: isMobile ? '15px' : '23px',
         color: '#FFF',
         opacity: 0.9,
-        marginTop: isMobile ? 8 : 12,
+        marginTop: isMobile ? 0 : 12,
         width: isMobile ? 200 : 402,
         textAlign: 'justify'
     },
@@ -137,7 +138,20 @@ export default function AboutAudit() {
                                 <Typography className={styles.auditSubText}>Zokyo audit</Typography>
                                 { !isMobile && <Grid className={styles.whiteLine} /> }
                             </Grid>
-                            <Typography className={styles.auditDescription}>Zokyo audits smart contracts, protocols, crowd sale token contracts, and custom smart contracts across every major protocol and programming language.</Typography>
+                            {
+                                isMobile ? (
+                                    <>
+                                        <Typography className={styles.auditDescription}>Zokyo audits smart contracts,</Typography>
+                                        <Typography className={styles.auditDescription} style={{letterSpacing: '0.03em'}}>protocols, crowd sale token</Typography>
+                                        <Typography className={styles.auditDescription} style={{letterSpacing: '0.02em'}}>contracts, and custom smart</Typography>
+                                        <Typography className={styles.auditDescription}>contracts across every major</Typography>
+                                        <Typography className={styles.auditDescription} style={{letterSpacing: '0.07em'}}>protocol and programming</Typography>
+                                        <Typography className={styles.auditDescription}>language.</Typography>
+                                    </>
+                                ) : (
+                                    <Typography className={styles.auditDescription}>Zokyo audits smart contracts, protocols, crowd sale token contracts, and custom smart contracts across every major protocol and programming language.</Typography>
+                                )
+                            }
                             <Button className={styles.readAudit} onClick={onZokyoAudit}>
                                 read the audit
                                 <img draggable={false} alt="Arrow Icon" src="/assets/images/arrow1.png" className={styles.arrowImg} />
@@ -153,7 +167,20 @@ export default function AboutAudit() {
                                 <Typography className={styles.auditSubText}>Haechi audit</Typography>
                                 { !isMobile && <Grid className={styles.whiteLine} /> }
                             </Grid>
-                            <Typography className={styles.auditDescription} style={{ letterSpacing: '-0.04em' }}>Haechi is a leading smart contract security audit and development firm. They are incubated by the Samsung Electronics and awarded Ethereum Foundation Grant.</Typography>
+                            {
+                                isMobile ? (
+                                    <Grid>
+                                        <Typography className={styles.auditDescription} style={{ letterSpacing: '-0.05em' }}>Haechi is a leading smart contract</Typography>
+                                        <Typography className={styles.auditDescription} style={{ letterSpacing: '-0.015em' }}>security audit and development</Typography>
+                                        <Typography className={styles.auditDescription} style={{ letterSpacing: '0.037em' }}>firm. They are incubated by</Typography>
+                                        <Typography className={styles.auditDescription} style={{ letterSpacing: '0.025em' }}>the Samsung Electronics and</Typography>
+                                        <Typography className={styles.auditDescription} style={{ letterSpacing: '0.006em' }}>awarded Ethereum Foundation</Typography>
+                                        <Typography className={styles.auditDescription}>Grant.</Typography>
+                                    </Grid>
+                                ) : (
+                                    <Typography className={styles.auditDescription} style={{ letterSpacing: '-0.04em' }}>Haechi is a leading smart contract security audit and development firm. They are incubated by the Samsung Electronics and awarded Ethereum Foundation Grant.</Typography>
+                                )
+                            }
                             <Button className={styles.readAudit} onClick={onHaechiAudit}>
                                 read the audit
                                 <img draggable={false} alt="Arrow Icon" src="/assets/images/arrow1.png" className={styles.arrowImg} />

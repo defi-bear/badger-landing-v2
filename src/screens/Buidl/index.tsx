@@ -92,7 +92,7 @@ export default function Buidl() {
                 </Grid>
                 <Typography className={styles.description}>Come join the party! The Badgers are growing in numbers, and there’s plenty of room left for anyone who wants to come and start building products and liquidity strategies with the community. </Typography>
                 <Typography className={styles.waysText}>Ways you can contribute:</Typography>
-                <Grid container className={styles.item} alignItems="flex-start" direction="row">
+                <Grid container justify="center" className={styles.item} alignItems="flex-start" direction="row">
                     <Grid item>
                         <img draggable={false} alt="Star Logo" src="/assets/images/star.png" className={styles.star} />
                     </Grid>
@@ -108,7 +108,7 @@ export default function Buidl() {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid container className={styles.item} alignItems="flex-start" direction="row">
+                <Grid container justify="center" className={styles.item} alignItems="flex-start" direction="row">
                     <Grid item>
                         <img draggable={false} alt="Star Logo" src="/assets/images/star.png" className={styles.star} />
                     </Grid>
@@ -126,7 +126,7 @@ export default function Buidl() {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid container className={styles.item} alignItems="flex-start" direction="row">
+                <Grid container justify="center" className={styles.item} alignItems="flex-start" direction="row">
                     <Grid item>
                         <img draggable={false} alt="Star Logo" src="/assets/images/star.png" className={styles.star} />
                     </Grid>

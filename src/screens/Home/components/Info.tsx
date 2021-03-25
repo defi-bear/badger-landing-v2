@@ -23,13 +23,13 @@ const useStyles = makeStyles(() => ({
         textAlign: isMobile ? 'center' : 'left'
     },
     textWrapper: {
-        marginTop: 25,
+        marginTop: isMobile ? 15 : 25,
         display: 'flex',
         flexDirection: 'row'
     },
     indentIcon: {
-        width: 15,
-        height: 15,
+        width: isMobile ? 10.8 : 15,
+        height: isMobile ? 10.8 : 15,
         marginTop: 4,
         marginRight: 6
     },
@@ -37,8 +37,8 @@ const useStyles = makeStyles(() => ({
         fontFamily: 'POperator',
         fontStyle: 'normal',
         fontWeight: 'normal',
-        fontSize: '25px',
-        lineHeight: '23px',
+        fontSize: isMobile ? '18px' : '25px',
+        lineHeight: isMobile ? '16.6px' : '23px',
         opacity: 0.7,
         marginLeft: 4,
         textAlign: 'justify',
@@ -102,7 +102,7 @@ export default function Info() {
                                 <SubText width={isMobile ? '100%' : 580}>
                                     The #1 digital store of value on the planet, with the most distributed and permissionless network.
                                 </SubText>
-                                <SubText>
+                                <SubText letterspacing="0em">
                                     Unmatched in hashpower and security.
                                 </SubText>
                                 <SubText>
@@ -131,13 +131,13 @@ export default function Info() {
                         <Fade bottom delay={500}>
                             <>
                                 <Typography className={styles.title} align="right">The Potential of DeFi</Typography>
-                                <SubText letterspacing={isMobile ? '-0.08em' : '-0.032em'}>
+                                <SubText letterspacing={isMobile ? '0.04em' : '-0.032em'}>
                                     The fastest-growing sub-industry in blockchain, with over $25B Total Value Locked in DeFi applications.
                                 </SubText>
-                                <SubText letterspacing={isMobile ? '-0.08em' : 'initial'}>
+                                <SubText letterspacing={isMobile ? '-0.02em' : 'initial'}>
                                     For the first time, retail traders are able to utilize advanced financial instruments permissionlessly and without KYC.
                                 </SubText>
-                                <SubText letterspacing={isMobile ? '-0.07em' : '0.005em'}>
+                                <SubText letterspacing={isMobile ? '-0.01em' : '0.005em'}>
                                     It’s a way to build alternatives to closed and centralized systems of Wall Street and the world’s most powerful banks.
                                 </SubText>
                             </>
@@ -152,7 +152,7 @@ export default function Info() {
                                 <SubText>
                                     The Badger DAO believes in the initiatives of other Web3 projects and aims to support them with exposure and funds.
                                 </SubText>
-                                <SubText letterspacing={isMobile ? '-0.02em' : '0.003em'}>
+                                <SubText letterspacing={isMobile ? '0.008em' : '0.003em'}>
                                     Gitcoin is a grants program for Web3 projects that are building cool stuff for the blockchain ecosystem. 2% of the DAO’s treasury is devoted to philanthropic efforts to these small communities.
                                 </SubText>
                             </>

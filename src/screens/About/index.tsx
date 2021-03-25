@@ -37,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
         textIndent: 35,
         textAlign: 'justify',
         padding: isMobile ? '0px 35px' : '0px',
+        letterSpacing: isMobile ? '-0.03em' : 'initial',
     },
     boldText: {
         fontWeight: 700

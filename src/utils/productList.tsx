@@ -60,7 +60,7 @@ const list = [
 			[
 				{
 					text: 'DIGG is an elastic supply token',
-					letterspacing: '0.079em'
+					letterspacing: '0.075em'
 				},
 				{
 					text: 'targeting the price of Bitcoin, with',
