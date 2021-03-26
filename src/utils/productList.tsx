@@ -2,55 +2,43 @@ import { isMobile } from 'react-device-detect';
 
 const list = [
 	{
-		img: 'assets/images/vault.png',
-		title: 'Sett Vaults',
+		img: 'assets/images/badgerHead.png',
+		title: '$BADGER',
 		textList: [
 			[
 				{
-					text: 'The Sett Vaults are a product for earning',
-					letterspacing: '-0.044em'
+					text: 'BADGER is the token of governing power',
+					letterspacing: isMobile ? '-0.023em' : '0.03em'
 				},
 				{
-					text: 'rewards on your staked assets, with a',
-					letterspacing: isMobile ? '0.01em' : '0.008em'
-				},
-				{
-					text: 'primary focus on Bitcoin-on-Ethereum',
-					letterspacing: isMobile ? '0.015em' : '0.012em'
-				},
-				{
-					text: 'strategies',
+					text: 'over the BadgerDAO treasury',
 					letterspacing: '0em'
 				},
 			],
 			[
 				{
-					text: 'You can earn rewards for staking $Badger',
-					letterspacing: '-0.05em'
+					text: 'It is issued as a reward for staking',
+					letterspacing: '0.01em'
 				},
 				{
-					text: 'and $DIGG token',
+					text: 'in the Badger Setts',
 					letterspacing: '0em'
 				},
 			],
 			[
 				{
-					text: 'The Badger Setts are the main hub for',
-					letterspacing: isMobile ? '-0.009em' : '-0.01em'
+					text: 'bBadger from the BADGER Sett is often',
+					letterspacing: '-0.011em'
 				},
 				{
-					text: 'Bitcoiners transitioning their funds',
-					letterspacing: isMobile ? '0.032em' : '0.029em'
+					text: 'utilized for collaborations with other',
+					letterspacing: isMobile ? '0.012em' : '0.01em'
 				},
 				{
-					text: 'across chains to stack sats with the',
-					letterspacing: isMobile ? '0.03em' : '0.028em'
-				},
-				{
-					text: 'power of DeFi',
+					text: 'DeFi communities, such as MEME',
 					letterspacing: '0em'
 				},
-			]
+			], 
 		],
 	},
 	{
@@ -103,43 +91,55 @@ const list = [
 		learnMore: 'https://digg.page',
 	},
 	{
-		img: 'assets/images/badgerHead.png',
-		title: '$BADGER',
+		img: 'assets/images/vault.png',
+		title: 'Sett Vaults',
 		textList: [
 			[
 				{
-					text: 'BADGER is the token of governing power',
-					letterspacing: isMobile ? '-0.023em' : '0.03em'
+					text: 'The Sett Vaults are a product for earning',
+					letterspacing: '-0.044em'
 				},
 				{
-					text: 'over the BadgerDAO treasury',
+					text: 'rewards on your staked assets, with a',
+					letterspacing: isMobile ? '0.01em' : '0.008em'
+				},
+				{
+					text: 'primary focus on Bitcoin-on-Ethereum',
+					letterspacing: isMobile ? '0.015em' : '0.012em'
+				},
+				{
+					text: 'strategies',
 					letterspacing: '0em'
 				},
 			],
 			[
 				{
-					text: 'It is issued as a reward for staking',
-					letterspacing: '0.01em'
+					text: 'You can earn rewards for staking $Badger',
+					letterspacing: '-0.05em'
 				},
 				{
-					text: 'in the Badger Setts',
+					text: 'and $DIGG token',
 					letterspacing: '0em'
 				},
 			],
 			[
 				{
-					text: 'bBadger from the BADGER Sett is often',
-					letterspacing: '-0.011em'
+					text: 'The Badger Setts are the main hub for',
+					letterspacing: isMobile ? '-0.009em' : '-0.01em'
 				},
 				{
-					text: 'utilized for collaborations with other',
-					letterspacing: isMobile ? '0.012em' : '0.01em'
+					text: 'Bitcoiners transitioning their funds',
+					letterspacing: isMobile ? '0.032em' : '0.029em'
 				},
 				{
-					text: 'DeFi communities, such as MEME',
+					text: 'across chains to stack sats with the',
+					letterspacing: isMobile ? '0.03em' : '0.028em'
+				},
+				{
+					text: 'power of DeFi',
 					letterspacing: '0em'
 				},
-			], 
+			]
 		],
 	},
 	{

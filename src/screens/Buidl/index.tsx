@@ -81,6 +81,7 @@ const useStyles = makeStyles(() => ({
 
 export default function Buidl() {
     const styles = useStyles();
+    const spacing = isMobile ? '-0.08em' : '0em';
 
     return (
         <Grid container className={styles.main} alignItems="center" justify="center">
@@ -116,7 +117,7 @@ export default function Buidl() {
                         <Grid container>
                             <Typography className={styles.itemText}>
                                 <span className={styles.itemTitle}>Development:</span>
-                                <span style={{letterSpacing: '-0.08em'}}> Build new products and integrations with DeFi protocols and DAOs across the ecosystem.</span>
+                                <span style={{letterSpacing: spacing }}> Build new products and integrations with DeFi protocols and DAOs across the ecosystem.</span>
                             </Typography>
                             <Typography className={styles.itemText}>
                                 <Link href="https://forms.gle/bJMAC5M3T2NfSvy3A">
@@ -137,7 +138,7 @@ export default function Buidl() {
                                 <Link href="https://discord.gg/PaPaeDq">
                                     <span className={styles.itemLink}> Hop into our Discord</span>
                                 </Link>
-                                <span className={styles.itemText}> to join the conversation and learn more about how to get involved with the community!</span>
+                                <span> to join the conversation and learn more about how to get involved with the community!</span>
                             </Typography>
                         </Grid>
                     </Grid>

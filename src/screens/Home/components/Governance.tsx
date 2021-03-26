@@ -122,6 +122,11 @@ export default function Governance() {
                             Go to Community forum
                         </TickItem>
                     </Grid>
+                    <Grid item>
+                        <TickItem type="snapshot" href="https://snapshot.org/#/badgerdao.eth">
+                            Go to Snapshot page
+                        </TickItem>
+                    </Grid>
                 </Grid>
                 <Typography className={styles.sdescription}>
                     Anyone can come and propose a new product, idea, or amendment to governance
