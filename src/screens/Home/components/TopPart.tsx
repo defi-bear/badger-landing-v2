@@ -96,10 +96,10 @@ export default function TopPart() {
 						</Grid>
 						<Grid container>
 							<Fade bottom>
-								<Typography className={styles.buildText}>Building Defi for Bitcoin</Typography>
+								<Typography className={styles.buildText}>Building DeFi for Bitcoin</Typography>
 							</Fade>
 							<Fade bottom delay={500}>
-								<Typography className={styles.description}><span className={styles.boldDescription}>BadgerDAO</span> is a decentralized collective of developers, strategists, and content creators who seek to build and support new Bitcoin-focused products for the DeFi ecosystem</Typography>
+								<Typography className={styles.description}><span className={styles.boldDescription}>BadgerDAO</span> is a decentralized collective of developers, strategists, and content creators who seek to build and support new Bitcoin-focused products for the DeFi (Decentralized Finance) ecosystem</Typography>
 							</Fade>
 							<Fade bottom delay={1000}>
 								<Button className={styles.viewAudit} onClick={onAudit}>
@@ -114,10 +114,10 @@ export default function TopPart() {
 						<Grid item xs={6}>
 							<Grid container>
 								<Fade bottom>
-									<Typography className={styles.buildText}>Building Defi for Bitcoin</Typography>
+									<Typography className={styles.buildText}>Building DeFi for Bitcoin</Typography>
 								</Fade>
 								<Fade bottom delay={500}>
-									<Typography className={styles.description}><span className={styles.boldDescription}>BadgerDAO</span> is a decentralized collective of developers, strategists, and content creators who seek to build and support new Bitcoin-focused products for the DeFi ecosystem</Typography>
+									<Typography className={styles.description}><span className={styles.boldDescription}>BadgerDAO</span> is a decentralized collective of developers, strategists, and content creators who seek to build and support new Bitcoin-focused products for the DeFi (Decentralized Finance) ecosystem</Typography>
 								</Fade>
 								<Fade bottom delay={1000}>
 									<Button className={styles.viewAudit} onClick={onAudit}>

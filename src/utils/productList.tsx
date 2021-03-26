@@ -36,7 +36,7 @@ const list = [
 			[
 				{
 					text: 'The Badger Setts are the main hub for',
-					letterspacing: '-0.009em'
+					letterspacing: isMobile ? '-0.009em' : '-0.01em'
 				},
 				{
 					text: 'Bitcoiners transitioning their funds',
@@ -109,7 +109,7 @@ const list = [
 			[
 				{
 					text: 'BADGER is the token of governing power',
-					letterspacing: '-0.023em'
+					letterspacing: isMobile ? '-0.023em' : '0.03em'
 				},
 				{
 					text: 'over the BadgerDAO treasury',

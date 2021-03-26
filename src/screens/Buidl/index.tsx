@@ -90,7 +90,7 @@ export default function Buidl() {
                     <Typography className={styles.buildText}>Build with the Badgers</Typography>
                     <img draggable={false} alt="Screw Icon" src="/assets/images/screw.png" className={styles.hammerIcon} />
                 </Grid>
-                <Typography className={styles.description}>Come join the party! The Badgers are growing in numbers, and there’s plenty of room left for anyone who wants to come and start building products and liquidity strategies with the community. </Typography>
+                <Typography className={styles.description}>Come join the party! The Badgers are growing in numbers, and there’s plenty of room for anyone who wants to come and start building products with the community. </Typography>
                 <Typography className={styles.waysText}>Ways you can contribute:</Typography>
                 <Grid container justify="center" className={styles.item} alignItems="flex-start" direction="row">
                     <Grid item>
@@ -135,9 +135,9 @@ export default function Buidl() {
                             <Typography className={styles.itemText}>
                                 <span className={styles.itemTitle}>Join the Discussion:</span>
                                 <Link href="https://discord.gg/PaPaeDq">
-                                    <span className={styles.itemLink}> Hop in to our Discord</span>
+                                    <span className={styles.itemLink}> Hop into our Discord</span>
                                 </Link>
-                                <span className={styles.itemText}> to get involved in the conversations and find out about our awesome community events!</span>
+                                <span className={styles.itemText}> to join the conversation and learn more about how to get involved with the community!</span>
                             </Typography>
                         </Grid>
                     </Grid>
