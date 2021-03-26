@@ -81,7 +81,7 @@ const useStyles = makeStyles((theme) => ({
         width: isMobile ? 117 : 328,
         height: isMobile ? 125 : 352,
         position: 'absolute',
-        top: isMobile ? 420 : 240,
+        top: isMobile ? 411 : 240,
         left: isMobile ? -150 : -114,
     },
     bubbleWrapper: {

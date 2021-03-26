@@ -3,11 +3,15 @@ import { Grid, makeStyles, Link, Typography } from '@material-ui/core';
 import { isMobile } from 'react-device-detect';
 
 const useStyles = makeStyles((theme) => ({
+    wrapper: {
+        paddingTop: 30,
+    },
     main: {
         width: '100%',
-        paddingTop: isMobile ? 17 : 84,
+        paddingTop: isMobile ? 28 : 84,
         paddingBottom: isMobile ? 32 : 67,
-        borderBottom: '3px solid rgba(0, 0, 0, 0.05)'
+        borderBottom: '3px solid rgba(0, 0, 0, 0.05)',
+        borderTop: '3px solid rgba(0, 0, 0, 0.05)',
 	},
 	subMain: {
         maxWidth: 1120,
@@ -105,32 +109,34 @@ export default function Governance() {
     const styles = useStyles();
 
     return (
-        <Grid className={styles.main} container justify="center" id="governance">
-            <Grid className={styles.subMain} alignItems="center" container direction="column">
-                <Typography className={styles.title}>Governance</Typography>
-                <Typography className={styles.description}>
-                    Badger DAO is governed through a combination of communication platforms, from Discord, to our community forum
-                </Typography>
-                <Grid container alignItems="flex-start" direction="column" className={styles.tickItems}>
-                    <Grid item>
-                        <TickItem type="discord" href="https://discord.com/invite/xSPFHHS">
-                            Go to Discord
-                        </TickItem>
+        <Grid className={styles.wrapper} container justify="center" id="governance">
+            <Grid className={styles.main} container justify="center">
+                <Grid className={styles.subMain} alignItems="center" container direction="column">
+                    <Typography className={styles.title}>Governance</Typography>
+                    <Typography className={styles.description}>
+                        Badger DAO is governed through a combination of communication platforms, from Discord, to our community forum
+                    </Typography>
+                    <Grid container alignItems="flex-start" direction="column" className={styles.tickItems}>
+                        <Grid item>
+                            <TickItem type="discord" href="https://discord.com/invite/xSPFHHS">
+                                Go to Discord
+                            </TickItem>
+                        </Grid>
+                        <Grid item>
+                            <TickItem type="community" href="https://forum.badger.finance">
+                                Go to Community forum
+                            </TickItem>
+                        </Grid>
+                        <Grid item>
+                            <TickItem type="snapshot" href="https://snapshot.org/#/badgerdao.eth">
+                                Go to Snapshot page
+                            </TickItem>
+                        </Grid>
                     </Grid>
-                    <Grid item>
-                        <TickItem type="community" href="https://forum.badger.finance">
-                            Go to Community forum
-                        </TickItem>
-                    </Grid>
-                    <Grid item>
-                        <TickItem type="snapshot" href="https://snapshot.org/#/badgerdao.eth">
-                            Go to Snapshot page
-                        </TickItem>
-                    </Grid>
+                    <Typography className={styles.sdescription}>
+                        Anyone can come and propose a new product, idea, or amendment to governance
+                    </Typography>
                 </Grid>
-                <Typography className={styles.sdescription}>
-                    Anyone can come and propose a new product, idea, or amendment to governance
-                </Typography>
             </Grid>
         </Grid>
     )

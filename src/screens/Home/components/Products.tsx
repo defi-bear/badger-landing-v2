@@ -10,7 +10,6 @@ const useStyles = makeStyles((theme) => ({
     main: {
         width: '100%',
         paddingTop: isMobile ? 55 : 234,
-        borderBottom: '3px solid rgba(0, 0, 0, 0.05)',
         padding: isMobile ? '0px 35px 35px 35px' : 67,
 	},
 	subMain: {
@@ -84,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
 		marginTop: 15,
         padding: '6px 12px',
         position: 'absolute',
-        bottom: 7,
+        bottom: 0,
 		'&:hover': {
 			background: theme.palette.primary.dark,
 			opacity: 1
@@ -130,9 +129,9 @@ const Item = ({ img, title, textList, learnMore }: ItemProps) => {
                 <img draggable={false} src={img} className={styles.itemImg} />
             </Grid>
             <Grid item>
-                <Typography className={styles.itemTitle}>{title}</Typography>
+                <Typography className={styles.itemTitle} style={{ marginTop: title === '$BADGER' ? 18 : 22 }}>{title}</Typography>
             </Grid>
-            <Grid item className={styles.itemBody}>
+            <Grid item className={styles.itemBody} style={{ paddingBottom: title === '$DIGG' ? 30 : 0 }}>
                 {
                     textList.map(texts => (
                         <Grid className={styles.itemTextWrapper}>

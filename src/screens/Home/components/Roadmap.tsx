@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: ismobile ? '16px' : '30px',
         opacity: 0.7,
         marginTop: ismobile ? 0 : 15,
-        letterSpacing: ismobile ? '-0.05em' : '-0.028em',
+        letterSpacing: ismobile ? '-0.05em' : '-0.04em',
     },
     mobileTexts: {
         marginTop: 10

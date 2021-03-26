@@ -135,7 +135,7 @@ export default function Info() {
                                     The fastest-growing sub-industry in blockchain, with over $25B Total Value Locked in DeFi applications.
                                 </SubText>
                                 <SubText letterspacing={isMobile ? '-0.05em' : 'initial'}>
-                                    For the first time, retail traders are able to utilize advanced financial instruments permissionlessly and without KYC.
+                                    For the first time, retail traders are able to utilize advanced financial instruments permissionlessly.
                                 </SubText>
                                 <SubText letterspacing={isMobile ? '-0.01em' : '0.005em'}>
                                     It’s a way to build alternatives to closed and centralized systems of Wall Street and the world’s most powerful banks.
