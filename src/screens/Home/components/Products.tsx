@@ -83,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
 		marginTop: 15,
         padding: '6px 12px',
         position: 'absolute',
-        bottom: 0,
+        bottom: isMobile ? 8 : 0,
 		'&:hover': {
 			background: theme.palette.primary.dark,
 			opacity: 1
