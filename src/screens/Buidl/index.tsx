@@ -116,7 +116,7 @@ export default function Buidl() {
                         <Grid container>
                             <Typography className={styles.itemText}>
                                 <span className={styles.itemTitle}>Development:</span>
-                                <span> Build new products, liquidity strategies and integrations with other Defi DAOs.</span>
+                                <span style={{letterSpacing: '-0.08em'}}> Build new products and integrations with DeFi protocols and DAOs across the ecosystem.</span>
                             </Typography>
                             <Typography className={styles.itemText}>
                                 <Link href="https://forms.gle/bJMAC5M3T2NfSvy3A">
