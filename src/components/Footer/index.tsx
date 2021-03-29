@@ -152,7 +152,7 @@ export default function Footer() {
 				))}
 				<Grid item xs={12}>
 					<Typography className={styles.bottomText}>
-						*$BADGER is strictly utilized to govern the Badger DAO and has no monetary value
+						*$BADGER is strictly utilized to govern the BadgerDAO and has no monetary value
 					</Typography>
 				</Grid>
 			</Grid>

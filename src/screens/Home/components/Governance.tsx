@@ -114,7 +114,7 @@ export default function Governance() {
                 <Grid className={styles.subMain} alignItems="center" container direction="column">
                     <Typography className={styles.title}>Governance</Typography>
                     <Typography className={styles.description}>
-                        Badger DAO is governed through a combination of communication platforms, from Discord, to our community forum
+                        BadgerDAO is governed through a combination of communication platforms, from Discord, to our community forum
                     </Typography>
                     <Grid container alignItems="flex-start" direction="column" className={styles.tickItems}>
                         <Grid item>

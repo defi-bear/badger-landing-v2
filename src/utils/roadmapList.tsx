@@ -26,7 +26,7 @@ const roadmapList = [
 		title: 'Q4 2020',
 		texts: [
 			'- Developer collective contracted to build a DAO to govern the parameters of the elastic supply token',
-			'- Badger DAO brand was born',
+			'- BadgerDAO brand was born',
 			'- Partnerships formed with various DeFi DAOs',
 			'- $Badger & Sett Vaults audited',
 			'- Launch of $Badger and Sett Vaults',
@@ -151,7 +151,7 @@ const mobileRoadmapList = [
 			],
 			[
 				{
-					text: '- Badger DAO brand was', letterspacing: '0em',
+					text: '- BadgerDAO brand was', letterspacing: '0em',
 				},
 				{
 					text: 'born', letterspacing: '0em',

@@ -95,7 +95,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function About() {
     const styles = useStyles();
-    const description = 'Builders are a distributed team of developers, founders, content creators, and strategists, who all believe in the power of Bitcoin as a digital store of value, and DeFi as a means of permissionlessly earning yield on Bitcoin. The team is being led by Chris Spadafora, a long term crypto enthusiast, investor, founder of Angelrock, host of Crypto After Dark poker and philanthropy through Pioneerclub.io. Many more Badgers have joined him since the inception of Badger DAO, and now compose a community where the DAO decides on the direction & production of Badger DAO’s products.';
+    const description = 'Builders are a distributed team of developers, founders, content creators, and strategists, who all believe in the power of Bitcoin as a digital store of value, and DeFi as a means of permissionlessly earning yield on Bitcoin. The team is being led by Chris Spadafora, a long term crypto enthusiast, investor, founder of Angelrock, host of Crypto After Dark poker and philanthropy through Pioneerclub.io. Many more Badgers have joined him since the inception of BadgerDAO, and now compose a community where the DAO decides on the direction & production of BadgerDAO’s products.';
     const onReview = () => {
         window.open('https://github.com/badger-Finance')
     }
