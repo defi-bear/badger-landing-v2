@@ -4,6 +4,8 @@ import { Grid, makeStyles, Typography, Button } from '@material-ui/core';
 import Fade from 'react-reveal/Fade';
 import { isMobile } from 'react-device-detect';
 
+import { formatUsd } from '../../../utils/formatNumber';
+import usePrice from '../../../api/price';
 import InfoText from './InfoText';
 import MainBadgerImage from './MainBadgerImage';
 
@@ -82,6 +84,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function TopPart() {
 	const styles = useStyles();
+    const badgerPrice = usePrice('badger-dao', 'usd');
+    const diggPrice = usePrice('digg', 'usd');
 
 	const onAudit = () => {
 		window.open('https://badger.finance/wp-content/uploads/2021/01/HAECHI-AUDIT-BadgerDAO-Smart-Contract-Audit-Report-1.pdf', '_blank');
@@ -137,16 +141,16 @@ export default function TopPart() {
 			}
 			<Grid container direction="row" className={styles.infoContainer}>
 				<Grid item xs={ isMobile ? 6 : 2 }>
-					<InfoText topText='$57.54' bottomText='Badger price' />
+					<InfoText topText={`$${badgerPrice}`} bottomText='Badger price' />
 				</Grid>
 				<Grid item xs={ isMobile ? 6 : 2 }>
-					<InfoText topText='7,000+' bottomText='Badger HODLers' />
+					<InfoText topText='15,000+' bottomText='Badger HODLers' />
 				</Grid>
 				<Grid item xs={ isMobile ? 6 : 2 }>
-					<InfoText topText='$42,000' bottomText='DIGG price' />
+					<InfoText topText={`$${formatUsd(diggPrice)}`} bottomText='DIGG price' />
 				</Grid>
 				<Grid item xs={ isMobile ? 6 : 2 }>
-					<InfoText topText='1000+' bottomText='DIGG HODLers' />
+					<InfoText topText='3,500+' bottomText='DIGG HODLers' />
 				</Grid>
 			</Grid>
         </Grid>

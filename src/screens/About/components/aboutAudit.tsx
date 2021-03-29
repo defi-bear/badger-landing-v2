@@ -107,7 +107,7 @@ const useStyles = makeStyles((theme) => ({
         background: theme.palette.primary.main,
         position: 'absolute',
         top: isMobile ? 532 : 579,
-        left: isMobile ? -158 : -114,
+        left: isMobile ? -160 : -114,
     },
 }))
 
@@ -190,12 +190,12 @@ export default function AboutAudit() {
                 </Grid>
                 <Grid className={styles.rightPanel} item xs={isMobile ? 2 : 4}>
                     <img draggable={false} alt="Security Person" src="/assets/images/securityPeople.png" className={styles.securityPerson} />
-                    <Bounce right cascade delay={2000}>
+                    <Fade right cascade delay={2000}>
                         <Grid className={styles.bubbleWrapper}>
                             <img draggable={false} alt="Security Bubble" src="/assets/images/securityBubble.png" className={styles.securityBubble} />
                             <Typography className={styles.securityText}>Security matters</Typography>
                         </Grid>
-                    </Bounce>
+                    </Fade>
                     <Grid className={styles.yellowBorder} />
                 </Grid>
             </Grid>

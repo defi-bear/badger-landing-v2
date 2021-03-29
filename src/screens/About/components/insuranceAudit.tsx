@@ -122,12 +122,12 @@ export default function InsuranceAudit() {
             <Grid container className={styles.main}>
                 <Grid className={styles.leftPanel} item xs={isMobile ? 2 : 4}>
                     <img draggable={false} alt="Insurance Person" src="/assets/images/insurancePeople.png" className={styles.insurancePeople} />
-                    <Bounce left cascade delay={2000}>
+                    <Fade left cascade delay={2000}>
                         <Grid className={styles.bubbleWrapper}>
                             <img draggable={false} alt="Insurance Bubble" src="/assets/images/insuranceBubble.png" className={styles.insuranceBubble} />
                             <Typography className={styles.bubbleText}>Insure your Funds</Typography>
                         </Grid>
-                    </Bounce>
+                    </Fade>
                     <Grid className={styles.yellowBorder} />
                 </Grid>
                 <Grid className={styles.rightPanel} item xs={isMobile ? 10 : 8}>
@@ -140,12 +140,12 @@ export default function InsuranceAudit() {
                             {
                                 isMobile ? (
                                     <Grid>
-                                        <Typography className={styles.nexusDescription} style={{ letterSpacing: '-0.03em' }}>Nexus Mutual is a decentralized</Typography>
-                                        <Typography className={styles.nexusDescription} style={{ letterSpacing: '0.03em' }}>insurance protocol built on</Typography>
-                                        <Typography className={styles.nexusDescription} style={{ letterSpacing: '-0.05em' }}>Ethereum that began in May 2019.</Typography>
-                                        <Typography className={styles.nexusDescription} style={{ letterSpacing: '0.07em' }}>Through Nexus, users can</Typography>
-                                        <Typography className={styles.nexusDescription} style={{ letterSpacing: '0.07em' }}>purchase covers on their</Typography>
-                                        <Typography className={styles.nexusDescription} style={{ letterSpacing: '0.03em' }}>smart contracts using NXM.</Typography>
+                                        <Typography className={styles.nexusDescription} style={{ letterSpacing: '-0.05em' }}>Nexus Mutual is a decentralized</Typography>
+                                        <Typography className={styles.nexusDescription} style={{ letterSpacing: '0.01em' }}>insurance protocol built on</Typography>
+                                        <Typography className={styles.nexusDescription} style={{ letterSpacing: '-0.065em' }}>Ethereum that began in May 2019.</Typography>
+                                        <Typography className={styles.nexusDescription} style={{ letterSpacing: '0.04em' }}>Through Nexus, users can</Typography>
+                                        <Typography className={styles.nexusDescription} style={{ letterSpacing: '0.045em' }}>purchase covers on their</Typography>
+                                        <Typography className={styles.nexusDescription} style={{ letterSpacing: '0.01em' }}>smart contracts using NXM.</Typography>
                                     </Grid>
                                 ) : (
                                     <Typography className={styles.nexusDescription}>Nexus Mutual is a decentralized insurance protocol built on Ethereum that began in May 2019. Through Nexus, users can purchase covers on their smart contracts using NXM.</Typography>

@@ -153,7 +153,7 @@ export default function Info() {
                                     The Badger DAO believes in the initiatives of other Web3 projects and aims to support them with exposure and funds.
                                 </SubText>
                                 <SubText letterspacing={isMobile ? '-0.04em' : '0.003em'}>
-                                    Gitcoin is a grants program for Web3 projects that are building cool stuff for the blockchain ecosystem. 2% of the DAO’s treasury is devoted to philanthropic efforts to these small communities.
+                                    Gitcoin is a grants program for Web3 projects that are building to further advance the blockchain ecosystem. 2% of the DAO’s treasury is devoted to philanthropic efforts to these small communities.
                                 </SubText>
                             </>
                         </Fade>
