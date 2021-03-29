@@ -141,7 +141,7 @@ export default function About() {
                     <img draggable={false} alt="Arrow Icon" src="/assets/images/arrow1.png" className={styles.arrowImg} />
                 </Button>
                 <Grid className={styles.bigBorder} />
-                <ReactPlayer url='https://www.youtube.com/watch?v=7GVz9La2L9w' width={isMobile ? 240 : 835} height={isMobile ? 124 : 430} />
+                <ReactPlayer controls url='https://www.youtube.com/watch?v=7GVz9La2L9w' width={isMobile ? 240 : 835} height={isMobile ? 124 : 430} />
             </Grid>
             <AboutAudit />
             <InsuranceAudit />
