@@ -86,7 +86,8 @@ const useStyles = makeStyles((theme) => ({
     },
     bubbleWrapper: {
         position: 'absolute',
-        left: isMobile ? 45 : 220,
+        // left: isMobile ? 45 : 220,
+        right: isMobile ? -55 : 165,
         top: isMobile ? 305 : 0
     },
     insurancePeople: {
