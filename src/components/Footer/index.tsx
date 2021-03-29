@@ -132,7 +132,7 @@ export default function Footer() {
 								<Grid>
 									{footeritems.items.map((item) => (
 										<Grid key={item.title}>
-											<Link href={item.link}>
+											<Link href={item.link} target="_blank">
 												<Grid container direction="row" alignItems="center" className={styles.item}>
 													<img
 														draggable={false}

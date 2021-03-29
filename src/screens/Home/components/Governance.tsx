@@ -98,7 +98,7 @@ const TickItem = ({ children, href, type }: TickItemProps) => {
                 <img draggable={false} src="/assets/images/arrow2.png" className={styles.arrow} />
             </Grid>
             <img draggable={false} src={`/assets/images/${type}.png`} className={styles.tickItemImage} />
-            <Link href={href} className={styles.tickText}>
+            <Link href={href} target="_blank" className={styles.tickText}>
                 {children}
             </Link>
         </Grid>
