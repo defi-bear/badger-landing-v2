@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
     leftPanel: {
         backgroundColor: theme.palette.secondary.main,
         padding: isMobile ? '3px 0px 0px 24px' : '72px 0px 28px 123px',
+        overflow: 'hidden'
     },
     auditText: {
         color: 'white',

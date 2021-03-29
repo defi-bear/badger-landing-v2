@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: 56,
         backgroundColor: theme.palette.secondary.main,
         padding: isMobile ? '3px 17px 31px 0px' : '39px 111px 89px 0px',
+        overflow: 'hidden'
     },
     insuranceText: {
         fontSize: isMobile ? 13 : 30,

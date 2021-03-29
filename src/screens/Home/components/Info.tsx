@@ -8,6 +8,7 @@ const useStyles = makeStyles(() => ({
     main: {
 		width: '100%',
 		padding: isMobile ? '50px 35px 0px 36px' : '107px 35px 0px 36px',
+        overflow: 'hidden'
     },
     subMain: {
         maxWidth: 1120,

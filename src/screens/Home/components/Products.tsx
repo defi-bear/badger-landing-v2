@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         paddingTop: isMobile ? 55 : 234,
         padding: isMobile ? '0px 35px 35px 35px' : 67,
+        overflow: 'hidden'
 	},
 	subMain: {
         maxWidth: 1120,
