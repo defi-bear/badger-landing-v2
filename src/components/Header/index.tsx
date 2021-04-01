@@ -79,7 +79,7 @@ export default function Header() {
 	const [isOpen, setOpen] = useState(false)
 
 	const onLaunchApp = () => {
-		window.open('https://app.badger.finance', '_self');
+		window.open('https://app.badger.finance', '_blank');
 	}
 
 	const onLinkClicked = (name : string) => {

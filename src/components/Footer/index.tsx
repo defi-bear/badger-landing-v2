@@ -112,6 +112,10 @@ const useStyles = makeStyles((theme) => ({
 export default function Footer() {
 	const styles = useStyles();
 
+	const onLaunch = () => {
+		window.open('https://app.badger.finance/', '_blank')
+	}
+
 	return (
 		<Grid>
 			<Grid className={styles.stackingPart} container direction="column" alignItems="center">
@@ -120,7 +124,7 @@ export default function Footer() {
                     <img draggable={false} src="/assets/images/coinStar.png" className={styles.coinStarImg} />
                 </Grid>
                 <Typography className={styles.stackingDescription}>Open the Badger App and Digg into our Sett Vaults</Typography>
-                <Button className={styles.launchApp} onClick={() => window.open('https://app.badger.finance/', '_self')}>LAUNCH OUR APP</Button>
+                <Button className={styles.launchApp} onClick={onLaunch}>LAUNCH OUR APP</Button>
             </Grid>
 			<Grid container className={styles.main}>
 				<Grid item xs={isMobile ? 12 : 3}>
