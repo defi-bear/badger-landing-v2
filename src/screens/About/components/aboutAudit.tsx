@@ -108,7 +108,7 @@ const useStyles = makeStyles((theme) => ({
         background: theme.palette.primary.main,
         position: 'absolute',
         top: isMobile ? 532 : 579,
-        left: isMobile ? -160 : -114,
+        left: isMobile ? 'calc(100% - 220px)' : -114,
     },
 }))
 

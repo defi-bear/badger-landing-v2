@@ -81,7 +81,8 @@ const useStyles = makeStyles(() => ({
 
 export default function Buidl() {
     const styles = useStyles();
-    const spacing = isMobile ? '-0.08em' : '0em';
+    const spacing = isMobile ? '-0.07em' : '0em';
+    const grantspacing = isMobile ? '-0.07em' : '0.003em';
 
     return (
         <Grid container className={styles.main} alignItems="center" justify="center">
@@ -117,11 +118,31 @@ export default function Buidl() {
                         <Grid container>
                             <Typography className={styles.itemText}>
                                 <span className={styles.itemTitle}>Development:</span>
-                                <span style={{letterSpacing: spacing }}> Build new products and integrations with DeFi protocols and DAOs across the ecosystem.</span>
+                                <span style={{letterSpacing: spacing }}> Build new products, liquidity strategies and integrations with other DeFi DAOs.</span>
                             </Typography>
                             <Typography className={styles.itemText}>
                                 <Link href="https://forms.gle/bJMAC5M3T2NfSvy3A">
                                     <span className={styles.itemLink} style={{marginLeft: 0}}> Fill out our Badger Interest Form</span>
+                                </Link>
+                            </Typography>
+                        </Grid>
+                    </Grid>
+                </Grid>
+                <Grid container justify="center" className={styles.item} alignItems="flex-start" direction="row">
+                    <Grid item>
+                        <img draggable={false} alt="Star Logo" src="/assets/images/star.png" className={styles.star} />
+                    </Grid>
+                    <Grid item className={styles.itemRight}>
+                        <Grid container>
+                            <Typography className={styles.itemText}>
+                                <span className={styles.itemTitle}>Ecosystem Grants:</span>
+                                <span style={{ letterSpacing: grantspacing }}> Apply through our Grants Program for an Ecosystem Grant, Which are awarded to developers and teams building new products and infrastrucuture furthering Bitcoin Defi.</span>
+                                <Link href="https://forum.badger.finance/t/bip-28-badger-grants-program/2380">
+                                    <span className={styles.itemLink}> Read more about the Grants Program</span>
+                                </Link>
+                                <span> and </span>
+                                <Link href="https://badgerdao.typeform.com/to/S65IExaO">
+                                    <span className={styles.itemLink}> check out the Ecosystem Grant application</span>
                                 </Link>
                             </Typography>
                         </Grid>

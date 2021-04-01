@@ -68,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: 22,
     },
     tickItems: {
-        width: isMobile ? 250 : 360
+        width: isMobile ? 270 : 380
     },
     arrowContainer: {
         width: 36,
@@ -80,6 +80,11 @@ const useStyles = makeStyles((theme) => ({
     },
     tickItemImage: {
         width: isMobile ? 22.7 : 40
+    },
+    linkIcon: {
+        marginLeft: isMobile ? 5 : 11,
+        width: isMobile ? 10 : 15,
+        height: isMobile ? 10 : 15
     }
 }))
 
@@ -97,10 +102,11 @@ const TickItem = ({ children, href, type }: TickItemProps) => {
             <Grid className={styles.arrowContainer}>
                 <img draggable={false} src="/assets/images/arrow2.png" className={styles.arrow} />
             </Grid>
-            <img draggable={false} src={`/assets/images/${type}.png`} className={styles.tickItemImage} />
+            <img draggable={false} alt={type} src={`/assets/images/${type}.png`} className={styles.tickItemImage} />
             <Link href={href} target="_blank" className={styles.tickText}>
                 {children}
             </Link>
+            <img draggable={false} alt="link icon" src={`/assets/images/linkYellow.png`} className={styles.linkIcon} />
         </Grid>
     )
 }

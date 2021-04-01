@@ -101,6 +101,11 @@ const useStyles = makeStyles((theme) => ({
 	},
 	footerItem: {
 		marginTop: isMobile ? 35 : 0,
+	},
+	linkIcon: {
+		width: isMobile ? 10 : 15,
+		height: isMobile ? 10 : 15,
+		marginLeft: isMobile ? 5 : 10
 	}
 }));
 
@@ -141,6 +146,12 @@ export default function Footer() {
 														className={item.title === 'Read our Newsletter' ? styles.newsIcon : styles.itemIcon}
 													/>
 													<Typography className={styles.itemText}>{item.title}</Typography>
+													<img
+														draggable={false}
+														alt="Link Icon"
+														src="/assets/images/linkWhite.png"
+														className={styles.linkIcon}
+													/>
 												</Grid>
 											</Link>
 										</Grid>
