@@ -102,7 +102,7 @@ export default function Buidl() {
                         <Grid container>
                             <Typography className={styles.itemText}>
                                 <span className={styles.itemTitle}>Governance:</span>
-                                <Link href="https://forum.badger.finance/">
+                                <Link target="_blank" href="https://forum.badger.finance/">
                                     <span className={styles.itemLink}> Read through our governance forum</span>
                                 </Link>
                                 <span> vote on current proposals or compose your own!</span>
@@ -121,7 +121,7 @@ export default function Buidl() {
                                 <span style={{letterSpacing: spacing }}> Build new products, liquidity strategies and integrations with other DeFi DAOs.</span>
                             </Typography>
                             <Typography className={styles.itemText}>
-                                <Link href="https://forms.gle/bJMAC5M3T2NfSvy3A">
+                                <Link target="_blank" href="https://forms.gle/bJMAC5M3T2NfSvy3A">
                                     <span className={styles.itemLink} style={{marginLeft: 0}}> Fill out our Badger Interest Form</span>
                                 </Link>
                             </Typography>
@@ -137,11 +137,11 @@ export default function Buidl() {
                             <Typography className={styles.itemText}>
                                 <span className={styles.itemTitle}>Ecosystem Grants:</span>
                                 <span style={{ letterSpacing: grantspacing }}> Apply through our Grants Program for an Ecosystem Grant, Which are awarded to developers and teams building new products and infrastrucuture furthering Bitcoin Defi.</span>
-                                <Link href="https://forum.badger.finance/t/bip-28-badger-grants-program/2380">
+                                <Link target="_blank" href="https://forum.badger.finance/t/bip-28-badger-grants-program/2380">
                                     <span className={styles.itemLink}> Read more about the Grants Program</span>
                                 </Link>
                                 <span> and </span>
-                                <Link href="https://badgerdao.typeform.com/to/S65IExaO">
+                                <Link target="_blank" href="https://badgerdao.typeform.com/to/S65IExaO">
                                     <span className={styles.itemLink}> check out the Ecosystem Grant application</span>
                                 </Link>
                             </Typography>
@@ -156,7 +156,7 @@ export default function Buidl() {
                         <Grid container>
                             <Typography className={styles.itemText}>
                                 <span className={styles.itemTitle}>Join the Discussion:</span>
-                                <Link href="https://discord.gg/PaPaeDq">
+                                <Link target="_blank" href="https://discord.gg/PaPaeDq">
                                     <span className={styles.itemLink}> Hop into our Discord</span>
                                 </Link>
                                 <span> to join the conversation and learn more about how to get involved with the community!</span>
